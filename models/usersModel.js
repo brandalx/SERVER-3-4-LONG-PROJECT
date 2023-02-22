@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 const Joi = require("joi");
+//Import for Json Web Token for user authentication and authorization
 const jwt = require("jsonwebtoken");
-
+//Basic user scema model for Mongo Data Base
 let schema = new mongoose.Schema({
   name: String,
   email: String,
@@ -15,9 +16,9 @@ let schema = new mongoose.Schema({
     default: "USER",
   },
 });
-
+//Scema import to users route
 exports.UsersModel = mongoose.model("users", schema);
-
+//Joi validation Schema
 exports.validateJoi = (_reqBody) => {
   let joiSchema = Joi.object({
     name: Joi.string().min(2).max(200).required(),
@@ -25,9 +26,10 @@ exports.validateJoi = (_reqBody) => {
     email: Joi.string().min(1).max(300).email().required(),
     password: Joi.string().min(1).max(100).required(),
   });
+  //returns valid schema
   return joiSchema.validate(_reqBody);
 };
-
+//Joi validation schema for Log in
 exports.validateLogin = (_reqBody) => {
   let joiSchema = Joi.object({
     //this will handle and make validation for email
