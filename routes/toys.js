@@ -64,4 +64,23 @@ router.get("/category/:catname", async (req, res) => {
   }
 });
 
+// TODO: add auth after all requests settled
+router.post("/", async (req, res) => {
+  //Checks first that returned object from Joi validation is even valid, if not throws an error and not continues to make POST request
+  let validBody = validateJoi(req.body);
+  if (validBody.error) {
+    return res.status(400).json(validBody.error.details);
+  }
+  //If returned Joi schema is valid creates an new obejct in JSON  and puts it in data base
+  try {
+    let toy = new ToysModel(req.body);
+    await toy.save();
+    res.json(toy);
+    //if any error occures will throw an error
+  } catch (err) {
+    console.log(err);
+    res.status(502).json({ err });
+  }
+});
+
 module.exports = router;
