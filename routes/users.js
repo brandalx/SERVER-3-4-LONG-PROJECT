@@ -10,4 +10,19 @@ router.get("/", async (req, res) => {
   res.json({ msg: "Users endpoint" });
 });
 
+router.post("/", async (req, res) => {
+  let validBody = validateJoi(req.body);
+  if (validBody.error) {
+    return res.status(400).json(validBody.error.details);
+  }
+  try {
+    let user = new UsersModel(req.body);
+    await user.save();
+    res.json(user);
+  } catch (err) {
+    console.log(err);
+    res.status(502).json({ err });
+  }
+});
+
 module.exports = router;
