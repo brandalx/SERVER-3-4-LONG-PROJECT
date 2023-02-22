@@ -25,4 +25,20 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.put("/:id", async (req, res) => {
+  let id = req.params.id;
+  let validBody = validateJoi(req.body);
+  if (validBody.error) {
+    return res.status(400).json(validBody.error.details);
+  }
+  try {
+    let user = new UsersModel(req.body);
+    await user.save();
+    res.json(user);
+  } catch (err) {
+    console.log(err);
+    res.status(502).json({ err });
+  }
+});
+
 module.exports = router;
