@@ -30,4 +30,24 @@ router.get("/", async (req, res) => {
   }
 });
 
+// GET request to handle search
+//Query example: http://localhost:3001/toys/search/?s=hotel
+router.get("/search", async (req, res) => {
+  let querySearch = req.query.s;
+  //Regular Expression added to make query request as non key sensative "i"
+
+  let searchExpression = new RegExp(querySearch, "i");
+  try {
+    let data = await ToysModel.find({
+      // // $or - built in mongoose function for Mongo DB to make search for keys name, info, type of the toys route
+      $or: [{ name: searchExpression }, { info: searchExpression }],
+    }).limit(20);
+    //limits result as 100 items max
+    res.json(data);
+  } catch (err) {
+    console.log(err);
+    res.status(502).json({ err });
+  }
+});
+
 module.exports = router;
