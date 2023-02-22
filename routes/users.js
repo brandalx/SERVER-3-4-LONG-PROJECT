@@ -32,13 +32,16 @@ router.put("/:id", async (req, res) => {
     return res.status(400).json(validBody.error.details);
   }
   try {
-    let user = new UsersModel(req.body);
-    await user.save();
-    res.json(user);
+    let data = await UsersModel.updateOne({ _id: id }, req.body);
+    res.json(data);
   } catch (err) {
     console.log(err);
     res.status(502).json({ err });
   }
 });
+
+router.delete("/id", async (req, res) => {});
+
+router;
 
 module.exports = router;
