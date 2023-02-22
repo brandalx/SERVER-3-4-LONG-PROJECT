@@ -96,5 +96,47 @@
     "category": "Arts & Crafts",
     "img_url": "https://images-na.ssl-images-amazon.com/images/I/91eyt%2BtDRKL._AC_SL1500_.jpg",
     "price": 34.99
+  },
+  {
+    "name": "Lego City Space Mars Research Shuttle",
+    "info": "This set includes a space shuttle, two astronaut minifigures, a rover, and a helidrone.",
+    "category": "Construction Sets",
+    "img_url": "https://images-na.ssl-images-amazon.com/images/I/81VdDsfpeNL._AC_SL1500_.jpg",
+    "price": 29.99
+  },
+  {
+    "name": "Hot Wheels Criss Cross Crash Track Set",
+    "info": "This set features over 16 feet of track with four crash zones, a motorized booster, and four high-speed crash zones.",
+    "category": "Toy Cars and Tracks",
+    "img_url": "https://images-na.ssl-images-amazon.com/images/I/91ibc%2BDPvDL._AC_SL1500_.jpg",
+    "price": 49.99
+  },
+  {
+    "name": "Barbie Dreamhouse",
+    "info": "This three-story dollhouse features eight rooms, a working elevator, and a pool with a slide.",
+    "category": "Dolls and Accessories",
+    "img_url": "https://images-na.ssl-images-amazon.com/images/I/81K4YW4DB-L._AC_SL1500_.jpg",
+    "price": 179.99
+  },
+  {
+    "name": "Nerf N-Strike Elite Disruptor Blaster",
+    "info": "This six-shot blaster fires darts up to 90 feet and has a rotating drum for quick firing.",
+    "category": "Toy Guns and Weapons",
+    "img_url": "https://images-na.ssl-images-amazon.com/images/I/81etP5FlOzL._AC_SL1500_.jpg",
+    "price": 12.99
+  },
+  {
+    "name": "Melissa & Doug Wooden Building Blocks Set",
+    "info": "This set includes 100 wooden blocks in various shapes and colors for imaginative building and play.",
+    "category": "Building and Stacking Toys",
+    "img_url": "https://images-na.ssl-images-amazon.com/images/I/81S1e9XjJiL._AC_SL1500_.jpg",
+    "price": 19.99
+  },
+  {
+    "name": "Crayola Inspiration Art Case",
+    "info": "This art set includes over 140 pieces for coloring, drawing, and painting, all stored in a portable carrying case.",
+    "category": "Art and Creativity Toys",
+    "img_url": "https://images-na.ssl-images-amazon.com/images/I/81W55I9m1qL._AC_SL1500_.jpg",
+    "price": 24.99
   }
 ]
