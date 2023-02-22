@@ -133,4 +133,18 @@ router.put("/:id", async (req, res) => {
   }
 });
 
+router.delete("/:id", async (req, res) => {
+  try {
+    //params defenition
+    let id = req.params.id;
+    //params defenition
+    let data = await ToysModel.deleteOne({ _id: id });
+    // response about succ delete
+    res.json(data);
+  } catch (err) {
+    console.log(err);
+    res.status(502).json({ err });
+  }
+});
+
 module.exports = router;
