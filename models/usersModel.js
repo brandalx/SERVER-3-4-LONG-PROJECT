@@ -27,3 +27,12 @@ exports.validateJoi = (_reqBody) => {
   });
   return joiSchema.validate(_reqBody);
 };
+
+exports.validateLogin = (_reqBody) => {
+  let joiSchema = Joi.object({
+    //this will handle and make validation for email
+    email: Joi.string().min(1).max(300).email().required(),
+    password: Joi.string().min(1).max(100).required(),
+  });
+  return joiSchema.validate(_reqBody);
+};
