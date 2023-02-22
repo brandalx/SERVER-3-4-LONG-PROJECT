@@ -31,7 +31,7 @@ router.get("/", async (req, res) => {
 });
 
 // GET request to handle search
-//Query example: http://localhost:3001/toys/search/?s=hotel
+//Query example: http://localhost:3001/toys/search/?s=shuttle
 router.get("/search", async (req, res) => {
   let querySearch = req.query.s;
   //Regular Expression added to make query request as non key sensative "i"
@@ -51,7 +51,7 @@ router.get("/search", async (req, res) => {
 });
 
 // GET request to handle search by category with using params
-//Query example: http://localhost:3001/toys/search/?s=hotel
+//Params example: http://localhost:3001/toys/category/figures
 router.get("/category/:catname", async (req, res) => {
   let catParam = req.params.catname;
   let searchExpression = new RegExp(catParam, "i");
