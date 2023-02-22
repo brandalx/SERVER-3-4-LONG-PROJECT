@@ -107,7 +107,7 @@ router.put("/:id", async (req, res) => {
   try {
     //id definition
     let id = req.params.id;
-    //actual update of existed ibject by provided ID
+    //actual update of existed object by provided ID
     let data = await ToysModel.updateOne({ _id: id }, req.body);
     res.json(data);
   } catch (err) {
