@@ -50,4 +50,18 @@ router.get("/search", async (req, res) => {
   }
 });
 
+// GET request to handle search by category with using params
+//Query example: http://localhost:3001/toys/search/?s=hotel
+router.get("/category/:catname", async (req, res) => {
+  let catParam = req.params.catname;
+  let searchExpression = new RegExp(catParam, "i");
+  try {
+    let data = await ToysModel.find({ category: searchExpression });
+    res.json(data);
+  } catch (err) {
+    console.log(err);
+    res.status(502).json({ err });
+  }
+});
+
 module.exports = router;
