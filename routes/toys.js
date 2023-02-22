@@ -159,5 +159,5 @@ router.delete("/:id", async (req, res) => {
     res.status(502).json({ err });
   }
 });
-
+//exports whole route to config routes
 module.exports = router;
