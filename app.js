@@ -3,10 +3,10 @@ const http = require("http");
 const path = require("cors");
 
 // Routes initilization
-const { routesInit } = require("./routes/config_routes");
+const { routesInit } = require("./routes//configRoutes");
 
 //Connecting to the database
-require("./db/mongo_connect");
+require("./db/mongoConnect");
 
 const app = express();
 // Disables security, and allows to make an IP request from another domain from another server
