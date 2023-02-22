@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Lego City Space Mars Research Shuttle",
+    "info": "This set includes a space shuttle, two astronaut minifigures, a rover, and a helidrone.",
+    "category": "Construction Sets",
+    "img_url": "https://images-na.ssl-images-amazon.com/images/I/81VdDsfpeNL._AC_SL1500_.jpg",
+    "price": 29.99
+  },
+  {
+    "name": "Barbie Dreamhouse",
+    "info": "This 3-story dollhouse features a working elevator, pool, and garage.",
+    "category": "Dolls & Accessories",
+    "img_url": "https://images-na.ssl-images-amazon.com/images/I/71x7xLzk%2B4L._AC_SL1000_.jpg",
+    "price": 179.99
+  },
+  {
+    "name": "Hot Wheels Criss Cross Crash Track Set",
+    "info": "This track set features four intersecting crash zones and a motorized booster.",
+    "category": "Cars & Race Tracks",
+    "img_url": "https://images-na.ssl-images-amazon.com/images/I/81M5iOyzpbL._AC_SL1500_.jpg",
+    "price": 44.99
+  },
+  {
+    "name": "Nerf N-Strike Elite Disruptor Blaster",
+    "info": "This Nerf gun can shoot up to 90 feet and holds 6 darts in its rotating drum.",
+    "category": "Action Figures & Playsets",
+    "img_url": "https://images-na.ssl-images-amazon.com/images/I/91OXkpmDr1L._AC_SL1500_.jpg",
+    "price": 12.99
+  },
+  {
+    "name": "Melissa & Doug Let's Play House! Dust! Sweep! Mop! Pretend Play Set",
+    "info": "This cleaning play set includes a broom, mop, duster, dustpan, and storage stand.",
+    "category": "Pretend Play",
+    "img_url": "https://images-na.ssl-images-amazon.com/images/I/91%2B9r6Uqo6L._AC_SL1500_.jpg",
+    "price": 29.99
+  },
+  {
+    "name": "Funko Pop! Marvel: Avengers Endgame - Iron Man (I Am Iron Man) Glow-in-The-Dark Deluxe Vinyl Figure",
+    "info": "This Iron Man vinyl figure features glow-in-the-dark details and is based on the iconic 'I Am Iron Man' moment from Avengers: Endgame.",
+    "category": "Collectibles & Figures",
+    "img_url": "https://images-na.ssl-images-amazon.com/images/I/81EBtyBJabL._AC_SL1500_.jpg",
+    "price": 24.99
+  },
+  {
+    "name": "LEGO Star Wars: The Mandalorian The Child Building Kit",
+    "info": "This LEGO set features the adorable Baby Yoda (The Child) character from The Mandalorian TV series.",
+    "category": "Construction Sets",
+    "img_url": "https://images-na.ssl-images-amazon.com/images/I/81pdU6r3U6L._AC_SL1500_.jpg",
+    "price": 79.99
+  },
+  {
+    "name": "LEGO Classic Medium Creative Brick Box",
+    "info": "This LEGO set comes with over 480 pieces in a variety of shapes and colors to inspire creativity.",
+    "category": "Construction Sets",
+    "img_url": "https://images-na.ssl-images-amazon.com/images/I/81nMqhd6UwL._AC_SL1500_.jpg",
+    "price": 34.99
+  },
+  {
+    "name": "Little Tikes Cozy Coupe 30th Anniversary Car",
+    "info": "This classic ride-on car features a removable floorboard and working horn.",
+    "category": "Ride-On Toys",
+    "img_url": "https://images-na.ssl-images-amazon.com/images/I/81tP%2BkKRjzL._AC_SL1500_.jpg",
+    "price": 54.99
+  },
+  {
+    "name": "Baby Alive Sweet Spoonfuls Baby Doll Girl",
+    "info": "This Baby Alive doll comes with a feeding bowl and spoon for pretend feeding play.",
+    "category": "Dolls & Accessories",
+    "img_url": "https://images-na.ssl-images-amazon.com/images/I/81Yc%2B7BFTPL._AC_SL1500_.jpg",
+    "price": 26.99
+  },
+  {
+    "name": "Fisher-Price Laugh & Learn Smart Stages Chair",
+    "info": "This interactive chair features over 50 sing-along songs, tunes, and phrases to teach numbers, colors, shapes, and more.",
+    "category": "Learning & Education",
+    "img_url": "https://images-na.ssl-images-amazon.com/images/I/81G6q3v6UyL._AC_SL1500_.jpg",
+    "price": 34.99
+  },
+  {
+    "name": "NERF Ultra One Motorized Blaster",
+    "info": "This NERF blaster can shoot up to 120 feet and includes a 25-dart drum.",
+    "category": "Action Figures & Playsets",
+    "img_url": "https://images-na.ssl-images-amazon.com/images/I/81YyWWuB7zL._AC_SL1500_.jpg",
+    "price": 49.99
+  },
+  {
+    "name": "VTech Sit-to-Stand Learning Walker",
+    "info": "This interactive walker features a removable activity panel with piano keys, phone, and other manipulative toys.",
+    "category": "Learning & Education",
+    "img_url": "https://images-na.ssl-images-amazon.com/images/I/81vJ4zDmG4L._AC_SL1500_.jpg",
+    "price": 34.99
+  },
+  {
+    "name": "Play-Doh Kitchen Creations Ultimate Chef Play Food Set",
+    "info": "This Play-Doh set includes a variety of kitchen tools and molds to create pretend foods.",
+    "category": "Arts & Crafts",
+    "img_url": "https://images-na.ssl-images-amazon.com/images/I/91eyt%2BtDRKL._AC_SL1500_.jpg",
+    "price": 34.99
+  }
+]
