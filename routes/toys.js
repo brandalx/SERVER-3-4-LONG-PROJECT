@@ -98,4 +98,23 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.put("/:id", async (req, res) => {
+  //Joi checks
+  let validBody = validateJoi(req.body);
+  if (validBody.error) {
+    return res.status(400).json(validBody.error.details);
+  }
+  try {
+    //id definition
+    let id = req.params.id;
+    //actual update of existed ibject by provided ID
+    let data = await ToysModel.updateOne({ _id: id }, req.body);
+    res.json(data);
+  } catch (err) {
+    //handling error
+    console.log(err);
+    res.status(502).json({ err });
+  }
+});
+
 module.exports = router;
