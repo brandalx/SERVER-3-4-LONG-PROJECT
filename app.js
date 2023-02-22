@@ -1,6 +1,7 @@
 const express = require("express");
 const http = require("http");
-const path = require("cors");
+const path = require("path");
+const cors = require("cors");
 
 // Routes initilization
 const { routesInit } = require("./routes//configRoutes");
@@ -14,12 +15,12 @@ app.use(cors());
 
 //To send body from client side
 app.use(express.json());
-
-routesInit(app);
-
 // Define a static folder that will be the "public" folder
 app.use(express.static(path.join(__dirname, "public")));
+routesInit(app);
 
 const server = http.createServer(app);
-let port = process.env.PORT || 3002;
+// When upload to a real server that the server will provide its port
+// the port itself instead of me having to change it manually
+let port = process.env.PORT || 3001;
 server.listen(port);
