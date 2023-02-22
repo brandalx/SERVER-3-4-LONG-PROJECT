@@ -98,6 +98,22 @@ router.post("/", async (req, res) => {
   }
 });
 
+// PUT request to handle an updating the existed item in the data base:
+/* Example for valid PUT request through POSTMAN:
+In POSTMAN  change: request type to to PUT, adress to:
+http://localhost:3001/toys/63f67afa1c859b4d063e03f4
+
+{
+        "name": "Lego City Space Mars Research Shuttle 2.0",
+        "info": "This set includes a new space shuttle, five astronaut minifigures, and a two rovers",
+        "category": "Action Figures & Playsets",
+        "img_url": "https://images-na.ssl-images-amazon.com/images/I/81YyWWuB7zL._AC_SL1500_.jpg",
+        "price": 10.00       
+}
+*/
+
+//Id will be added through an params option
+
 router.put("/:id", async (req, res) => {
   //Joi checks
   let validBody = validateJoi(req.body);
