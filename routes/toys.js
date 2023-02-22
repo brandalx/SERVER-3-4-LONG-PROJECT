@@ -64,6 +64,21 @@ router.get("/category/:catname", async (req, res) => {
   }
 });
 
+// POST request to handle an adding the new item to data base:
+/* Example for valid POST request through POSTMAN:
+In POSTMAN  change: request type to to POST, choose body ==> row, then enter adress in url field: http://localhost:3001/toys
+
+example:
+
+{
+  "name": "Lego Ninjago Golden Dragon",
+  "info": "This set includes a golden dragon, three minifigures, and assorted weapons.",
+  "category": "Construction Sets",
+  "img_url": "https://images-na.ssl-images-amazon.com/images/I/81nA1edvR9L._AC_SL1500_.jpg",
+  "price": 19.99
+  }
+  */
+
 // TODO: add auth after all requests settled
 router.post("/", async (req, res) => {
   //Checks first that returned object from Joi validation is even valid, if not throws an error and not continues to make POST request
