@@ -1,0 +1,19 @@
+{
+  "name": "SERVER-3-4-LONG-PROJECT",
+  "version": "1.0.0",
+  "description": "SERVER-3-4-LONG-PROJECT",
+  "scripts": {
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandalx/SERVER-3-4-LONG-PROJECT.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brandalx/SERVER-3-4-LONG-PROJECT/issues"
+  },
+  "homepage": "https://github.com/brandalx/SERVER-3-4-LONG-PROJECT#readme"
+}
