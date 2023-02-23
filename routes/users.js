@@ -79,15 +79,17 @@ router.post("/login", async (req, res) => {
 //Retrieving a user's information based on the token that is sent in the request header.
 //GOES TO MIDDLEWARE FUNCTION {AUTH}, THEN ASYNC(req,res) HAPPENS
 // auth -> middleware function that runs before the router's main function
+
 router.get("/userInfo", auth, async (req, res) => {
   try {
     let user = await UsersModel.findOne(
       //req.tokedata is manual value whic we passed as global from auth
-      {
-        _id: req.tokenData.id,
-      },
-      { password: 0 } //deletes password from resposnse
+
+      { _id: req.tokenData._id },
+      //deletes password from resposnse
+      { password: 0 }
     );
+
     res.json(user);
   } catch (err) {
     console.log(err);
