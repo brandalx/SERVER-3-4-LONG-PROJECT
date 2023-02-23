@@ -66,3 +66,15 @@
 .srchbtn:hover {
   background: #ff4a6e !important;
 }
+
+a {
+}
+
+a:hover {
+  color: #ff4a6e !important;
+  transition: all 0.3s;
+}
+
+.part1 {
+  padding: 150px 0;
+}
