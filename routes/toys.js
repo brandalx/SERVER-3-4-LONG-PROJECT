@@ -125,12 +125,21 @@ router.put("/:editId", auth, async (req, res) => {
   try {
     //id definition
     let id = req.params.editId;
-    //actual update of existed object by provided ID
-    let data = await ToysModel.updateOne(
-      { _id: id, user_id: req.tokenData._id }, // user_id:req.tokenData._id -> The user will only be able to edit records he added
-      req.body
-    );
-    res.json(data);
+    let data;
+    if (req.tokenData.role == "admin") {
+      data = await ToysModel.updateOne(
+        { _id: id }, // user_id:req.tokenData._id -> The user will only be able to edit records he added
+        req.body
+      );
+      res.json(data);
+    } else {
+      //actual update of existed object by provided ID
+      data = await ToysModel.updateOne(
+        { _id: id, user_id: req.tokenData._id }, // user_id:req.tokenData._id -> The user will only be able to edit records he added
+        req.body
+      );
+      res.json(data);
+    }
   } catch (err) {
     //handling error
     console.log(err);
