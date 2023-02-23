@@ -4,6 +4,6 @@ main().catch((err) => console.log(err));
 
 async function main() {
   mongoose.set("strictQuery", false);
-  await mongoose.connect(process.env.LOCALURLDB);
-  console.log("mongo connect server local");
+  await mongoose.connect(process.env.URLDB);
+  console.log("mongo connect server atlas");
 }
