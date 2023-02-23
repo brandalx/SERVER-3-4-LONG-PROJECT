@@ -97,14 +97,14 @@ router.get("/userInfo", auth, async (req, res) => {
   }
 });
 
-router.put("/:id", async (req, res) => {
+router.put("/:id", auth, async (req, res) => {
   let id = req.params.id;
   let validBody = validateJoi(req.body);
   if (validBody.error) {
     return res.status(400).json(validBody.error.details);
   }
   try {
-    let data = await UsersModel.updateOne({ _id: id }, req.body);
+    let data = await UsersModel.updateOne({ _id: req.tokenData._id }, req.body);
     res.json(data);
   } catch (err) {
     console.log(err);

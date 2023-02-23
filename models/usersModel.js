@@ -15,6 +15,8 @@ let schema = new mongoose.Schema({
     type: String,
     default: "USER",
   },
+  //This is new paramter to display in response
+  user_id: String,
 });
 //Scema import to users route
 exports.UsersModel = mongoose.model("users", schema);
