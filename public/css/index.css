@@ -1,3 +1,9 @@
+code {
+  border-radius: 4px;
+  background: #ffc3cf8a;
+  padding: 3px;
+}
+
 input {
   padding-left: 10px;
   transition: all 0.3s;
