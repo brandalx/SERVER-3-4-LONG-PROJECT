@@ -149,13 +149,20 @@ router.delete("/:delId", auth, async (req, res) => {
   try {
     //params defenition
     let id = req.params.delId;
+    let data;
+    if (req.tokenData.role == "admin") {
+      let data = await ToysModel.deleteOne({
+        _id: id,
+      });
+      res.json(data);
+    } else {
+      data = await ToysModel.deleteOne({
+        _id: id,
+        user_id: req.tokenData._id,
+      }); //now wit help of user_id: req.tokenData._id, we will delete only something whats only user created
+      res.json(data);
+    }
 
-    let data = await ToysModel.deleteOne({
-      _id: id,
-      user_id: req.tokenData._id,
-    }); //now wit help of user_id: req.tokenData._id, we will delete only something whats only user created
-
-    res.json(data);
     // response about succ delete
     /* POSTMAN will display something like: 
 {

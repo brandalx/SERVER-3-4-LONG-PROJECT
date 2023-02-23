@@ -68,7 +68,7 @@ router.post("/login", async (req, res) => {
       return res.status(401).json({ err: "Password you're entered is wrong" });
     }
     // The user will be sent a token that will allow him to be in areas that require permission;
-    let newToken = createToken(user._id);
+    let newToken = createToken(user._id, user.role);
     res.json({ token: newToken });
   } catch (err) {
     console.log(err);
