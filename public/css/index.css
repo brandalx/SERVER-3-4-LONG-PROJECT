@@ -1,5 +1,5 @@
 .css-selector {
-  padding: 80px 0;
+  padding: 150px 0;
   background: linear-gradient(91deg, #c77dff, #fc5c7c);
   background-size: 400% 400%;
 
@@ -40,4 +40,29 @@
   100% {
     background-position: 0% 50%;
   }
+}
+
+.input {
+  background: rgba(255, 255, 255, 0.356) !important ;
+  border: gray 1px solid;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.733) !important;
+}
+
+.input:focus {
+  outline: #ff4e71d5 5px solid !important;
+}
+.input:active {
+}
+
+.srchbtn {
+  border: 1px solid rgba(255, 255, 255, 0.377) !important;
+  background: #fc5c7cd8 !important;
+  color: white !important;
+}
+
+.srchbtn:hover {
+  background: #ff4a6e !important;
 }
