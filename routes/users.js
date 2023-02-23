@@ -5,6 +5,7 @@ const {
   UsersModel,
   validateJoi,
   validateLogin,
+  createToken,
 } = require("../models/usersModel");
 
 const { auth } = require("../middlewares/auth");
@@ -44,6 +45,32 @@ router.post("/", async (req, res) => {
       });
     }
     // To handle default error that may thrown if 11000 hasnt occured
+    console.log(err);
+    res.status(502).json({ err });
+  }
+});
+
+// Authenticating a user by verifying their email and password and returning a JSON web token if the authentication is successful.
+router.post("/login", async (req, res) => {
+  let validBody = validateLogin(req.body);
+  if (validBody.error) {
+    return res.status(400).json(validBody.error.details);
+  }
+  try {
+    // Checks if the email sent to body even exists in the database
+    let user = await UsersModel.findOne({ email: req.body.email });
+    if (!user) {
+      return res.status(401).json({ err: "Email not found / user dont exist" });
+    }
+    // Checks if the encrypted password in the database matches the password in body sended, if not throws error
+    let validPassword = await bcrypt.compare(req.body.password, user.password);
+    if (!validPassword) {
+      return res.status(401).json({ err: "Password you're entered is wrong" });
+    }
+    // The user will be sent a token that will allow him to be in areas that require permission;
+    let newToken = createToken(user._id);
+    res.json({ token: newToken });
+  } catch (err) {
     console.log(err);
     res.status(502).json({ err });
   }
