@@ -38,3 +38,11 @@ exports.validateLogin = (_reqBody) => {
   });
   return joiSchema.validate(_reqBody);
 };
+
+exports.createToken = (user_id) => {
+  //          ===>           PLEASE MENTION: [THIS] KEY WILL BE CHANGED WHEN WILL BE DEPLOYED TO THE REAL SERVER
+  //                                           \/
+  //                       payload    | the secret key |  options object (will expire in 60 minutes)
+  let token = jwt.sign({ _id: user_id }, "secretWord", { expiresIn: "60mins" });
+  return token;
+};
