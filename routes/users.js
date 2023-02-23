@@ -112,10 +112,10 @@ router.put("/:id", auth, async (req, res) => {
   }
 });
 
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", auth, async (req, res) => {
   try {
     let id = req.params.id;
-    let data = await UsersModel.deleteOne({ _id: id });
+    let data = await UsersModel.deleteOne({ _id: req.tokenData._id });
     res.json(data);
   } catch (err) {
     console.log(err);
