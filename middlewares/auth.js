@@ -1,6 +1,8 @@
 const jwt = require("jsonwebtoken");
 exports.auth = (req, res, next) => {
   // Checks at all that a token has been sent in the directory
+  //req.header is used to send token in the header as more secure way to operate ith sesitive info
+  //x-api-key - header name whic will be checked if he does provided valid token
   let token = req.header("x-api-key");
   if (!token) {
     return res
