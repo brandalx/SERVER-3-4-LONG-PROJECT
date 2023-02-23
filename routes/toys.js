@@ -114,7 +114,7 @@ http://localhost:3001/toys/63f67afa1c859b4d063e03f4
 
 //Id will be added through an params option
 
-router.put("/:id", async (req, res) => {
+router.put("/:editId", async (req, res) => {
   //Joi checks
   let validBody = validateJoi(req.body);
   if (validBody.error) {
@@ -122,7 +122,7 @@ router.put("/:id", async (req, res) => {
   }
   try {
     //id definition
-    let id = req.params.id;
+    let id = req.params.editId;
     //actual update of existed object by provided ID
     let data = await ToysModel.updateOne({ _id: id }, req.body);
     res.json(data);
@@ -139,10 +139,10 @@ In POSTMAN  change: request type to to DELETE, adress to:
 http://localhost:3001/toys/63f67b01e7dadcb2291e0828 
 */
 
-router.delete("/:id", async (req, res) => {
+router.delete("/:delId", async (req, res) => {
   try {
     //params defenition
-    let id = req.params.id;
+    let id = req.params.delId;
     //params defenition
     let data = await ToysModel.deleteOne({ _id: id });
     // response about succ delete
