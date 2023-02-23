@@ -1,3 +1,68 @@
+input {
+  padding-left: 10px;
+  transition: all 0.3s;
+  height: 34px;
+  background: rgba(255, 255, 255, 0.404) !important ;
+  border: rgb(255, 255, 255) 1px solid;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+input:focus {
+  transition: all 0.3s;
+  outline: none;
+  border: #ff4a6e 1px solid;
+}
+
+.srchbtn {
+  border: 1px solid rgba(255, 255, 255, 0.377) !important;
+  background: #fc5c7cd8 !important;
+  color: white !important;
+}
+
+.srchbtn:hover {
+  background: #ff4a6e !important;
+}
+
+a {
+}
+
+a:hover {
+  color: #ff4a6e !important;
+  transition: all 0.3s;
+}
+
+.part1 {
+  padding: 100px 0;
+}
+
+/*Animations classes*/
+
+.roll-in-blurred-left {
+  -webkit-animation: roll-in-blurred-left 0.65s cubic-bezier(0.23, 1, 0.32, 1)
+    both;
+  animation: roll-in-blurred-left 0.65s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+@keyframes roll-in-blurred-left {
+  0% {
+    -webkit-transform: translateX(-1000px) rotate(-720deg);
+    transform: translateX(-1000px) rotate(-720deg);
+    -webkit-filter: blur(50px);
+    filter: blur(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(0deg);
+    transform: translateX(0) rotate(0deg);
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
 .css-selector {
   padding: 150px 0;
   background: linear-gradient(91deg, #c77dff, #fc5c7c);
@@ -40,41 +105,4 @@
   100% {
     background-position: 0% 50%;
   }
-}
-
-.input {
-  background: rgba(255, 255, 255, 0.356) !important ;
-  border: gray 1px solid;
-}
-
-.input::placeholder {
-  color: rgba(255, 255, 255, 0.733) !important;
-}
-
-.input:focus {
-  outline: #ff4e71a8 5px solid !important;
-}
-.input:active {
-}
-
-.srchbtn {
-  border: 1px solid rgba(255, 255, 255, 0.377) !important;
-  background: #fc5c7cd8 !important;
-  color: white !important;
-}
-
-.srchbtn:hover {
-  background: #ff4a6e !important;
-}
-
-a {
-}
-
-a:hover {
-  color: #ff4a6e !important;
-  transition: all 0.3s;
-}
-
-.part1 {
-  padding: 100px 0;
 }
