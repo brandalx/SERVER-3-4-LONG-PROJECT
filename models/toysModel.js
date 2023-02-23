@@ -13,6 +13,7 @@ let schema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  user_id: String,
 });
 //TO DO: user_id for users
 exports.ToysModel = mongoose.model("toys", schema);

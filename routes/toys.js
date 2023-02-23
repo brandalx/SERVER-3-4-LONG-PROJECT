@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const { ToysModel, validateJoi } = require("../models/toysModel");
+const { auth } = require("../middlewares/auth");
 
 //In POSTMAN  change: request type to to GET, choose Body ===> row
 
@@ -26,7 +27,7 @@ router.get("/", async (req, res) => {
     res.json(data);
   } catch (err) {
     console.log(err);
-    res.status(502).json({ err });
+    return res.status(502).json({ err });
   }
 });
 
@@ -46,7 +47,7 @@ router.get("/search", async (req, res) => {
     res.json(data);
   } catch (err) {
     console.log(err);
-    res.status(502).json({ err });
+    return res.status(502).json({ err });
   }
 });
 
@@ -60,7 +61,7 @@ router.get("/category/:catname", async (req, res) => {
     res.json(data);
   } catch (err) {
     console.log(err);
-    res.status(502).json({ err });
+    return res.status(502).json({ err });
   }
 });
 
@@ -80,7 +81,7 @@ example:
   */
 
 // TODO: add auth after all requests settled
-router.post("/", async (req, res) => {
+router.post("/", auth, async (req, res) => {
   //Checks first that returned object from Joi validation is even valid, if not throws an error and not continues to make POST request
   let validBody = validateJoi(req.body);
   if (validBody.error) {
@@ -89,12 +90,13 @@ router.post("/", async (req, res) => {
   //If returned Joi schema is valid creates an new obejct in JSON  and puts it in data base
   try {
     let toy = new ToysModel(req.body);
+    toy.user_id = req.tokenData._id;
     await toy.save();
     res.json(toy);
     //if any error occures will throw an error
   } catch (err) {
     console.log(err);
-    res.status(502).json({ err });
+    return res.status(502).json({ err });
   }
 });
 
@@ -114,7 +116,7 @@ http://localhost:3001/toys/63f67afa1c859b4d063e03f4
 
 //Id will be added through an params option
 
-router.put("/:editId", async (req, res) => {
+router.put("/:editId", auth, async (req, res) => {
   //Joi checks
   let validBody = validateJoi(req.body);
   if (validBody.error) {
@@ -124,12 +126,15 @@ router.put("/:editId", async (req, res) => {
     //id definition
     let id = req.params.editId;
     //actual update of existed object by provided ID
-    let data = await ToysModel.updateOne({ _id: id }, req.body);
+    let data = await ToysModel.updateOne(
+      { _id: id, user_id: req.tokenData._id }, // user_id:req.tokenData._id -> The user will only be able to edit records he added
+      req.body
+    );
     res.json(data);
   } catch (err) {
     //handling error
     console.log(err);
-    res.status(502).json({ err });
+    return res.status(502).json({ err });
   }
 });
 
@@ -138,13 +143,19 @@ router.put("/:editId", async (req, res) => {
 In POSTMAN  change: request type to to DELETE, adress to:
 http://localhost:3001/toys/63f67b01e7dadcb2291e0828 
 */
-
-router.delete("/:delId", async (req, res) => {
+// code will try to delete and makes check only users adds and not all the others.
+//code will filter by user id
+router.delete("/:delId", auth, async (req, res) => {
   try {
     //params defenition
     let id = req.params.delId;
-    //params defenition
-    let data = await ToysModel.deleteOne({ _id: id });
+
+    let data = await ToysModel.deleteOne({
+      _id: id,
+      user_id: req.tokenData._id,
+    }); //now wit help of user_id: req.tokenData._id, we will delete only something whats only user created
+
+    res.json(data);
     // response about succ delete
     /* POSTMAN will display something like: 
 {
@@ -152,11 +163,10 @@ router.delete("/:delId", async (req, res) => {
     "deletedCount": 1
 }
 */
-    res.json(data);
+
     // if not will throw to an error
   } catch (err) {
-    console.log(err);
-    res.status(502).json({ err });
+    return res.status(502).json({ err });
   }
 });
 //exports whole route to config routes
