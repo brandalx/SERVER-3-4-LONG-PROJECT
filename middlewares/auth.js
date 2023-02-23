@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+require("dotenv").config();
 exports.auth = (req, res, next) => {
   // Checks at all that a token has been sent in the directory
   //req.header is used to send token in the header as more secure way to operate ith sesitive info
@@ -11,7 +12,7 @@ exports.auth = (req, res, next) => {
   }
   try {
     // tries to decode the token and get its payload, which is currently an ID
-    let decodeToken = jwt.verify(token, "secretWord");
+    let decodeToken = jwt.verify(token, process.env.TOKENSECRET);
     // req -> parameter of an object that is shared by all functions in the routers chain
     req.tokenData = decodeToken;
     // Will call the next function in the routers chain
