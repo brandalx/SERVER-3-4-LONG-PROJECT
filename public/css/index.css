@@ -79,6 +79,30 @@ a:hover {
 .topics {
   padding: 50px 0;
 }
+.container {
+  max-width: 1600px !important;
+}
+footer {
+  padding: 50px 0;
+}
+
+@media (min-width: 1200px) {
+  /* styles to turn on for screens larger than lg */
+  .styled {
+    transition: all 0.3s;
+    border-radius: 40px;
+    margin: 1.5rem;
+    padding: 3rem;
+  }
+}
+
+/* styles to turn off for screens smaller than lg */
+.styled {
+  transition: all 0.3s;
+  border-radius: none;
+  margin: none;
+  padding: none;
+}
 
 /*Animations classes*/
 
