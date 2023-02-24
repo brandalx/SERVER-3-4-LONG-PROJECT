@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta property="og:image" content="./images/mediasharepreview.jpg" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/index.css" />
@@ -11,6 +12,7 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
@@ -21,6 +23,7 @@
     <script defer src="./js//app.js" type="module"></script>
     <link rel="stylesheet" href="./css/tools/burger.css" />
     <link rel="stylesheet" href="./css/tools/tools.css" />
+
     <title>Welcome to Toys REST API</title>
   </head>
   <body>
@@ -179,8 +182,8 @@
       <main class="page-body main-strip">
         <div class="container-fluid topics text-center">
           <div class="container">
-            <h2 class="fw-bold py-2">Main topics</h2>
-            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-6 g-2">
+            <h2 class="fw-bold py-2" data-aos="fade-up">Main topics</h2>
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-6 g-3">
               <div class="col">
                 <a class="text-decoration-none text-dark" href="#introduction">
                   <div
@@ -388,18 +391,57 @@
                 </a>
               </div>
               <div class="col">
-                <a class="text-decoration-none text-dark" href="#introduction">
+                <a class="text-decoration-none text-dark" href="#routes">
                   <div
                     class="card cardintro border-0 h-100"
                     style="background: #ffd1f486"
                     data-aos="fade-up"
                   >
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
+                      <div>
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M6 19.5V4.5H8V19.5H6Z"
+                            fill="#FF4A6E"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M7.00001 18.0859L4.70712 15.793L3.29291 17.2072L6.29291 20.2072C6.68343 20.5977 7.3166 20.5977 7.70712 20.2072L10.7071 17.2072L9.29291 15.793L7.00001 18.0859Z"
+                            fill="#FF4A6E"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M14 12.5H10V14.5H14V12.5Z"
+                            fill="#FF4A6E"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M17 8.5H10V10.5H17V8.5Z"
+                            fill="#FF4A6E"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M20 4.5H10V6.5H20V4.5Z"
+                            fill="#FF4A6E"
+                          />
+                        </svg>
+                      </div>
+                      <h5 class="card-title">Routes</h5>
                       <p class="card-text text-body-secondary">
-                        This is a longer card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
+                        Different routes or endpoints available in the
+                        application's API, what they do, and how to use them.
                       </p>
                     </div>
                   </div>
@@ -453,7 +495,7 @@
                     />
                   </svg>
                 </h2>
-                <p>
+                <p class="text-body-secondary">
                   Everything you need to know about this Toys REST API and how
                   does it works
                 </p>
@@ -546,7 +588,7 @@
                     />
                   </svg>
                 </h3>
-                <p class="mb-0">
+                <p class="mb-0 text-body-secondary">
                   Layout, navigation, and functionality of the user interface,
                   including how to access various features and functions
                 </p>
@@ -629,7 +671,7 @@
                     />
                   </svg>
                 </h3>
-                <p class="mb-0">
+                <p class="mb-0 text-body-secondary">
                   Different roles and access levels for users, and what actions
                   they are authorized to perform.
                 </p>
@@ -721,7 +763,7 @@
                     />
                   </svg>
                 </h3>
-                <p class="mb-0">
+                <p class="mb-0 text-body-secondary">
                   Features and functions of the application, including how to
                   use each feature and what it does.
                 </p>
@@ -830,6 +872,104 @@
                     brute-force attacks against user passwords.
                   </li>
                 </ul>
+              </div>
+            </div>
+          </div>
+          <div id="routes" class="container-fluid part2" data-aos="fade-up">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-3">
+                  <h3 class="fw-bolder" data-aos="fade-right">
+                    Routes
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M6 19.5V4.5H8V19.5H6Z"
+                        fill="#FF4A6E"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M7.00001 18.0859L4.70712 15.793L3.29291 17.2072L6.29291 20.2072C6.68343 20.5977 7.3166 20.5977 7.70712 20.2072L10.7071 17.2072L9.29291 15.793L7.00001 18.0859Z"
+                        fill="#FF4A6E"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M14 12.5H10V14.5H14V12.5Z"
+                        fill="#FF4A6E"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M17 8.5H10V10.5H17V8.5Z"
+                        fill="#FF4A6E"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M20 4.5H10V6.5H20V4.5Z"
+                        fill="#FF4A6E"
+                      />
+                    </svg>
+                  </h3>
+                  <p class="mb-0 text-body-secondary">
+                    Different routes or endpoints available in the application's
+                    API, what they do, and how to use them.
+                  </p>
+                </div>
+                <div class="col-lg-9">
+                  <hr style="color: #ff4a6e" />
+                  <h4 class="text-start fw-bold">Description</h4>
+
+                  <p>
+                    This API consists of two main routes, /toys and /users, each
+                    serving different functionalities. Additionally, there is a
+                    /main endpoint that will guide you on what to do in case you
+                    are lost. Finally, if user enter a non-existing endpoint,
+                    the server will return a default 404 error response router.
+                  </p>
+                  <h4>The toys router</h4>
+                  <p>
+                    The toys router is responsible for handling requests related
+                    to toys. It allows users to perform GET, PUT, POST, and
+                    DELETE requests for toys. Additionally, users can sort and
+                    search for toys by name, category, and other information.
+                    The toys router also handles requests for creating and
+                    updating toy information, such as name, description, and
+                    price.
+                  </p>
+                  <h4>The users router</h4>
+                  <p>
+                    The users router, on the other hand, handles requests
+                    related to users. It allows users to perform GET, PUT, POST,
+                    and DELETE requests for user data. Users can also sort and
+                    search for users by name and other information. This router
+                    is responsible for managing user authentication, including
+                    user registration, password reset, and user role management.
+                  </p>
+                  <h4>The main router</h4>
+                  <p>
+                    The main router is a default endpoint for the API. It's just
+                    shows information and recommends to visit /index.html
+                  </p>
+                  <h4>404 router</h4>
+                  <p>
+                    The 404 router is an additional router in the Toys REST API
+                    that handles any requests for non-existing endpoints. If a
+                    user enters a non-existing endpoint, the server will return
+                    a default response with a 404 error message. The purpose of
+                    this router is to provide a clear response to users and help
+                    them understand what went wrong in their request.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
