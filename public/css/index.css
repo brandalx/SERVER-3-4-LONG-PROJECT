@@ -72,9 +72,11 @@ a:hover {
     opacity: 1;
   }
 }
-
-.css-selector {
+.partMain {
   padding: 150px 0;
+}
+
+.css-selector1 {
   background: linear-gradient(91deg, #c77dff, #fc5c7c);
   background-size: 400% 400%;
 
@@ -114,5 +116,48 @@ a:hover {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+.css-selector {
+  background: linear-gradient(54deg, #c77dff, #fc5c7c, #fde781);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 17s ease infinite;
+  -moz-animation: AnimationName 17s ease infinite;
+  animation: AnimationName 17s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 63% 0%;
+  }
+  50% {
+    background-position: 38% 100%;
+  }
+  100% {
+    background-position: 63% 0%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 63% 0%;
+  }
+  50% {
+    background-position: 38% 100%;
+  }
+  100% {
+    background-position: 63% 0%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 63% 0%;
+  }
+  50% {
+    background-position: 38% 100%;
+  }
+  100% {
+    background-position: 63% 0%;
   }
 }
