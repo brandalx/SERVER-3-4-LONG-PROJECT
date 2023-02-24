@@ -61,6 +61,24 @@ a:hover {
   background: #ff829bc9;
 }
 
+.cardintro {
+  outline: #ffffff00 1px solid;
+  transition: all 0.3s !important;
+}
+
+.cardintro:hover {
+  cursor: pointer;
+  outline: #ff4a6e79 1px solid;
+  box-shadow: 11px 27px 52px -10px rgba(194, 194, 194, 0.45);
+
+  transition: all 0.3s !important;
+  transform: translate(0px, -5px) !important;
+}
+
+.topics {
+  padding: 100px 0;
+}
+
 /*Animations classes*/
 
 .roll-in-blurred-left {
