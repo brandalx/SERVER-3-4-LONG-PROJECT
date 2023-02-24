@@ -32,7 +32,7 @@ router.get("/", async (req, res) => {
 });
 
 // GET request to handle search
-//Query example: http://localhost:3001/toys/search/?s=shuttle
+//Query example: https://toysrestapi/toys/search/?s=shuttle
 router.get("/search", async (req, res) => {
   let querySearch = req.query.s;
   //Regular Expression added to make query request as non key sensative "i"
@@ -103,7 +103,7 @@ router.post("/", auth, async (req, res) => {
 // PUT request to handle an updating the existed item in the data base:
 /* Example for valid PUT request through POSTMAN:
 In POSTMAN  change: request type to to PUT, adress to:
-http://localhost:3001/toys/63f67afa1c859b4d063e03f4
+https://toysrestapi/toys/63f67afa1c859b4d063e03f4
 
 {
         "name": "Lego City Space Mars Research Shuttle 2.0",
