@@ -223,3 +223,20 @@ a:hover {
     opacity: 1;
   }
 }
+
+.move-on-hover rect,
+.move-on-hover ellipse {
+  transition: transform 0.3s ease-in-out;
+}
+
+.move-on-hover__item1:hover {
+  transform: translate(5px);
+}
+
+.move-on-hover__item2:hover {
+  transform: translate(-5px, 0);
+}
+
+.move-on-hover__item3:hover {
+  transform: translate(5px);
+}
