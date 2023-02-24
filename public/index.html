@@ -68,15 +68,40 @@
                   <span></span><span></span><span></span>
                 </div>
               </button>
-              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link fw-bold text-white" href="#">Netlify</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link fw-bold text-white" href="#">Github</a>
-                  </li>
-                </ul>
+              <div
+                class="collapse navbar-collapse justify-content-between"
+                id="navbarTogglerDemo02"
+              >
+                <div class="col-lg-8">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link fw-bold text-white" href="#"
+                        >Netlify</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link fw-bold text-white" href="#">Github</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-2">
+                  <button class="mainbtn">
+                    Get started
+                    <svg
+                      class="ms-2 mb-1"
+                      width="11"
+                      height="19"
+                      viewBox="0 0 11 19"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2.15 0.374951L10.575 8.77495C10.675 8.87495 10.746 8.98328 10.788 9.09995C10.83 9.21662 10.8507 9.34162 10.85 9.47495C10.85 9.60828 10.829 9.73328 10.787 9.84995C10.745 9.96662 10.6743 10.075 10.575 10.175L2.15001 18.6C1.91667 18.8333 1.62501 18.95 1.27501 18.95C0.925005 18.95 0.625006 18.825 0.375006 18.575C0.125006 18.325 5.64191e-06 18.0333 5.61277e-06 17.7C5.58363e-06 17.3666 0.125006 17.075 0.375006 16.825L7.72501 9.47495L0.375004 2.12495C0.141671 1.89162 0.0250038 1.60395 0.0250038 1.26195C0.0250038 0.919952 0.150004 0.624285 0.400004 0.374951C0.650004 0.124951 0.94167 -4.87248e-05 1.275 -4.8754e-05C1.60834 -4.87831e-05 1.9 0.124951 2.15 0.374951Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           </nav>
@@ -84,8 +109,8 @@
         <div class="container-fluid partMain">
           <div class="container">
             <p class="text-white">Documentation to use</p>
-            <h1 class="text-white fw-bolder">Toys REST API</h1>
-            <div class="row">
+            <h1 class="text-white fw-bolder display-4">Toys REST API</h1>
+            <div class="row align-items-center">
               <div class="col-lg-6">
                 <div class="row">
                   <div class="col-lg-10">
@@ -101,9 +126,11 @@
                 </div>
               </div>
 
-              <div class="col-lg-6 mt-3 mt-lg-0">
-                <div class="col-lg-6 col-12">
-                  <p class="text-white ms-lg-5">
+              <div
+                class="col-lg-6 mt-3 mt-lg-0 d-flex justify-content-end fw-semibold"
+              >
+                <div class="col-lg-9 col-12">
+                  <p class="text-white">
                     Search for any requests you need or just list down. Not sure
                     where to start from? <br />
                     Try
@@ -227,6 +254,43 @@
                   but will only be able to make <b><code>GET</code></b> requests
                   to retrieve information about toys and sort/search by name or
                   category.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid part2">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-3">
+                <h3 class="fw-bolder">User Roles and Permissions</h3>
+                <p class="mb-0">
+                  Different roles and access levels for users, and what actions
+                  they are authorized to perform.
+                </p>
+              </div>
+              <div class="col-lg-9">
+                <hr style="color: #ff4a6e" />
+                <h4 class="text-start">User and Admin roles</h4>
+
+                <p>
+                  The Toys API has two levels of user roles and permissions. By
+                  default, all users are considered regular users and can only
+                  perform limited actions. Regular users can delete only the
+                  items they have created and modify their password, email, or
+                  name. Only an admin can grant additional permissions or
+                  elevate a user to the second user role.
+                </p>
+                <p>
+                  The second user role is called an admin, and can only be
+                  granted directly in the Mongo database. Admins have full
+                  control over the users and toys routes, allowing them to
+                  create, update, and delete items without any limitations. They
+                  can also view all users and their created items. Due to their
+                  elevated permissions, admin accounts must be carefully managed
+                  and restricted to trusted individuals. At this moment its not
+                  possible to require change status to admin account
                 </p>
               </div>
             </div>

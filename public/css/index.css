@@ -47,6 +47,19 @@ a:hover {
 .part2 {
   padding: 20px 0;
 }
+.mainbtn {
+  padding-right: 15px;
+  transition: all 0.3s;
+  color: white;
+  border-radius: 5px;
+  height: 34px;
+  background: rgba(255, 255, 255, 0.404);
+  border: rgb(255, 255, 255) 1px solid;
+}
+.mainbtn:hover {
+  transition: all 0.3s;
+  background: #ff829bc9;
+}
 
 /*Animations classes*/
 
