@@ -115,7 +115,7 @@
         <div class="container-fluid css-selector">
           <div class="container">
             <p class="text-white">Documentation to use</p>
-            <h1 class="text-white">Toys REST API</h1>
+            <h1 class="text-white fw-bolder">Toys REST API</h1>
             <div class="row">
               <div class="col-lg-6">
                 <div class="row">
@@ -155,9 +155,9 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-3">
-                <h2>Introduction</h2>
+                <h2 class="fw-bolder">Introduction</h2>
                 <p>
-                  Everything you need to know about the Toys REST API and how
+                  Everything you need to know about this Toys REST API and how
                   does it works
                 </p>
               </div>
@@ -202,8 +202,59 @@
                   The server is responsible for handling requests to the Mongo
                   DB database and can perform various operations on the
                   <code>users</code> and <code>toys</code> routes, including
-                  <code>GET</code>, <code>PUT</code>, <code>POST</code>, and
-                  <code>DELETE</code> requests.
+                  <b><code>GET</code></b
+                  >, <b><code>PUT</code></b
+                  >, <b><code>POST</code></b
+                  >, and <b><code>DELETE</code></b> requests.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid part2">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-3">
+                <h3 class="fw-bolder">User Interface</h3>
+                <p>
+                  Layout, navigation, and functionality of the user interface,
+                  including how to access various features and functions
+                </p>
+              </div>
+              <div class="col-lg-9">
+                <hr style="color: #ff4a6e" />
+                <h4 class="text-start">Options of UI interaction</h4>
+
+                <p>
+                  The user interface for this application can be accessed
+                  through this web
+                  <b><a href="http://localhost:3001/toys"> URL</a></b>
+                  input directly in your web browser or through an API platform
+                  like
+                  <a href="https://www.postman.com/">Postman</a>, wtih all
+                  request to the same
+                  <b><a href="http://localhost:3001/toys"> URL</a></b
+                  >. For the purposes of this documentation, we will use Postman
+                  to provide clear instructions. Please note that this server
+                  has been tested and works best with hand requests or requests
+                  made through Postman, and may not function well with other
+                  programs.
+                </p>
+                <p>
+                  The user interface is structured around two main routes:
+                  <code>toys</code> and <code>users</code>. To use the
+                  application, users <b>must</b> first register by making a
+                  <b><code>POST</code></b>
+                  request, which will be explained in detail later. Once
+                  registered, users can create new toys in the toys route and
+                  delete any items they have created.
+                </p>
+                <p>
+                  Without registering, users can still access the toys route,
+                  but will only be able to make <b><code>GET</code></b> requests
+                  to retrieve information about toys and sort/search by name or
+                  category.
                 </p>
               </div>
             </div>

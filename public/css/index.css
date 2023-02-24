@@ -41,7 +41,11 @@ a:hover {
 }
 
 .part1 {
-  padding: 100px 0;
+  padding-top: 50px;
+}
+
+.part2 {
+  padding: 20px 0;
 }
 
 /*Animations classes*/
