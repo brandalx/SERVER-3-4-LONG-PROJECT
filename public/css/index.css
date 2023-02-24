@@ -248,6 +248,10 @@ footer {
   }
 }
 
+.move-on-hover circle {
+  transition: transform 0.3s ease-in-out;
+}
+
 .move-on-hover rect,
 .move-on-hover ellipse {
   transition: transform 0.3s ease-in-out;
