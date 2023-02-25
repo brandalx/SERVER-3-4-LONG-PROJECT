@@ -4,7 +4,19 @@ code {
   padding: 3px;
 }
 
+#loadingLine {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 5px;
+  border-radius: 10px;
+  /* background: linear-gradient(54deg, #c77dff, #fc5c7c, #fde781); */
+  z-index: 999;
+}
+
 ::selection {
+  color: white;
   background-color: #ff4a6e;
 }
 
@@ -48,9 +60,6 @@ input:focus {
 
 .srchbtn:hover {
   background: #ff4a6e !important;
-}
-
-a {
 }
 
 a:hover {

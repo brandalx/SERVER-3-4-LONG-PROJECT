@@ -6,7 +6,7 @@ const { auth } = require("../middlewares/auth");
 //In POSTMAN  change: request type to to GET, choose Body ===> row
 
 // GET request handle
-//Query example: http://localhost:3001/toys/?page=1&sort=name&desc=yes
+//Query example: https://toysrestapi.cyclic.app/toys/?page=1&sort=name&desc=yes
 
 router.get("/", async (req, res) => {
   let perPage = 5;
@@ -52,7 +52,7 @@ router.get("/search", async (req, res) => {
 });
 
 // GET request to handle search by category with using params
-//Params example: http://localhost:3001/toys/category/figures
+//Params example: https://toysrestapi.cyclic.app/toys/category/figures
 router.get("/category/:catname", async (req, res) => {
   let catParam = req.params.catname;
   let searchExpression = new RegExp(catParam, "i");
@@ -67,7 +67,7 @@ router.get("/category/:catname", async (req, res) => {
 
 // POST request to handle an adding the new item to data base:
 /* Example for valid POST request through POSTMAN:
-In POSTMAN  change: request type to to POST, choose body ==> row, then enter adress in url field: http://localhost:3001/toys
+In POSTMAN  change: request type to to POST, choose body ==> row, then enter adress in url field: https://toysrestapi.cyclic.app/toys
 
 example:
 
@@ -150,7 +150,7 @@ router.put("/:editId", auth, async (req, res) => {
 // DELETE request to handle an delete item from the data base:
 /* Example for valid DELETE request through POSTMAN:
 In POSTMAN  change: request type to to DELETE, adress to:
-http://localhost:3001/toys/63f67b01e7dadcb2291e0828 
+https://toysrestapi.cyclic.app/toys/63f67b01e7dadcb2291e0828
 */
 // code will try to delete and makes check only users adds and not all the others.
 //code will filter by user id
