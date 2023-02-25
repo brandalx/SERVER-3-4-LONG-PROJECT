@@ -8,6 +8,16 @@ code {
   background-color: #ff4a6e;
 }
 
+::-webkit-scrollbar {
+  background-color: white;
+  color: #ff4a6e;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background-color: #ff4a6e;
+}
+
 input {
   font-weight: bold;
   color: white;
