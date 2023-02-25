@@ -4,6 +4,15 @@ code {
   padding: 3px;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  font-family: "Rubik", sans-serif;
+}
+td:hover {
+  cursor: pointer;
+}
+
 #loadingLine {
   position: fixed;
   top: 0;
@@ -294,4 +303,14 @@ footer {
 
 .move-on-hover__item3:hover {
   transform: translate(5px);
+}
+
+.move-on-hover__item4 {
+  transition: all 0.3s;
+}
+
+.move-on-hover__item4:hover {
+  cursor: pointer;
+  transition: all 0.3s;
+  transform: translate(0, -5px);
 }
