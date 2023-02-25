@@ -4,7 +4,13 @@ code {
   padding: 3px;
 }
 
+::selection {
+  background-color: #ff4a6e;
+}
+
 input {
+  font-weight: bold;
+  color: white;
   padding-left: 10px;
   transition: all 0.3s;
   height: 34px;
@@ -13,10 +19,12 @@ input {
 }
 
 input::placeholder {
+  font-weight: normal;
   color: rgba(255, 255, 255, 0.87) !important;
 }
 
 input:focus {
+  color: white;
   transition: all 0.3s;
   outline: none;
   border: #ff4a6e 1px solid;
