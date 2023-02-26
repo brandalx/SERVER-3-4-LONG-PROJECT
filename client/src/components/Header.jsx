@@ -104,7 +104,7 @@ export const Header = () => {
                     <a
                       arget="_blank"
                       className="nav-link fw-bold text-white"
-                      href="#"
+                      href="https://github.com/brandalx/SERVER-3-4-LONG-PROJECT"
                     >
                       Github
                     </a>
