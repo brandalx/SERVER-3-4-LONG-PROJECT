@@ -3,6 +3,11 @@ code {
   background: #ffc3cf8a;
   padding: 3px;
 }
+.code {
+  border-radius: 4px;
+  background: #77ff898a;
+  padding: 3px;
+}
 
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
 
@@ -47,6 +52,13 @@ input {
   height: 34px;
   background: rgba(255, 255, 255, 0.404) !important ;
   border: rgb(255, 255, 255) 1px solid;
+}
+
+.jsondata {
+  padding-top: 15px;
+  border-radius: 15px;
+  background: #aaff9933;
+  /* background: #ffc3cf8a; */
 }
 
 input::placeholder {

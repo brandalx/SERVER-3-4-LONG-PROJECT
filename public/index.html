@@ -1312,23 +1312,139 @@
                   </h4>
                   <div class="py-5">
                     <h4 data-aos="fade-up" style="color: #fc5c7c">/toys</h4>
+                    <div class="py-3">
+                      <h4 class="text-start">GET requests</h4>
 
+                      <code class="">
+                        https://toysrestapi.cyclic.app/toys
+                      </code>
+                      <p>Here all params you can pass in this GET endpoint</p>
+                    </div>
                     <div class="table-responsive" data-aos="fade-up">
                       <table class="table table-hover">
                         <thead>
                           <tr>
                             <th scope="col">Method</th>
-                            <th scope="col">Action</th>
-                            <th scope="col">Endpoint</th>
-                            <th scope="col">Request example</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Request</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td>Shows all toys</td>
-                            <td>https://toysrestapi.cyclic.app/toys</td>
                             <td>GET</td>
-                            <td>get</td>
+
+                            <td>Shows all toys (limits 5 per page)</td>
+                            <td>https://toysrestapi.cyclic.app/toys</td>
+                          </tr>
+                          <tr>
+                            <td>GET</td>
+                            <td>Shows all toys, lists page</td>
+                            <td>
+                              https://toysrestapi.cyclic.app/toys/?page=<code
+                                >{number of page}</code
+                              >
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>GET</td>
+                            <td>Shows all toys, sorts by required key</td>
+                            <td>
+                              https://toysrestapi.cyclic.app/toys/?sort=<code
+                                >{name of key}</code
+                              >
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>GET</td>
+                            <td>
+                              Shows all toys, ascending or descending order
+                            </td>
+                            <td>
+                              https://toysrestapi.cyclic.app/toys/?desc=<code
+                                >{yes}</code
+                              >
+                              <code
+                                style="color: #19cc37; background: #d1ffd186"
+                              >
+                                if <code>yes</code> descending will be turn on,
+                                else turned
+                                <bold class="fw-bold">off</bold></code
+                              >
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="py-3">
+                      <h4 class="text-start">
+                        <span class="fw-bold text-danger">*</span>POST request
+                      </h4>
+
+                      <code class="">
+                        https://toysrestapi.cyclic.app/toys
+                      </code>
+                      <p>Here all params you can pass in this POST endpoint</p>
+                      <p>
+                        <bold class="fw-bold">
+                          <span class="fw-bold text-danger">*</span> Please
+                          mention:</bold
+                        >
+                        for this type request you should create user in
+                        <code>/users</code> route and have valid
+                        <code class="fw-bold">token</code>. Follow to
+                        <code>/user</code>
+                        section to get all related information
+                      </p>
+                    </div>
+                    <div class="table-responsive" data-aos="fade-up">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Method</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Request</th>
+                            <th scope="col">Request <code>body</code></th>
+                            <th scope="col">Request <code>header</code></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>POST</td>
+
+                            <td>Posts new toys into the database</td>
+
+                            <td>https://toysrestapi.cyclic.app/toys</td>
+                            <td>
+                              <p class="code my-3 w-25">JSON</p>
+                              <pre class="jsondata">
+{ "name": "Lego Ninjago Golden Dragon", 
+"info": "This set includes a golden dragon, three
+ minifigures, and assorted weapons.",>
+"category": "Construction Sets",
+"img_url":
+"https://images-na.ssl-images-amazon.com/images/I/81nA1edvR9L._AC_SL1500_.jpg",
+"price": 19.99 }
+                            </pre
+                              >
+                            </td>
+                            <td>
+                              <table class="table-responsive">
+                                <thead>
+                                  <tr>
+                                    <th class="px-4" scope="col">Key</th>
+                                    <th class="px-4" scope="col">Value</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td class="px-4">
+                                      <code>x-api-key</code>
+                                    </td>
+                                    <td class="px-4"><code>token</code></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
