@@ -123,7 +123,7 @@ a:hover {
 .cardintro:hover {
   cursor: pointer;
   outline: #ff4a6e79 1px solid;
-  box-shadow: 11px 27px 52px -10px rgba(194, 194, 194, 0.45);
+  box-shadow: 11px 27px 52px -10px rgba(255, 162, 205, 0.363);
 
   transition: all 0.3s !important;
   transform: translate(0px, -5px) !important;
