@@ -1,3 +1,5 @@
 node_modules
 .env
-src
+dist
+.parcel-cache
+yarn.lock
