@@ -1,3 +1,9 @@
+import React from "react";
+import { Header } from "./components/Header";
 export function App() {
-  return <h1 className="btn btn-danger">Helldddddddddo world!</h1>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 }
