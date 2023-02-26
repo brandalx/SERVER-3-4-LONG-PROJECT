@@ -701,16 +701,26 @@
                 <p>
                   The user interface for this application can be accessed
                   through this web
-                  <b><a href="https://toysrestapi/toys"> URL</a></b>
+                  <b
+                    ><a href="https://toysrestapi/toys"> URL</a>
+                    <code> https://toysrestapi/toys</code></b
+                  >
                   input directly in your web browser or through an API platform
                   like
                   <a href="https://www.postman.com/">Postman</a>, wtih all
                   request to the same
-                  <b><a href="https://toysrestapi/toys"> URL</a></b
-                  >. For the purposes of this documentation, we will use Postman
-                  to provide clear instructions. Please note that this server
-                  has been tested and works best with hand requests or requests
-                  made through Postman, and may not function well with other
+                  <b
+                    ><a href="https://toysrestapi/toys"> URL</a>
+                    <code> https://toysrestapi/toys</code></b
+                  >. For users route URL is the
+                  <b
+                    ><a href="https://toysrestapi/users">follow</a>
+                    <code> https://toysrestapi/users</code></b
+                  >
+                  For the purposes of this documentation, we will use Postman to
+                  provide clear instructions. Please note that this server has
+                  been tested and works best with hand requests or requests made
+                  through Postman, and may not function well with other
                   programs.
                 </p>
                 <p>
@@ -718,9 +728,10 @@
                   <code>toys</code> and <code>users</code>. To use the
                   application, users <b>must</b> first register by making a
                   <b><code>POST</code></b>
-                  request, which will be explained in detail later. Once
-                  registered, users can create new toys in the toys route and
-                  delete any items they have created.
+                  request, which explained in
+                  <a href="#createuser">functions</a> section. Once registered,
+                  users can create new toys in the toys route and delete any
+                  items they have created.
                 </p>
                 <p>
                   Without registering, users can still access the toys route,
@@ -1041,21 +1052,27 @@
                   <h4 data-aos="fade-up">The toys router</h4>
                   <p data-aos="fade-up">
                     The toys router is responsible for handling requests related
-                    to toys. It allows users to perform GET, PUT, POST, and
-                    DELETE requests for toys. Additionally, users can sort and
-                    search for toys by name, category, and other information.
-                    The toys router also handles requests for creating and
-                    updating toy information, such as name, description, and
-                    price.
+                    to toys. It allows users to perform <b><code>GET</code></b
+                    >, <b><code>PUT</code></b
+                    >, <b><code>POST</code></b
+                    >, and <b><code>DELETE</code></b> requests for toys.
+                    Additionally, users can sort and search for toys by name,
+                    category, and other information. The toys router also
+                    handles requests for creating and updating toy information,
+                    such as name, description, and price.
                   </p>
                   <h4 data-aos="fade-up">The users router</h4>
                   <p data-aos="fade-up">
                     The users router, on the other hand, handles requests
-                    related to users. It allows users to perform GET, PUT, POST,
-                    and DELETE requests for user data. Users can also sort and
-                    search for users by name and other information. This router
-                    is responsible for managing user authentication, including
-                    user registration, password reset, and user role management.
+                    related to users. It allows users to perform
+                    <b><code>GET</code></b
+                    >, <b><code>PUT</code></b
+                    >, <b><code>POST</code></b
+                    >, and <b><code>DELETE</code></b> requests for user data.
+                    Users can also sort and search for users by name and other
+                    information. This router is responsible for managing user
+                    authentication, including user registration, password reset,
+                    and user role management.
                   </p>
                   <h4 data-aos="fade-up">The main router</h4>
                   <p data-aos="fade-up">
@@ -1079,7 +1096,9 @@
                     All routes endpoints
                   </h4>
                   <p data-aos="fade-up" class="text-secondary">
-                    To see functionality with POST PUT DELETE requests follow to
+                    To see functionality with <b><code>POST</code></b>
+                    <b><code>PUT</code></b> <b><code>DELETE</code></b> requests
+                    follow to
                     <a href="#functions">functions part</a>
                   </p>
                   <div class="py-5">
@@ -1098,19 +1117,25 @@
                           <tr>
                             <td>Shows all toys</td>
                             <td>https://toysrestapi.cyclic.app/toys</td>
-                            <td>GET</td>
+                            <td>
+                              <b><code>GET</code></b>
+                            </td>
                           </tr>
                           <tr>
                             <td>Search by category or info</td>
                             <td>https://toysrestapi.cyclic.app/toys/search</td>
-                            <td>GET</td>
+                            <td>
+                              <b><code>GET</code></b>
+                            </td>
                           </tr>
                           <tr>
                             <td>Search by category</td>
                             <td>
                               https://toysrestapi.cyclic.app/toys/category/{catname}
                             </td>
-                            <td>GET</td>
+                            <td>
+                              <b><code>GET</code></b>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -1119,8 +1144,10 @@
                       /users
                     </h4>
                     <p class="text-secondary">
-                      To see functionality with POST PUT DELETE requests follow
-                      to <a href="#">functions part</a>
+                      To see functionality with <b><code>POST</code></b>
+                      <b><code>PUT</code></b>
+                      <b><code>DELETE</code></b> requests follow to
+                      <a href="#">functions part</a>
                     </p>
                     <div class="table-responsive" data-aos="fade-up">
                       <table class="table table-hover">
@@ -1135,24 +1162,32 @@
                           <tr>
                             <td>Users endpoint</td>
                             <td>https://toysrestapi.cyclic.app/users</td>
-                            <td>GET</td>
+                            <td>
+                              <b><code>GET</code></b>
+                            </td>
                           </tr>
                           <tr>
                             <td>Creating a new user</td>
                             <td>https://toysrestapi.cyclic.app/users/</td>
-                            <td>POST</td>
+                            <td>
+                              <b><code>POST</code></b>
+                            </td>
                           </tr>
                           <tr>
                             <td>Authenticating a user</td>
                             <td>https://toysrestapi.cyclic.app/users/login</td>
-                            <td>POST</td>
+                            <td>
+                              <b><code>POST</code></b>
+                            </td>
                           </tr>
                           <tr>
                             <td>Retrieving a user's information</td>
                             <td>
                               https://toysrestapi.cyclic.app/users/userInfo
                             </td>
-                            <td>GET</td>
+                            <td>
+                              <b><code>GET</code></b>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -1175,7 +1210,9 @@
                           <tr>
                             <td>Main endpoint</td>
                             <td>https://toysrestapi.cyclic.app/main</td>
-                            <td>GET</td>
+                            <td>
+                              <b><code>GET</code></b>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -1200,7 +1237,9 @@
                               <span style="color: #fc5c7c">(this page )</span>
                             </td>
                             <td>https://toysrestapi.cyclic.app/</td>
-                            <td>GET</td>
+                            <td>
+                              <b><code>GET</code></b>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -1228,7 +1267,9 @@
                               https://toysrestapi.cyclic.app/{none-existing
                               route}
                             </td>
-                            <td>GET</td>
+                            <td>
+                              <b><code>GET</code></b>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -1311,14 +1352,25 @@
                     All routes functions
                   </h4>
                   <div class="py-5">
-                    <h4 data-aos="fade-up" style="color: #fc5c7c">/toys</h4>
+                    <h2
+                      data-aos="fade-up"
+                      class="mt-5 pt-5 text-center"
+                      style="color: #fc5c7c"
+                    >
+                      /toys
+                    </h2>
                     <div class="py-3">
-                      <h4 class="text-start">GET requests</h4>
+                      <h4 class="text-start">
+                        <b><code>GET</code></b> requests
+                      </h4>
 
                       <code class="">
                         https://toysrestapi.cyclic.app/toys
                       </code>
-                      <p>Here all params you can pass in this GET endpoint</p>
+                      <p>
+                        Here all params you can pass in this
+                        <b><code>GET</code></b> endpoint
+                      </p>
                     </div>
                     <div class="table-responsive" data-aos="fade-up">
                       <table class="table table-hover">
@@ -1331,13 +1383,17 @@
                         </thead>
                         <tbody>
                           <tr>
-                            <td>GET</td>
+                            <td>
+                              <b><code>GET</code></b>
+                            </td>
 
                             <td>Shows all toys (limits 5 per page)</td>
                             <td>https://toysrestapi.cyclic.app/toys</td>
                           </tr>
                           <tr>
-                            <td>GET</td>
+                            <td>
+                              <b><code>GET</code></b>
+                            </td>
                             <td>Shows all toys, lists page</td>
                             <td>
                               https://toysrestapi.cyclic.app/toys/?page=<code
@@ -1346,7 +1402,9 @@
                             </td>
                           </tr>
                           <tr>
-                            <td>GET</td>
+                            <td>
+                              <b><code>GET</code></b>
+                            </td>
                             <td>Shows all toys, sorts by required key</td>
                             <td>
                               https://toysrestapi.cyclic.app/toys/?sort=<code
@@ -1355,7 +1413,9 @@
                             </td>
                           </tr>
                           <tr>
-                            <td>GET</td>
+                            <td>
+                              <b><code>GET</code></b>
+                            </td>
                             <td>
                               Shows all toys, ascending or descending order
                             </td>
@@ -1377,7 +1437,9 @@
                     </div>
                   </div>
 
-                  <h4 class="text-start mt-5">GET request for search</h4>
+                  <h4 class="text-start mt-5">
+                    <b><code>GET</code></b> request for search
+                  </h4>
 
                   <code class="">
                     https://toysrestapi.cyclic.app/toys/search?s=</code
@@ -1387,7 +1449,10 @@
                     >{search}</span
                   >
 
-                  <p>Here all params you can pass in this GET endpoint</p>
+                  <p>
+                    Here all params you can pass in this
+                    <b><code>GET</code></b> endpoint
+                  </p>
 
                   <div class="table-responsive mb-5" data-aos="fade-up">
                     <table class="table table-hover">
@@ -1400,7 +1465,9 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td>GET</td>
+                          <td>
+                            <b><code>GET</code></b>
+                          </td>
 
                           <td>
                             Search passed query in <code>info</code> and
@@ -1413,7 +1480,7 @@
                   </div>
 
                   <h4 class="text-start mt-5">
-                    GET request for search by category
+                    <b><code>GET</code></b> request for search by category
                   </h4>
 
                   <code class="">
@@ -1424,7 +1491,10 @@
                     >{category name}</span
                   >
 
-                  <p>Here all params you can pass in this GET endpoint</p>
+                  <p>
+                    Here all params you can pass in this
+                    <b><code>GET</code></b> endpoint
+                  </p>
 
                   <div class="table-responsive mb-5" data-aos="fade-up">
                     <table class="table table-hover">
@@ -1437,7 +1507,9 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td>GET</td>
+                          <td>
+                            <b><code>GET</code></b>
+                          </td>
 
                           <td>
                             Search passed param in <code>category</code> key
@@ -1452,11 +1524,15 @@
 
                   <div class="py-3">
                     <h4 class="text-start">
-                      <span class="fw-bold text-danger">*</span>POST request
+                      <span class="fw-bold text-danger">*</span
+                      ><b><code>POST</code></b> request
                     </h4>
 
                     <code class=""> https://toysrestapi.cyclic.app/toys </code>
-                    <p>Here all params you can pass in this POST endpoint</p>
+                    <p>
+                      Here all params you can pass in this
+                      <b><code>POST</code></b> endpoint
+                    </p>
                     <p>
                       <bold class="fw-bold">
                         <span class="fw-bold text-danger">*</span> Please
@@ -1464,7 +1540,8 @@
                       >
                       for this type request you should create user in
                       <code>/users</code> route and have valid
-                      <code class="fw-bold">token</code>. Follow to
+                      <code class="fw-bold"><a href="#login">token</a></code
+                      >. Follow to
                       <code>/user</code>
                       section to get all related information
                     </p>
@@ -1484,7 +1561,9 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td>POST</td>
+                          <td>
+                            <b><code>POST</code></b>
+                          </td>
 
                           <td><code>Posts</code> new toys into the database</td>
 
@@ -1528,7 +1607,8 @@
 
                   <div class="py-5">
                     <h4 class="text-start">
-                      <span class="fw-bold text-danger">*</span>PUT request
+                      <span class="fw-bold text-danger">*</span
+                      ><b><code>PUT</code></b> request
                     </h4>
 
                     <code class=""> https://toysrestapi.cyclic.app/toys/</code
@@ -1538,7 +1618,10 @@
                       >{toy id}</span
                     >
 
-                    <p>Here all params you can pass in this PUT endpoint</p>
+                    <p>
+                      Here all params you can pass in this
+                      <b><code>PUT</code></b> endpoint
+                    </p>
                     <p>
                       <bold class="fw-bold">
                         <span class="fw-bold text-danger">*</span> Please
@@ -1573,7 +1656,9 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td>PUT</td>
+                          <td>
+                            <b><code>PUT</code></b>
+                          </td>
 
                           <td>
                             <code>Updates</code> user's created toy
@@ -1620,7 +1705,8 @@
 
                   <div class="py-5">
                     <h4 class="text-start">
-                      <span class="fw-bold text-danger">*</span>DELETE request
+                      <span class="fw-bold text-danger">*</span
+                      ><b><code>DELETE</code></b> request
                     </h4>
 
                     <code class=""> https://toysrestapi.cyclic.app/toys/</code
@@ -1630,7 +1716,10 @@
                       >{toy id}</span
                     >
 
-                    <p>Here all params you can pass in this DELETE endpoint</p>
+                    <p>
+                      Here all params you can pass in this
+                      <b><code>DELETE</code></b> endpoint
+                    </p>
                     <p>
                       <bold class="fw-bold">
                         <span class="fw-bold text-danger">*</span> Please
@@ -1665,7 +1754,9 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td>DELETE</td>
+                          <td>
+                            <b><code>DELETE</code></b>
+                          </td>
 
                           <td>
                             <code>Deletes</code> user's created toy
@@ -1698,27 +1789,314 @@
                       </tbody>
                     </table>
                   </div>
+                  <div class="container">
+                    <h2
+                      data-aos="fade-up"
+                      class="mt-5 pt-5 text-center"
+                      style="color: #fc5c7c"
+                    >
+                      /users
+                    </h2>
 
-                  <h4 data-aos="fade-up" class="pt-5" style="color: #fc5c7c">
-                    /users
-                  </h4>
+                    <div class="py-3">
+                      <h4 class="text-start">
+                        <b><code>GET</code></b> requests
+                      </h4>
 
+                      <code class="">
+                        https://toysrestapi.cyclic.app/users
+                      </code>
+                      <p>
+                        Here all params you can pass in this
+                        <b><code>GET</code></b> endpoint
+                      </p>
+                    </div>
+                    <div class="table-responsive" data-aos="fade-up">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Method</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">
+                              Request <code>URL</code> example
+                            </th>
+                            <th scope="col">
+                              Request <code>header</code> example
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <b><code>GET</code></b>
+                            </td>
+
+                            <td>Default users endpoint</td>
+                            <td>https://toysrestapi.cyclic.app/users</td>
+                            <td>Not required</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <b><code>GET</code></b>
+                            </td>
+
+                            <td>Gets user info</td>
+                            <td>
+                              https://toysrestapi.cyclic.app/users/userInfo
+                            </td>
+                            <td><code>token</code></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div id="createuser" class="py-3">
+                    <h4 class="text-start">
+                      <b><code>POST</code></b> request
+                    </h4>
+
+                    <code class=""> https://toysrestapi.cyclic.app/users</code>
+                    <p>
+                      Here all params you can pass in this
+                      <b><code>POST</code></b> endpoint
+                    </p>
+                  </div>
                   <div class="table-responsive" data-aos="fade-up">
                     <table class="table table-hover">
                       <thead>
                         <tr>
-                          <th>Method</th>
-                          <th>Action</th>
-                          <th>Endpoint</th>
-                          <th>Request example</th>
+                          <th scope="col">Method</th>
+                          <th scope="col">Description</th>
+                          <th scope="col">Request <code>URL</code> example</th>
+                          <th scope="col">Request <code>body</code> example</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td>Shows all toys</td>
-                          <td>https://toysrestapi.cyclic.app/toys</td>
-                          <td>GET</td>
-                          <td>GET</td>
+                          <td>POST</td>
+
+                          <td><code>Posts</code> new user into the database</td>
+
+                          <td>https://toysrestapi.cyclic.app/users</td>
+                          <td>
+                            <p class="code my-3 w-25">JSON</p>
+                            <pre class="jsondata">
+{                             
+  "name": "John Griffin",
+  "email": "example@gmail.com",
+  "password": "1234",
+}
+                            </pre>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="py-3" id="login">
+                    <h4 class="text-start">
+                      <b><code>POST</code></b> request to login and get
+                      <code>token</code>
+                    </h4>
+
+                    <code class="">
+                      https://toysrestapi.cyclic.app/users/login</code
+                    >
+                    <p>
+                      Here all params you can pass in this
+                      <b><code>POST</code></b> endpoint
+                    </p>
+                  </div>
+                  <div class="table-responsive" data-aos="fade-up">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th scope="col">Method</th>
+                          <th scope="col">Description</th>
+                          <th scope="col">Request <code>URL</code> example</th>
+                          <th scope="col">Request <code>body</code> example</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>POST</td>
+
+                          <td>
+                            Authenticates user and returns him token in response
+                          </td>
+
+                          <td>https://toysrestapi.cyclic.app/users/login</td>
+                          <td>
+                            <p class="code my-3 w-25">JSON</p>
+                            <pre class="jsondata">
+{                             
+  "email": "example@gmail.com",
+  "password": "1234",
+}
+                            </pre>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="py-5">
+                    <h4 class="text-start">
+                      <b><code>PUT</code></b> request
+                    </h4>
+
+                    <code class=""> https://toysrestapi.cyclic.app/users/</code
+                    ><span
+                      class="code"
+                      style="color: #19cc37; background: #d1ffd186"
+                      >{user id}</span
+                    >
+
+                    <p>
+                      Here all params you can pass in this
+                      <b><code>PUT</code></b> endpoint
+                    </p>
+
+                    <div class="border-start border-2 border-info ps-4">
+                      <p>
+                        User can edit <bold class="fw-bold">only</bold> its
+                        created profile, only user with <code>admin</code> role
+                        can edit any user he wants
+                      </p>
+                    </div>
+                  </div>
+                  <div class="table-responsive" data-aos="fade-up">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th scope="col">Method</th>
+                          <th scope="col">Description</th>
+                          <th scope="col">Request <code>URL</code> example</th>
+                          <th scope="col">Request <code>body</code> example</th>
+                          <th scope="col">
+                            Request <code>header</code> example
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <b><code>PUT</code></b>
+                          </td>
+
+                          <td>
+                            <code>Updates</code> user's information by its
+                            <code>id</code> in the database
+                          </td>
+
+                          <td>
+                            https://toysrestapi.cyclic.app/users/63f6ca4c146b478891fb0ad8
+                          </td>
+                          <td>
+                            <p class="code my-3 w-25">JSON</p>
+                            <pre class="jsondata">
+{    
+  "name": "James Griffin",                        
+  "email": "example2@gmail.com",
+  "password": "123445",
+}
+                            </pre>
+                          </td>
+                          <td>
+                            <table class="table-responsive">
+                              <thead>
+                                <tr>
+                                  <th class="px-4" scope="col">Key</th>
+                                  <th class="px-4" scope="col">Value</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="px-4">
+                                    <code>x-api-key</code>
+                                  </td>
+                                  <td class="px-4"><code>token</code></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="py-5">
+                    <h4 class="text-start">
+                      <b><code>DELETE</code></b> request
+                    </h4>
+
+                    <code class=""> https://toysrestapi.cyclic.app/users/</code
+                    ><span
+                      class="code"
+                      style="color: #19cc37; background: #d1ffd186"
+                      >{user id}</span
+                    >
+
+                    <p>
+                      Here all params you can pass in this
+                      <b><code>DELETE</code></b> endpoint
+                    </p>
+
+                    <div class="border-start border-2 border-info ps-4">
+                      <p>
+                        User can delete <bold class="fw-bold">only</bold> its
+                        created profile, only user with <code>admin</code> role
+                        can delete any item he wants
+                      </p>
+                    </div>
+                  </div>
+                  <div class="table-responsive" data-aos="fade-up">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th scope="col">Method</th>
+                          <th scope="col">Description</th>
+                          <th scope="col">Request <code>URL</code> example</th>
+
+                          <th scope="col">
+                            Request <code>header</code> example
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <b><code>DELETE</code></b>
+                          </td>
+
+                          <td>
+                            <code>Deletes</code> user's profile
+                            <code>by id</code> from the database
+                          </td>
+
+                          <td>
+                            https://toysrestapi.cyclic.app/users/63f6ca4c146b478891fb0ad8
+                          </td>
+
+                          <td>
+                            <table class="table-responsive">
+                              <thead>
+                                <tr>
+                                  <th class="px-4" scope="col">Key</th>
+                                  <th class="px-4" scope="col">Value</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="px-4">
+                                    <code>x-api-key</code>
+                                  </td>
+                                  <td class="px-4"><code>token</code></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
                         </tr>
                       </tbody>
                     </table>
