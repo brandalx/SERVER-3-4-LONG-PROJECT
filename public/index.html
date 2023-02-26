@@ -1375,56 +1375,84 @@
                         </tbody>
                       </table>
                     </div>
-                    <div class="py-3">
-                      <h4 class="text-start">
-                        <span class="fw-bold text-danger">*</span>POST request
-                      </h4>
 
-                      <code class="">
-                        https://toysrestapi.cyclic.app/toys
-                      </code>
-                      <p>Here all params you can pass in this POST endpoint</p>
-                      <p>
-                        <bold class="fw-bold">
-                          <span class="fw-bold text-danger">*</span> Please
-                          mention:</bold
-                        >
-                        for this type request you should create user in
-                        <code>/users</code> route and have valid
-                        <code class="fw-bold">token</code>. Follow to
-                        <code>/user</code>
-                        section to get all related information
-                      </p>
-                    </div>
-                    <div class="table-responsive" data-aos="fade-up">
-                      <table class="table table-hover">
-                        <thead>
-                          <tr>
-                            <th scope="col">Method</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">
-                              Request <code>URL</code> example
-                            </th>
-                            <th scope="col">
-                              Request <code>body</code> example
-                            </th>
-                            <th scope="col">
-                              Request <code>header</code> example
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>POST</td>
+                    <h4 class="text-start mt-5">GET request for search</h4>
 
-                            <td>
-                              <code>Posts</code> new toys into the database
-                            </td>
+                    <code class="">
+                      https://toysrestapi.cyclic.app/toys/search?s=</code
+                    ><span
+                      class="code"
+                      style="color: #19cc37; background: #d1ffd186"
+                      >{search}</span
+                    >
 
-                            <td>https://toysrestapi.cyclic.app/toys</td>
-                            <td>
-                              <p class="code my-3 w-25">JSON</p>
-                              <pre class="jsondata">
+                    <p>Here all params you can pass in this GET endpoint</p>
+                  </div>
+                  <div class="table-responsive mb-5" data-aos="fade-up">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th scope="col">Method</th>
+                          <th scope="col">Description</th>
+                          <th scope="col">Request</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>GET</td>
+
+                          <td>
+                            Search passed query in <code>info</code> and
+                            <code>name</code> keys
+                          </td>
+                          <td>https://toysrestapi/toys/search/?s=shuttle</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="py-3">
+                    <h4 class="text-start">
+                      <span class="fw-bold text-danger">*</span>POST request
+                    </h4>
+
+                    <code class=""> https://toysrestapi.cyclic.app/toys </code>
+                    <p>Here all params you can pass in this POST endpoint</p>
+                    <p>
+                      <bold class="fw-bold">
+                        <span class="fw-bold text-danger">*</span> Please
+                        mention:</bold
+                      >
+                      for this type request you should create user in
+                      <code>/users</code> route and have valid
+                      <code class="fw-bold">token</code>. Follow to
+                      <code>/user</code>
+                      section to get all related information
+                    </p>
+                  </div>
+                  <div class="table-responsive" data-aos="fade-up">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th scope="col">Method</th>
+                          <th scope="col">Description</th>
+                          <th scope="col">Request <code>URL</code> example</th>
+                          <th scope="col">Request <code>body</code> example</th>
+                          <th scope="col">
+                            Request <code>header</code> example
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>POST</td>
+
+                          <td><code>Posts</code> new toys into the database</td>
+
+                          <td>https://toysrestapi.cyclic.app/toys</td>
+                          <td>
+                            <p class="code my-3 w-25">JSON</p>
+                            <pre class="jsondata">
 {
    "name": "Lego Ninjago Golden Dragon", 
   "info": "This set includes a golden dragon, three
@@ -1434,96 +1462,91 @@
   "https://images-na.ssl-images-amazon.com/images/I/81nA1edvR9L._AC_SL1500_.jpg",
   "price": 19.99
  }
-                            </pre
-                              >
-                            </td>
-                            <td>
-                              <table class="table-responsive">
-                                <thead>
-                                  <tr>
-                                    <th class="px-4" scope="col">Key</th>
-                                    <th class="px-4" scope="col">Value</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <td class="px-4">
-                                      <code>x-api-key</code>
-                                    </td>
-                                    <td class="px-4"><code>token</code></td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
+                            </pre>
+                          </td>
+                          <td>
+                            <table class="table-responsive">
+                              <thead>
+                                <tr>
+                                  <th class="px-4" scope="col">Key</th>
+                                  <th class="px-4" scope="col">Value</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="px-4">
+                                    <code>x-api-key</code>
+                                  </td>
+                                  <td class="px-4"><code>token</code></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
 
-                    <div class="py-5">
-                      <h4 class="text-start">
-                        <span class="fw-bold text-danger">*</span>PUT request
-                      </h4>
+                  <div class="py-5">
+                    <h4 class="text-start">
+                      <span class="fw-bold text-danger">*</span>PUT request
+                    </h4>
 
-                      <code class=""> https://toysrestapi.cyclic.app/toys/</code
-                      ><span
-                        class="code"
-                        style="color: #19cc37; background: #d1ffd186"
-                        >{toy id}</span
+                    <code class=""> https://toysrestapi.cyclic.app/toys/</code
+                    ><span
+                      class="code"
+                      style="color: #19cc37; background: #d1ffd186"
+                      >{toy id}</span
+                    >
+
+                    <p>Here all params you can pass in this PUT endpoint</p>
+                    <p>
+                      <bold class="fw-bold">
+                        <span class="fw-bold text-danger">*</span> Please
+                        mention:</bold
                       >
-
-                      <p>Here all params you can pass in this PUT endpoint</p>
+                      for this type request you should create user in
+                      <code>/users</code> route and have valid
+                      <code class="fw-bold">token</code>. Follow to
+                      <code>/user</code>
+                      section to get all related information
+                    </p>
+                    <div class="border-start border-2 border-info ps-4">
                       <p>
-                        <bold class="fw-bold">
-                          <span class="fw-bold text-danger">*</span> Please
-                          mention:</bold
-                        >
-                        for this type request you should create user in
-                        <code>/users</code> route and have valid
-                        <code class="fw-bold">token</code>. Follow to
-                        <code>/user</code>
-                        section to get all related information
+                        User can delete <bold class="fw-bold">only</bold> its
+                        created toy item, only user with <code>admin</code> role
+                        can delete any item he wants
                       </p>
-                      <div class="border-start border-2 border-info ps-4">
-                        <p>
-                          User can delete <bold class="fw-bold">only</bold> its
-                          created toy item, only user with
-                          <code>admin</code> role can delete any item he wants
-                        </p>
-                      </div>
                     </div>
-                    <div class="table-responsive" data-aos="fade-up">
-                      <table class="table table-hover">
-                        <thead>
-                          <tr>
-                            <th scope="col">Method</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">
-                              Request <code>URL</code> example
-                            </th>
-                            <th scope="col">
-                              Request <code>body</code> example
-                            </th>
-                            <th scope="col">
-                              Request <code>header</code> example
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>PUT</td>
+                  </div>
+                  <div class="table-responsive" data-aos="fade-up">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th scope="col">Method</th>
+                          <th scope="col">Description</th>
+                          <th scope="col">Request <code>URL</code> example</th>
+                          <th scope="col">Request <code>body</code> example</th>
+                          <th scope="col">
+                            Request <code>header</code> example
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>PUT</td>
 
-                            <td>
-                              <code>Updates</code> user's created toy
-                              <code>by id</code> in the database
-                            </td>
+                          <td>
+                            <code>Updates</code> user's created toy
+                            <code>by id</code> in the database
+                          </td>
 
-                            <td>
-                              https://toysrestapi.cyclic.app/toys/63f67afa1c859b4d063e03f4
-                            </td>
-                            <td>
-                              <p class="code my-3 w-25">JSON</p>
-                              <pre class="jsondata">
+                          <td>
+                            https://toysrestapi.cyclic.app/toys/63f67afa1c859b4d063e03f4
+                          </td>
+                          <td>
+                            <p class="code my-3 w-25">JSON</p>
+                            <pre class="jsondata">
  {
   "name": "Lego City Space Mars Research Shuttle 2.0",
   "info": "This set includes a new space shuttle, five astronaut minifigures, and a two rovers",
@@ -1531,141 +1554,135 @@
   "img_url": "https://images-na.ssl-images-amazon.com/images/I/81YyWWuB7zL._AC_SL1500_.jpg",
   "price": 10.00       
 }
-                            </pre
-                              >
-                            </td>
-                            <td>
-                              <table class="table-responsive">
-                                <thead>
-                                  <tr>
-                                    <th class="px-4" scope="col">Key</th>
-                                    <th class="px-4" scope="col">Value</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <td class="px-4">
-                                      <code>x-api-key</code>
-                                    </td>
-                                    <td class="px-4"><code>token</code></td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
+                            </pre>
+                          </td>
+                          <td>
+                            <table class="table-responsive">
+                              <thead>
+                                <tr>
+                                  <th class="px-4" scope="col">Key</th>
+                                  <th class="px-4" scope="col">Value</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="px-4">
+                                    <code>x-api-key</code>
+                                  </td>
+                                  <td class="px-4"><code>token</code></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
 
-                    <div class="py-5">
-                      <h4 class="text-start">
-                        <span class="fw-bold text-danger">*</span>DELETE request
-                      </h4>
-
-                      <code class=""> https://toysrestapi.cyclic.app/toys/</code
-                      ><span
-                        class="code"
-                        style="color: #19cc37; background: #d1ffd186"
-                        >{toy id}</span
-                      >
-
-                      <p>
-                        Here all params you can pass in this DELETE endpoint
-                      </p>
-                      <p>
-                        <bold class="fw-bold">
-                          <span class="fw-bold text-danger">*</span> Please
-                          mention:</bold
-                        >
-                        for this type request you should create user in
-                        <code>/users</code> route and have valid
-                        <code class="fw-bold">token</code>. Follow to
-                        <code>/user</code>
-                        section to get all related information
-                      </p>
-                      <div class="border-start border-2 border-info ps-4">
-                        <p>
-                          User can delete <bold class="fw-bold">only</bold> its
-                          created toy item, only user with
-                          <code>admin</code> role can delete any item he wants
-                        </p>
-                      </div>
-                    </div>
-                    <div class="table-responsive" data-aos="fade-up">
-                      <table class="table table-hover">
-                        <thead>
-                          <tr>
-                            <th scope="col">Method</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">
-                              Request <code>URL</code> example
-                            </th>
-
-                            <th scope="col">
-                              Request <code>header</code> example
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>DELETE</td>
-
-                            <td>
-                              <code>Deletes</code> user's created toy
-                              <code>by id</code> from the database
-                            </td>
-
-                            <td>
-                              https://toysrestapi.cyclic.app/toys/63f67afa1c859b4d063e03f4
-                            </td>
-
-                            <td>
-                              <table class="table-responsive">
-                                <thead>
-                                  <tr>
-                                    <th class="px-4" scope="col">Key</th>
-                                    <th class="px-4" scope="col">Value</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <td class="px-4">
-                                      <code>x-api-key</code>
-                                    </td>
-                                    <td class="px-4"><code>token</code></td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-
-                    <h4 data-aos="fade-up" class="pt-5" style="color: #fc5c7c">
-                      /users
+                  <div class="py-5">
+                    <h4 class="text-start">
+                      <span class="fw-bold text-danger">*</span>DELETE request
                     </h4>
 
-                    <div class="table-responsive" data-aos="fade-up">
-                      <table class="table table-hover">
-                        <thead>
-                          <tr>
-                            <th>Method</th>
-                            <th>Action</th>
-                            <th>Endpoint</th>
-                            <th>Request example</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>Shows all toys</td>
-                            <td>https://toysrestapi.cyclic.app/toys</td>
-                            <td>GET</td>
-                            <td>GET</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                    <code class=""> https://toysrestapi.cyclic.app/toys/</code
+                    ><span
+                      class="code"
+                      style="color: #19cc37; background: #d1ffd186"
+                      >{toy id}</span
+                    >
+
+                    <p>Here all params you can pass in this DELETE endpoint</p>
+                    <p>
+                      <bold class="fw-bold">
+                        <span class="fw-bold text-danger">*</span> Please
+                        mention:</bold
+                      >
+                      for this type request you should create user in
+                      <code>/users</code> route and have valid
+                      <code class="fw-bold">token</code>. Follow to
+                      <code>/user</code>
+                      section to get all related information
+                    </p>
+                    <div class="border-start border-2 border-info ps-4">
+                      <p>
+                        User can delete <bold class="fw-bold">only</bold> its
+                        created toy item, only user with <code>admin</code> role
+                        can delete any item he wants
+                      </p>
                     </div>
+                  </div>
+                  <div class="table-responsive" data-aos="fade-up">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th scope="col">Method</th>
+                          <th scope="col">Description</th>
+                          <th scope="col">Request <code>URL</code> example</th>
+
+                          <th scope="col">
+                            Request <code>header</code> example
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>DELETE</td>
+
+                          <td>
+                            <code>Deletes</code> user's created toy
+                            <code>by id</code> from the database
+                          </td>
+
+                          <td>
+                            https://toysrestapi.cyclic.app/toys/63f67afa1c859b4d063e03f4
+                          </td>
+
+                          <td>
+                            <table class="table-responsive">
+                              <thead>
+                                <tr>
+                                  <th class="px-4" scope="col">Key</th>
+                                  <th class="px-4" scope="col">Value</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="px-4">
+                                    <code>x-api-key</code>
+                                  </td>
+                                  <td class="px-4"><code>token</code></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h4 data-aos="fade-up" class="pt-5" style="color: #fc5c7c">
+                    /users
+                  </h4>
+
+                  <div class="table-responsive" data-aos="fade-up">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Method</th>
+                          <th>Action</th>
+                          <th>Endpoint</th>
+                          <th>Request example</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Shows all toys</td>
+                          <td>https://toysrestapi.cyclic.app/toys</td>
+                          <td>GET</td>
+                          <td>GET</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
