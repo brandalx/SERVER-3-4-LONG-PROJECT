@@ -1375,19 +1375,20 @@
                         </tbody>
                       </table>
                     </div>
-
-                    <h4 class="text-start mt-5">GET request for search</h4>
-
-                    <code class="">
-                      https://toysrestapi.cyclic.app/toys/search?s=</code
-                    ><span
-                      class="code"
-                      style="color: #19cc37; background: #d1ffd186"
-                      >{search}</span
-                    >
-
-                    <p>Here all params you can pass in this GET endpoint</p>
                   </div>
+
+                  <h4 class="text-start mt-5">GET request for search</h4>
+
+                  <code class="">
+                    https://toysrestapi.cyclic.app/toys/search?s=</code
+                  ><span
+                    class="code"
+                    style="color: #19cc37; background: #d1ffd186"
+                    >{search}</span
+                  >
+
+                  <p>Here all params you can pass in this GET endpoint</p>
+
                   <div class="table-responsive mb-5" data-aos="fade-up">
                     <table class="table table-hover">
                       <thead>
@@ -1406,6 +1407,44 @@
                             <code>name</code> keys
                           </td>
                           <td>https://toysrestapi/toys/search/?s=shuttle</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h4 class="text-start mt-5">
+                    GET request for search by category
+                  </h4>
+
+                  <code class="">
+                    https://toysrestapi.cyclic.app/toys/category/</code
+                  ><span
+                    class="code"
+                    style="color: #19cc37; background: #d1ffd186"
+                    >{category name}</span
+                  >
+
+                  <p>Here all params you can pass in this GET endpoint</p>
+
+                  <div class="table-responsive mb-5" data-aos="fade-up">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th scope="col">Method</th>
+                          <th scope="col">Description</th>
+                          <th scope="col">Request</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>GET</td>
+
+                          <td>
+                            Search passed param in <code>category</code> key
+                          </td>
+                          <td>
+                            https://toysrestapi.cyclic.app/toys/category/figures
+                          </td>
                         </tr>
                       </tbody>
                     </table>
