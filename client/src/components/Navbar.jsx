@@ -84,7 +84,7 @@ export const Navbar = () => {
             </ul>
           </div>
           <div className="col-lg-2" data-aos="fade-left">
-            <a target="_blank" href="https://toysrestapi.cyclic.app/toys">
+            <a target="_blank" href="https://toysrestapi.cyclic.app">
               <button className="mainbtn">
                 Documentation
                 <svg

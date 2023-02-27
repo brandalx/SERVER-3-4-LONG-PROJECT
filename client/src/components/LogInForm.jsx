@@ -64,19 +64,19 @@ const LogInForm = () => (
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 clip-rule="evenodd"
                 d="M14.5 13H2.5V11H14.5V13Z"
                 fill="#FF4A6E"
               />
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 clip-rule="evenodd"
                 d="M11.7071 7.79297L15.2071 11.293C15.5976 11.6835 15.5976 12.3167 15.2071 12.7072L11.7071 16.2072L10.2929 14.793L13.0858 12.0001L10.2929 9.20718L11.7071 7.79297Z"
                 fill="#FF4A6E"
               />
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 clip-rule="evenodd"
                 d="M13.5 5C10.7824 5 8.42477 6.54837 7.2643 8.81567L5.48395 7.90442C6.97309 4.995 10.0027 3 13.5 3C18.4705 3 22.5 7.02944 22.5 12C22.5 16.9706 18.4705 21 13.5 21C10.0027 21 6.97309 19.005 5.48395 16.0956L7.2643 15.1843C8.42477 17.4516 10.7824 19 13.5 19C17.366 19 20.5 15.866 20.5 12C20.5 8.13401 17.366 5 13.5 5Z"
                 fill="#FF4A6E"

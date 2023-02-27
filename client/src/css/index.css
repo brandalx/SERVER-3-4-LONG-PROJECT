@@ -60,6 +60,9 @@ input {
   background: #aaff9933;
   /* background: #ffc3cf8a; */
 }
+label {
+  color: #747474;
+}
 
 input::placeholder {
   font-weight: normal;
@@ -69,8 +72,16 @@ input::placeholder {
 input:focus {
   color: white;
   transition: all 0.3s;
-  outline: none;
-  border: #ff4a6e 1px solid;
+  outline: none !important;
+  border: #ff4a6e 1px solid !important;
+  box-shadow: -1px 0px 2px 5px rgba(255, 74, 110, 0.2) !important;
+}
+input:active {
+  color: white;
+  transition: all 0.3s;
+  outline: none !important;
+  border: #ff4a6e 1px solid !important;
+  box-shadow: -1px 0px 2px 5px rgba(255, 74, 110, 0.2) !important;
 }
 
 .srchbtn {
