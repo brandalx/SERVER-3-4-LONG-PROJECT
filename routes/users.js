@@ -104,7 +104,10 @@ router.put("/:id", auth, async (req, res) => {
     return res.status(400).json(validBody.error.details);
   }
   try {
+    paswordnew = await bcrypt.hash(req.body.password, 10);
+    req.body.password = paswordnew;
     let data = await UsersModel.updateOne({ _id: req.tokenData._id }, req.body);
+
     res.json(data);
   } catch (err) {
     console.log(err);
