@@ -5,6 +5,7 @@ import { Main } from "./components/Main";
 import { Footer } from "./components/Footer";
 import CreateUser from "./components/CreateUser";
 import LogInForm from "./components/LogInForm";
+import UserInfo from "./components/UserInfo";
 export function App() {
   return (
     <div className="App">
@@ -15,6 +16,7 @@ export function App() {
         <Main>
           <CreateUser />
           <LogInForm />
+          <UserInfo />
         </Main>
       </div>
 

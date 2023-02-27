@@ -27,15 +27,17 @@ const validate = (values) => {
 
 const onSubmit = async (values, { setSubmitting, setStatus }) => {
   try {
-    const response = await axios.post(
-      "https://toysrestapi.cyclic.app/users/login",
-      values
+    const response = await axios.get(
+      "https://toysrestapi.cyclic.app/users/userInfo",
+      {
+        headers: {
+          "x-api-key": localStorage.getItem("x-api-key"),
+        },
+      }
     );
+
     console.log(response.data);
-    const token = response.data.token;
-    localStorage.clear();
-    localStorage.setItem("x-api-key", token);
-    setStatus({ success: true });
+    setStatus({ success: true, data: response.data });
   } catch (error) {
     console.error(error);
     setStatus({
@@ -47,14 +49,14 @@ const onSubmit = async (values, { setSubmitting, setStatus }) => {
   setSubmitting(false);
 };
 
-const LogInForm = () => (
+const UserInfo = () => (
   <Formik initialValues={initialValues} validate={validate} onSubmit={onSubmit}>
     {({ isSubmitting, status }) => (
       <Form className="form-group">
         {" "}
         <div id="quickstart" className="container py-5">
           <h2 className=" text-center">
-            Log in to get your token{" "}
+            Get User Info{" "}
             <svg
               className="move-on-hover__item4"
               width="24"
@@ -66,19 +68,37 @@ const LogInForm = () => (
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"
-                d="M14.5 13H2.5V11H14.5V13Z"
+                d="M4 2C4 1.44772 4.44772 1 5 1H21C21.5523 1 22 1.44772 22 2V22C22 22.5523 21.5523 23 21 23H5C4.44772 23 4 22.5523 4 22V2ZM6 3V21H20V3H6Z"
                 fill="#FF4A6E"
               />
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"
-                d="M11.7071 7.79297L15.2071 11.293C15.5976 11.6835 15.5976 12.3167 15.2071 12.7072L11.7071 16.2072L10.2929 14.793L13.0858 12.0001L10.2929 9.20718L11.7071 7.79297Z"
+                d="M2 5H5V7H2V5Z"
                 fill="#FF4A6E"
               />
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"
-                d="M13.5 5C10.7824 5 8.42477 6.54837 7.2643 8.81567L5.48395 7.90442C6.97309 4.995 10.0027 3 13.5 3C18.4705 3 22.5 7.02944 22.5 12C22.5 16.9706 18.4705 21 13.5 21C10.0027 21 6.97309 19.005 5.48395 16.0956L7.2643 15.1843C8.42477 17.4516 10.7824 19 13.5 19C17.366 19 20.5 15.866 20.5 12C20.5 8.13401 17.366 5 13.5 5Z"
+                d="M2 11H5V13H2V11Z"
+                fill="#FF4A6E"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M2 17H5V19H2V17Z"
+                fill="#FF4A6E"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M13 6.5C12.1716 6.5 11.5 7.17157 11.5 8C11.5 8.82843 12.1716 9.5 13 9.5C13.8284 9.5 14.5 8.82843 14.5 8C14.5 7.17157 13.8284 6.5 13 6.5ZM9.5 8C9.5 6.067 11.067 4.5 13 4.5C14.933 4.5 16.5 6.067 16.5 8C16.5 9.933 14.933 11.5 13 11.5C11.067 11.5 9.5 9.933 9.5 8Z"
+                fill="#FF4A6E"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.12602 17.5H16.874C16.4299 15.7748 14.8638 14.5 13 14.5C11.1362 14.5 9.57006 15.7748 9.12602 17.5ZM7 18.5C7 15.1863 9.68629 12.5 13 12.5C16.3137 12.5 19 15.1863 19 18.5C19 19.0523 18.5523 19.5 18 19.5H8C7.44772 19.5 7 19.0523 7 18.5Z"
                 fill="#FF4A6E"
               />
             </svg>
@@ -134,4 +154,4 @@ const LogInForm = () => (
   </Formik>
 );
 
-export default LogInForm;
+export default UserInfo;
