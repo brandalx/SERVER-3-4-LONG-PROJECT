@@ -3,6 +3,7 @@ import LoadingLine from "./components/Loadinline";
 import { Header } from "./components/Header";
 import { Main } from "./components/Main";
 import { Footer } from "./components/Footer";
+import { CreateUser } from "./components/CreateUser";
 export function App() {
   return (
     <div className="App">
@@ -10,7 +11,9 @@ export function App() {
 
       <div className="wrapper">
         <Header />
-        <Main />
+        <Main>
+          <CreateUser />
+        </Main>
       </div>
 
       <Footer />

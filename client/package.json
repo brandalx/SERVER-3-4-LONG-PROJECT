@@ -12,6 +12,7 @@
     "@popperjs/core": "^2.11.6",
     "aos": "^3.0.0-beta.6",
     "bootstrap": "^5.2.3",
+    "formik": "^2.2.9",
     "parcel": "latest",
     "process": "^0.11.10",
     "react": "^18.2.0",
