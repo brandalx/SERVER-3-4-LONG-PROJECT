@@ -193,6 +193,16 @@ footer {
   -moz-animation: AnimationName 9s ease infinite;
   animation: AnimationName 9s ease infinite;
 }
+.submitbtn {
+  transition: all 0.3s;
+  background: #fc5c7c;
+  border: none;
+}
+.submitbtn:hover {
+  transition: all 0.3s;
+  background: #ff2c56;
+  border: none;
+}
 
 @-webkit-keyframes AnimationName {
   0% {

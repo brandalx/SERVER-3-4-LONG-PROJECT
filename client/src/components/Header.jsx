@@ -132,7 +132,7 @@ export const Header = () => {
               <div className="col" data-aos="fade-up" data-aos-duration="800">
                 <a
                   className="text-decoration-none text-dark"
-                  href="#userinterface"
+                  href="#quickstart"
                 >
                   <div
                     className="card cardintro rounded-4 border-0 h-100"
