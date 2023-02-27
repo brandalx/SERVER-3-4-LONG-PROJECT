@@ -141,15 +141,15 @@ const ProductTable = () => {
               )}
             </div>
           </div>
-          <Table striped bordered hover>
+          <Table striped bordered hover responsive>
             <thead>
               <tr>
-                <th>Name</th>
-                <th>Info</th>
-                <th>Category</th>
-                <th>Image</th>
-                <th>Price</th>
-                <th>Date Created</th>
+                <th col>Name</th>
+                <th col>Info</th>
+                <th col>Category</th>
+                <th col>Image</th>
+                <th col>Price</th>
+                <th col>Date Created</th>
               </tr>
             </thead>
             <tbody>
