@@ -31,12 +31,19 @@ const validate = (values) => {
 };
 
 const onSubmit = async (values, { setSubmitting, setStatus }) => {
+  const config = {
+    headers: {
+      "x-api-key": localStorage.getItem("x-api-key"),
+    },
+  };
   try {
     const response = await axios.put(
-      "https://toysrestapi.cyclic.app/users/63fc77178de4f7534a3162c2",
-      values
+      `https://toysrestapi.cyclic.app/users/${userid}`,
+      values,
+      config
     );
     console.log(response.data);
+
     setStatus({ success: true });
   } catch (error) {
     console.error(error);
@@ -45,7 +52,7 @@ const onSubmit = async (values, { setSubmitting, setStatus }) => {
 
   setSubmitting(false);
 };
-
+const userid = localStorage.getItem("userid");
 const EditUser = () => (
   <Formik initialValues={initialValues} validate={validate} onSubmit={onSubmit}>
     {({ isSubmitting, status }) => (
@@ -125,7 +132,7 @@ const EditUser = () => (
               </button>
 
               {status && status.success && (
-                <div className="text-success">User created successfully!</div>
+                <div className="text-success">User info updated!</div>
               )}
               {status && !status.success && (
                 <div className="text-danger">

@@ -69,7 +69,9 @@ router.post("/login", async (req, res) => {
     }
     // The user will be sent a token that will allow him to be in areas that require permission;
     let newToken = createToken(user._id, user.role);
+
     res.json({ token: newToken });
+    // res.redirect(`/userInfo?token=${newToken}`);
   } catch (err) {
     console.log(err);
     res.status(502).json({ err });

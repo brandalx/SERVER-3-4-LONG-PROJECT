@@ -35,6 +35,7 @@ const onSubmit = async (values, { setSubmitting, setStatus }) => {
     const token = response.data.token;
     localStorage.clear();
     localStorage.setItem("x-api-key", token);
+
     setStatus({ success: true });
   } catch (error) {
     console.error(error);

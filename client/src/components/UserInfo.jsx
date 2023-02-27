@@ -163,6 +163,7 @@ const UserInfo = () => (
 
                       <p>Role: {status.data.role}</p>
                       <p>Your id: {status.data._id}</p>
+                      {localStorage.setItem("userid", status.data._id)}
                     </div>
                   </div>
                 </div>
