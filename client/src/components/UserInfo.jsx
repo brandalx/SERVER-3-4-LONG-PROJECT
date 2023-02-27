@@ -36,7 +36,7 @@ const onSubmit = async (values, { setSubmitting, setStatus }) => {
       }
     );
 
-    console.log(response.data);
+    // console.log(response.data);
     // let finaluserinfo = {};
     // finaluserinfo = { data: response.data };
     setStatus({ success: true, data: response.data });
@@ -44,7 +44,8 @@ const onSubmit = async (values, { setSubmitting, setStatus }) => {
     console.error(error);
     setStatus({
       success: false,
-      message: error.response.data.msg || error.response.data.err,
+      message:
+        error.response.data.msg || error.response.data.err || response.message,
     });
   }
 
