@@ -54,7 +54,7 @@ const onSubmit = async (values, { setSubmitting, setStatus }) => {
 const UserInfo = () => (
   <Formik initialValues={initialValues} validate={validate} onSubmit={onSubmit}>
     {({ isSubmitting, status }) => (
-      <Form className="form-group">
+      <Form className="form-group pb-5">
         {" "}
         <div id="quickstart" className="container py-5">
           <h2 className=" text-center">
@@ -155,13 +155,14 @@ const UserInfo = () => (
           <div className="container">
             {status && status.success && (
               <div className="row">
-                <div className="col-4"></div>
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title"> Name: {status.data.name} </h5>
-                    <p class="card-text">Email: {status.data.email}</p>
+                <div className="col-lg-4 col-md-6 col-sm-8 mx-auto mx-auto">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title"> Name: {status.data.name} </h5>
+                      <p class="card-text">Email: {status.data.email}</p>
 
-                    <p>Role: {status.data.role}</p>
+                      <p>Role: {status.data.role}</p>
+                    </div>
                   </div>
                 </div>
               </div>
