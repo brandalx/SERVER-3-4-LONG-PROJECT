@@ -7,6 +7,7 @@ import CreateUser from "./components/CreateUser";
 import LogInForm from "./components/LogInForm";
 import UserInfo from "./components/UserInfo";
 import EditUser from "./components/EditUser";
+import ProductTable from "./components/GetToysTable";
 export function App() {
   return (
     <div className="App">
@@ -19,6 +20,7 @@ export function App() {
           <LogInForm />
           <UserInfo />
           <EditUser />
+          <ProductTable />
         </Main>
       </div>
 

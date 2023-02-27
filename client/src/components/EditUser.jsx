@@ -118,7 +118,7 @@ const EditUser = () => (
                   type="password"
                   name="password"
                 />
-                <small id="emailHelp" class="form-text text-muted">
+                <small id="emailHelp" className="form-text text-muted">
                   <ErrorMessage name="password" component="div" />
                 </small>
               </div>

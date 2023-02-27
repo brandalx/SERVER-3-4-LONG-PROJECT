@@ -70,37 +70,37 @@ const UserInfo = () => (
             >
               <path
                 fillRule="evenodd"
-                clip-rule="evenodd"
+                clipRule="evenodd"
                 d="M4 2C4 1.44772 4.44772 1 5 1H21C21.5523 1 22 1.44772 22 2V22C22 22.5523 21.5523 23 21 23H5C4.44772 23 4 22.5523 4 22V2ZM6 3V21H20V3H6Z"
                 fill="#FF4A6E"
               />
               <path
                 fillRule="evenodd"
-                clip-rule="evenodd"
+                clipRule="evenodd"
                 d="M2 5H5V7H2V5Z"
                 fill="#FF4A6E"
               />
               <path
                 fillRule="evenodd"
-                clip-rule="evenodd"
+                clipRule="evenodd"
                 d="M2 11H5V13H2V11Z"
                 fill="#FF4A6E"
               />
               <path
                 fillRule="evenodd"
-                clip-rule="evenodd"
+                clipRule="evenodd"
                 d="M2 17H5V19H2V17Z"
                 fill="#FF4A6E"
               />
               <path
                 fillRule="evenodd"
-                clip-rule="evenodd"
+                clipRule="evenodd"
                 d="M13 6.5C12.1716 6.5 11.5 7.17157 11.5 8C11.5 8.82843 12.1716 9.5 13 9.5C13.8284 9.5 14.5 8.82843 14.5 8C14.5 7.17157 13.8284 6.5 13 6.5ZM9.5 8C9.5 6.067 11.067 4.5 13 4.5C14.933 4.5 16.5 6.067 16.5 8C16.5 9.933 14.933 11.5 13 11.5C11.067 11.5 9.5 9.933 9.5 8Z"
                 fill="#FF4A6E"
               />
               <path
                 fillRule="evenodd"
-                clip-rule="evenodd"
+                clipRule="evenodd"
                 d="M9.12602 17.5H16.874C16.4299 15.7748 14.8638 14.5 13 14.5C11.1362 14.5 9.57006 15.7748 9.12602 17.5ZM7 18.5C7 15.1863 9.68629 12.5 13 12.5C16.3137 12.5 19 15.1863 19 18.5C19 19.0523 18.5523 19.5 18 19.5H8C7.44772 19.5 7 19.0523 7 18.5Z"
                 fill="#FF4A6E"
               />
@@ -160,7 +160,7 @@ const UserInfo = () => (
                   <div class="card">
                     <div class="card-body">
                       <h5 class="card-title"> Name: {status.data.name} </h5>
-                      <p class="card-text">Email: {status.data.email}</p>
+                      <p className="card-text">Email: {status.data.email}</p>
 
                       <p>Role: {status.data.role}</p>
                       <p>Your id: {status.data._id}</p>

@@ -215,6 +215,19 @@ footer {
   border: none;
 }
 
+.submitbtn2 {
+  transition: all 0.3s;
+  color: #fc5c7c;
+  border: #fc5c7c solid 1px;
+  background: none;
+}
+.submitbtn2:hover {
+  transition: all 0.3s;
+  background: #fc5c7c;
+  color: #ffffff;
+  border: #fc5c7c solid 1px;
+}
+
 @-webkit-keyframes AnimationName {
   0% {
     background-position: 0% 50%;
