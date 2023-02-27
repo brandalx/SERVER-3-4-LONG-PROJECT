@@ -83,6 +83,21 @@ router.post("/login", async (req, res) => {
 // auth -> middleware function that runs before the router's main function
 
 router.get("/userInfo", auth, async (req, res) => {
+  // !TEST
+  //this is data to get user info with help of token and email/password
+  let user = await UsersModel.findOne({ email: req.body.email });
+  if (!user) {
+    return res.status(401).json({ err: "Email not found / user dont exist" });
+  }
+  // Checks if the encrypted password in the database matches the password in body sended, if not throws error
+  let validPassword = await bcrypt.compare(req.body.password, user.password);
+  if (!validPassword) {
+    return res.status(401).json({ err: "Password you're entered is wrong" });
+  }
+
+  //this is data to get user info with help of token and email/password
+  // !TEST END
+
   try {
     let user = await UsersModel.findOne(
       //req.tokedata is manual value whic we passed as global from auth

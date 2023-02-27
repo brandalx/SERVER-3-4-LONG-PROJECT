@@ -140,11 +140,11 @@ const UserInfo = () => (
               </button>
 
               {status && status.success && (
-                <div className="text-success">Login successfully!</div>
+                <div className="text-success">Correct data</div>
               )}
               {status && !status.success && (
                 <div className="text-danger">
-                  Failed to log in, reason:: {status.message}
+                  Failed to recognize your email / password {status.message}
                 </div>
               )}
             </div>
