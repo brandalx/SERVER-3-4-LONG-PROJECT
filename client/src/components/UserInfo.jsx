@@ -37,6 +37,8 @@ const onSubmit = async (values, { setSubmitting, setStatus }) => {
     );
 
     console.log(response.data);
+    // let finaluserinfo = {};
+    // finaluserinfo = { data: response.data };
     setStatus({ success: true, data: response.data });
   } catch (error) {
     console.error(error);
@@ -148,6 +150,23 @@ const UserInfo = () => (
             </div>
           </div>
           {/* <hr className="w-75 mx-auto" style={{ color: "#ff4a6e" }} /> */}
+        </div>
+        <div className="container-fluid">
+          <div className="container">
+            {status && status.success && (
+              <div className="row">
+                <div className="col-4"></div>
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title"> Name: {status.data.name} </h5>
+                    <p class="card-text">Email: {status.data.email}</p>
+
+                    <p>Role: {status.data.role}</p>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </Form>
     )}
