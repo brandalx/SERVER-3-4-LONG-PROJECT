@@ -3,17 +3,12 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import axios from "axios";
 
 const initialValues = {
-  name: "",
   email: "",
   password: "",
 };
 
 const validate = (values) => {
   const errors = {};
-
-  if (!values.name) {
-    errors.name = "Required";
-  }
 
   if (!values.email) {
     errors.email = "Required";
@@ -33,29 +28,33 @@ const validate = (values) => {
 const onSubmit = async (values, { setSubmitting, setStatus }) => {
   try {
     const response = await axios.post(
-      "https://toysrestapi.cyclic.app/users",
+      "https://toysrestapi.cyclic.app/users/login",
       values
     );
     console.log(response.data);
+    const token = response.data.token;
+    localStorage.setItem("x-api-key", token);
     setStatus({ success: true });
   } catch (error) {
     console.error(error);
-    setStatus({ success: false, message: error.response.data.msg });
+    setStatus({
+      success: false,
+      message: error.response.data.msg || error.response.data.err,
+    });
   }
 
   setSubmitting(false);
 };
 
-const CreateUser = () => (
+const LogInForm = () => (
   <Formik initialValues={initialValues} validate={validate} onSubmit={onSubmit}>
     {({ isSubmitting, status }) => (
       <Form className="form-group">
         {" "}
         <div id="quickstart" className="container py-5">
           <h2 className=" text-center">
-            Lets register first!{" "}
+            Log in to get your token{" "}
             <svg
-              className="move-on-hover__item4"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -65,44 +64,25 @@ const CreateUser = () => (
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"
-                d="M17 12.75C14.6528 12.75 12.75 14.6528 12.75 17C12.75 19.3472 14.6528 21.25 17 21.25C18.3898 21.25 19.6237 20.5837 20.4004 19.55C20.6492 19.2188 21.1193 19.1521 21.4505 19.4009C21.7817 19.6497 21.8484 20.1198 21.5996 20.451C20.5518 21.8456 18.8814 22.75 17 22.75C13.8244 22.75 11.25 20.1756 11.25 17C11.25 13.8244 13.8244 11.25 17 11.25C20.1756 11.25 22.75 13.8244 22.75 17C22.75 17.4142 22.4142 17.75 22 17.75C21.5858 17.75 21.25 17.4142 21.25 17C21.25 14.6528 19.3472 12.75 17 12.75Z"
+                d="M14.5 13H2.5V11H14.5V13Z"
                 fill="#FF4A6E"
               />
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"
-                d="M19.686 14.6398C20.023 14.8805 20.1011 15.3489 19.8603 15.686L17.3603 19.186C17.243 19.3503 17.0643 19.4604 16.8647 19.4912C16.6652 19.5221 16.4616 19.4712 16.3 19.3501L14.3 17.8501C13.9687 17.6015 13.9015 17.1314 14.15 16.8001C14.3986 16.4687 14.8687 16.4015 15.2 16.6501L16.5859 17.6895L18.6397 14.8141C18.8805 14.4771 19.3489 14.399 19.686 14.6398Z"
+                d="M11.7071 7.79297L15.2071 11.293C15.5976 11.6835 15.5976 12.3167 15.2071 12.7072L11.7071 16.2072L10.2929 14.793L13.0858 12.0001L10.2929 9.20718L11.7071 7.79297Z"
                 fill="#FF4A6E"
               />
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"
-                d="M10 2.75C7.92893 2.75 6.25 4.42893 6.25 6.5C6.25 8.57107 7.92893 10.25 10 10.25C12.0711 10.25 13.75 8.57107 13.75 6.5C13.75 4.42893 12.0711 2.75 10 2.75ZM4.75 6.5C4.75 3.60051 7.10051 1.25 10 1.25C12.8995 1.25 15.25 3.60051 15.25 6.5C15.25 9.3995 12.8995 11.75 10 11.75C7.10051 11.75 4.75 9.3995 4.75 6.5Z"
-                fill="#FF4A6E"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M10 11.75C5.99594 11.75 2.75 14.9959 2.75 19C2.75 19.4142 2.41421 19.75 2 19.75C1.58579 19.75 1.25 19.4142 1.25 19C1.25 14.1675 5.16751 10.25 10 10.25C10.4142 10.25 10.75 10.5858 10.75 11C10.75 11.4142 10.4142 11.75 10 11.75Z"
+                d="M13.5 5C10.7824 5 8.42477 6.54837 7.2643 8.81567L5.48395 7.90442C6.97309 4.995 10.0027 3 13.5 3C18.4705 3 22.5 7.02944 22.5 12C22.5 16.9706 18.4705 21 13.5 21C10.0027 21 6.97309 19.005 5.48395 16.0956L7.2643 15.1843C8.42477 17.4516 10.7824 19 13.5 19C17.366 19 20.5 15.866 20.5 12C20.5 8.13401 17.366 5 13.5 5Z"
                 fill="#FF4A6E"
               />
             </svg>
           </h2>
           <div className="row">
             <div className="col-lg-4 col-md-6 col-sm-8 mx-auto">
-              <div className="mb-3">
-                <label className="form-label" htmlFor="name">
-                  Name
-                </label>
-                <Field className="form-control" type="text" name="name" />
-                <small id="emailHelp" class="form-text text-muted">
-                  We'll never share your email with anyone else.
-                </small>
-                <small id="emailHelp" class="form-text text-muted">
-                  <ErrorMessage name="name" component="div" />
-                </small>
-              </div>
-
               <div className="mb-3">
                 <label className="form-label" htmlFor="email">
                   Email
@@ -136,11 +116,11 @@ const CreateUser = () => (
               </button>
 
               {status && status.success && (
-                <div className="text-success">User created successfully!</div>
+                <div className="text-success">Login successfully!</div>
               )}
               {status && !status.success && (
                 <div className="text-danger">
-                  Failed to create user: {status.message}
+                  Failed to log in, reason:: {status.message}
                 </div>
               )}
             </div>
@@ -152,4 +132,4 @@ const CreateUser = () => (
   </Formik>
 );
 
-export default CreateUser;
+export default LogInForm;
