@@ -27,8 +27,8 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: `http://localhost:${process.env.PORT || 3001}`,
-        description: "Cyclic server",
+        url: `${process.env.PORT || 3001}`,
+        description: process.env.PORT ? " Cyclic server " : "Local server",
       },
     ],
   },
