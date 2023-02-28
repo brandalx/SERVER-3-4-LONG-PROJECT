@@ -58,18 +58,18 @@ export const Navbar = () => {
                 <a
                   target="_blank"
                   className="nav-link fw-bold text-white"
-                  href="#"
+                  href="https://toysrestapi.cyclic.app/"
                 >
-                  Netlify
+                  Cyclic
                 </a>
               </li>
               <li className="nav-item">
                 <a
                   target="_blank"
                   className="nav-link fw-bold text-white"
-                  href="toysrestapi.cyclic.app"
+                  href="https://toysrestapi.cyclic.app/api-docs"
                 >
-                  Cyclic
+                  Automated docs
                 </a>
               </li>
               <li className="nav-item">
