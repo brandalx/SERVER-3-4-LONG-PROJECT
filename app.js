@@ -4,6 +4,8 @@ const path = require("path");
 const cors = require("cors");
 const swaggerUi = require("swagger-ui-express");
 const swaggerJsdoc = require("swagger-jsdoc");
+// Import the Swagger documentation from the separate file
+
 // Routes initilization
 const { routesInit } = require("./routes//configRoutes");
 
@@ -18,25 +20,32 @@ const swaggerOptions = {
   definition: {
     openapi: "3.0.0",
     info: {
-      title: "My API",
+      title: "Toys REST API",
       version: "1.0.0",
-      description: "My API with MongoDB",
+      description:
+        "Toys REST API - Swagger automated documantation. Please visit `https://toysrestapi.cyclic.app` for full custom documentation on the server side, or visit `https://toysrestapi.netlify.app` for front-end side of the app. ",
     },
     servers: [
       {
         url: `http://localhost:${process.env.PORT || 3001}`,
-
-        description: "Local server",
+        description: "Cyclic server",
       },
     ],
   },
-  // API routes folder
-  apis: ["./routes/*.js"],
+  // API schema model for all routes
+  apis: ["./swagger/swagger.js"],
 };
+
 // Initialize swagger-jsdoc
 const swaggerDocs = swaggerJsdoc(swaggerOptions);
+
 // Serve the Swagger UI with the generated OpenAPI specification file
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+
+// Define a route handler for the /swagger endpoint
+app.use("/swagger", (req, res) => {
+  res.json(swaggerDocs);
+});
 
 app.use(cors());
 
