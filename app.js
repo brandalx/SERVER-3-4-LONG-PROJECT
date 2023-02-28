@@ -7,7 +7,7 @@ const swaggerJsdoc = require("swagger-jsdoc");
 // Import the Swagger documentation from the separate file
 
 // Routes initilization
-const { routesInit } = require("./routes//configRoutes");
+const { routesInit } = require("./routes/configRoutes");
 
 //Connecting to the database
 require("./db/mongoConnect");
@@ -27,7 +27,8 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: `${process.env.PORT || 3001}`,
+        url: "https://toysrestapi.cyclic.app/",
+        // url: `http://localhost:3001/`,
         description: process.env.PORT ? " Cyclic server " : "Local server",
       },
     ],
