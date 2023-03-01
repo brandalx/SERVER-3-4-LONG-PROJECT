@@ -2,15 +2,16 @@ const express = require("express");
 const router = express.Router();
 const { ToysModel, validateJoi } = require("../models/toysModel");
 const { auth } = require("../middlewares/auth");
-const cache = require("express-cache-controller");
+const NodeCache = require("node-cache");
+const cache = new NodeCache({ stdTTL: 30, checkperiod: 40 });
 
 //In POSTMAN  change: request type to to GET, choose Body ===> row
 
 // GET request handle
 //Query example: https://toysrestapi.cyclic.app/toys/?page=1&sort=name&desc=yes
 
-router.get("/", cache({ maxAge: 300, minTime: 300 }), async (req, res) => {
-  console.log("Retrieving data from cache...");
+router.get("/", async (req, res) => {
+  console.log("Searching if data in cache");
   let perPage = 5;
   // Variable to list the page
   let page = req.query.page - 1 || 0;
@@ -18,6 +19,16 @@ router.get("/", cache({ maxAge: 300, minTime: 300 }), async (req, res) => {
   let sort = req.query.sort || "_id";
   // Variable to sort by acs or desc order
   let desc = req.query.desc == "yes" ? 1 : -1;
+  // Generate cache key based on request query params
+  const cacheKey = `toys-${perPage}-${page}-${sort}-${desc}`;
+  // Check if data is already in cache
+  const cachedData = cache.get(cacheKey);
+  if (cachedData) {
+    console.log("Data found in cache, retrieving data...");
+
+    return res.json(cachedData);
+  }
+  console.log("Data was not found in cache, sending request to the data base");
   try {
     let data = await ToysModel.find({})
       //makes display limit per page
@@ -26,6 +37,8 @@ router.get("/", cache({ maxAge: 300, minTime: 300 }), async (req, res) => {
       .skip(page * perPage)
       //makes an possible to sort by choosen option
       .sort({ [sort]: desc });
+    // Store data in cache
+    cache.set(cacheKey, data);
     res.json(data);
   } catch (err) {
     console.log(err);
