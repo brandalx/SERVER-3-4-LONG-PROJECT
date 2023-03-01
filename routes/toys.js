@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { ToysModel, validateJoi } = require("../models/toysModel");
 const { auth } = require("../middlewares/auth");
-const cache = require("express-cache-headers");
+const cache = require("express-cache-controller");
 
 //In POSTMAN  change: request type to to GET, choose Body ===> row
 
