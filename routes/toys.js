@@ -38,6 +38,7 @@ router.get("/", async (req, res) => {
       //makes an possible to sort by choosen option
       .sort({ [sort]: desc });
     // Store data in cache
+    console.log("Storing data for future requests...");
     cache.set(cacheKey, data);
     res.json(data);
   } catch (err) {
@@ -53,12 +54,27 @@ router.get("/search", async (req, res) => {
   //Regular Expression added to make query request as non key sensative "i"
 
   let searchExpression = new RegExp(querySearch, "i");
+  // Generate cache key based on request query params
+  const cacheKey = `search-${querySearch}`;
+  // Check if data is already in cache
+  const cachedData = cache.get(cacheKey);
+
+  if (cachedData) {
+    console.log("Data found for /search route in cache, retrieving data...");
+    return res.json(cachedData);
+  }
+  console.log(
+    "Data was not found for /search route in cache, sending request to the database"
+  );
   try {
     let data = await ToysModel.find({
       // // $or - built in mongoose function for Mongo DB to make search for keys name, info, type of the toys route
       $or: [{ name: searchExpression }, { info: searchExpression }],
     }).limit(20);
-    //limits result as 100 items max
+    //limits result as 20 items max
+    // Store data in cache
+    console.log("Storing data for future requests...");
+    cache.set(cacheKey, data);
     res.json(data);
   } catch (err) {
     console.log(err);
