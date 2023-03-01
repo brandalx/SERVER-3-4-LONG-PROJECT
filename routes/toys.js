@@ -58,7 +58,7 @@ router.get("/search", async (req, res) => {
   const cacheKey = `search-${querySearch}`;
   // Check if data is already in cache
   const cachedData = cache.get(cacheKey);
-
+  console.log("Searching if data in cache");
   if (cachedData) {
     console.log("Data found for /search route in cache, retrieving data...");
     return res.json(cachedData);
@@ -87,8 +87,21 @@ router.get("/search", async (req, res) => {
 router.get("/category/:catname", async (req, res) => {
   let catParam = req.params.catname;
   let searchExpression = new RegExp(catParam, "i");
+  const cacheKey = `category-/${searchExpression}`;
+  // Check if data is already in cache
+  const cachedData = cache.get(cacheKey);
+  console.log("Searching if data in cache");
+  if (cachedData) {
+    console.log("Data found for /search route in cache, retrieving data...");
+    return res.json(cachedData);
+  }
+  console.log(
+    "Data was not found for /search route in cache, sending request to the database"
+  );
   try {
     let data = await ToysModel.find({ category: searchExpression });
+    console.log("Storing data for future requests...");
+    cache.set(cacheKey, data);
     res.json(data);
   } catch (err) {
     console.log(err);
