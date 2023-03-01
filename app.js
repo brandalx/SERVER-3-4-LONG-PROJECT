@@ -4,6 +4,7 @@ const path = require("path");
 const cors = require("cors");
 const swaggerUi = require("swagger-ui-express");
 const swaggerJsdoc = require("swagger-jsdoc");
+const cacheController = require("express-cache-controller");
 // Import the Swagger documentation from the separate file
 
 // Routes initilization
@@ -47,13 +48,15 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 app.use("/swagger", (req, res) => {
   res.json(swaggerDocs);
 });
-
+// cache controller middleware
+app.use(cacheController());
 app.use(cors());
 
 //To send body from client side
 app.use(express.json());
 // Define a static folder that will be the "public" folder
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public"), { maxAge: "1d" }));
+
 routesInit(app);
 
 const server = http.createServer(app);

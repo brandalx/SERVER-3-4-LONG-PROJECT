@@ -2,13 +2,14 @@ const express = require("express");
 const router = express.Router();
 const { ToysModel, validateJoi } = require("../models/toysModel");
 const { auth } = require("../middlewares/auth");
+const cache = require("express-cache-headers");
 
 //In POSTMAN  change: request type to to GET, choose Body ===> row
 
 // GET request handle
 //Query example: https://toysrestapi.cyclic.app/toys/?page=1&sort=name&desc=yes
 
-router.get("/", async (req, res) => {
+router.get("/", cache(300), async (req, res) => {
   let perPage = 5;
   // Variable to list the page
   let page = req.query.page - 1 || 0;

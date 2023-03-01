@@ -93,7 +93,7 @@ const ProductTable = () => {
           </h2>
           <p className="text-secondary text-center">This is /toys route</p>
           <div className="row  ">
-            <div className="col-6 mb-5 ">
+            <div className="col-lg-6  col-12 mb-5 ">
               <div className="col-6">
                 <label>
                   Sort by:
@@ -161,8 +161,8 @@ const ProductTable = () => {
                 </table>
               </div>
             </div>
-            <div className="col-12">
-              <div className="pagination">
+            <div className="col-12 ">
+              <div className="pagination py-5">
                 <button
                   className="btn btn-primary submitbtn me-2"
                   disabled={currentPage === 1}
