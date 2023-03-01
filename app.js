@@ -5,6 +5,7 @@ const cors = require("cors");
 const swaggerUi = require("swagger-ui-express");
 const swaggerJsdoc = require("swagger-jsdoc");
 const cacheController = require("express-cache-controller");
+const cache = require("express-cache-headers");
 // Import the Swagger documentation from the separate file
 
 // Routes initilization
@@ -48,6 +49,15 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 app.use("/swagger", (req, res) => {
   res.json(swaggerDocs);
 });
+
+// Cache middleware
+app.use(
+  cache({
+    // Set max-age to 0 to disable caching
+    maxAge: 300,
+  })
+);
+
 // cache controller middleware
 
 console.log("Adding cache controller middleware");
