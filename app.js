@@ -61,7 +61,7 @@ app.use((req, res, next) => {
     console.log(
       `[${new Date().toISOString()}] ${req.method} ${req.originalUrl} ${
         res.statusCode
-      } ${res.getHeader("cache-hit")}`
+      } ${res.getHeader("Cache-Control")}`
     );
   });
   next();
