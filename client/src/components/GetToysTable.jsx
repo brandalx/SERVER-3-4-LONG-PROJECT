@@ -1,172 +1,185 @@
-import React, { useState } from "react";
-import Table from "react-bootstrap/Table";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import Dropdown from "react-bootstrap/Dropdown";
-import DropdownButton from "react-bootstrap/DropdownButton";
+import React, { useEffect, useState } from "react";
+
 import axios from "axios";
 
 const ProductTable = () => {
-  const [products, setProducts] = useState([]);
-  const [filterOn, setFilterOn] = useState(false);
-  const [sortField, setSortField] = useState("");
-  const [descSort, setDescSort] = useState(false);
-  const [pageNumber, setPageNumber] = useState(1);
+  const [ar, setAr] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [sortOption, setSortOption] = useState("name");
+  const [sortDescending, setSortDescending] = useState(false);
 
-  const handleFilterToggle = () => {
-    setFilterOn(!filterOn);
+  useEffect(() => {
+    handleApiRequest();
+  }, [currentPage, sortOption, sortDescending]);
+
+  const handleApiRequest = async () => {
+    let url = `https://toysrestapi.cyclic.app/toys?page=${currentPage}&sort_by=${sortOption}&desc=${
+      sortDescending ? "true" : "false"
+    }`;
+    let resp = await axios.get(url);
+    console.log(resp.data);
+    let sortedData = resp.data.sort((a, b) => {
+      if (sortOption === "name") {
+        return sortDescending
+          ? b.name.localeCompare(a.name)
+          : a.name.localeCompare(b.name);
+      } else if (sortOption === "price") {
+        return sortDescending ? b.price - a.price : a.price - b.price;
+      } else {
+        return sortDescending
+          ? new Date(b.date_created) - new Date(a.date_created)
+          : new Date(a.date_created) - new Date(b.date_created);
+      }
+    });
+    setAr(sortedData);
   };
 
-  const handleFilterApply = async () => {
-    const queryParameters = {};
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage);
+  };
 
-    if (sortField) {
-      queryParameters.sort = sortField;
-    }
+  const handleSortOptionChange = (event) => {
+    setSortOption(event.target.value);
+  };
 
-    if (descSort) {
-      queryParameters.desc = "yes";
-    }
-
-    if (pageNumber) {
-      queryParameters.page = pageNumber;
-    }
-
-    const queryString = new URLSearchParams(queryParameters).toString();
-
-    try {
-      const response = await axios.get(
-        `https://toysrestapi.cyclic.app/toys?${queryString}`
-      );
-
-      if (response && response.data) {
-        setProducts(response.data);
-      }
-    } catch (error) {
-      console.error(error);
-    }
+  const handleSortDescendingChange = (event) => {
+    setSortDescending(event.target.checked);
   };
 
   return (
     <>
-      <div style={{ padding: "100px 0" }} className="container-fluid">
+      <div className="container-fluid py-5">
         <div className="container ">
-          <div className="row">
-            <h2 className="col-12 text-center mb-5">
-              Toys route{" "}
-              <svg
-                className="move-on-hover mb-2"
-                width="80px"
-                height="50"
-                viewBox="0 0 30 30"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  className="move-on-hover__item1"
-                  y="21"
-                  width="30"
-                  height="9"
-                  rx="4"
-                  fill="#C77DFF"
-                />
-                <rect
-                  className="move-on-hover__item2"
-                  x="6"
-                  y="11"
-                  width="18"
-                  height="8"
-                  rx="4"
-                  fill="#FDE781"
-                />
-                <ellipse
-                  className="move-on-hover__item3"
-                  cx="15"
-                  cy="4.5"
-                  rx="4"
-                  ry="4.5"
-                  fill="#FC5C7C"
-                />
-              </svg>
-            </h2>
-          </div>
-          <div className="d-flex justify-content-between mb-3">
-            <div className="d-flex">
-              <Form.Control
-                type="number"
-                placeholder="Page number"
-                value={pageNumber}
-                onChange={(e) => setPageNumber(e.target.value)}
+          <h2 className=" text-center">
+            Toys{" "}
+            <b>
+              <code>GET</code>
+            </b>{" "}
+            request{" "}
+            <svg
+              className="move-on-hover mb-4"
+              width="80px"
+              height="50"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                className="move-on-hover__item1"
+                y="21"
+                width="30"
+                height="9"
+                rx="4"
+                fill="#ff4a6e"
               />
-              <Button
-                className="btn btn-primary submitbtn"
-                variant="primary ml-2"
-                onClick={handleFilterApply}
-              >
-                Filter
-              </Button>
-            </div>
-            <div className="d-flex">
-              <Button
-                variant="outline-primary mr-2"
-                className="btn btn-primary submitbtn2"
-                onClick={handleFilterToggle}
-              >
-                {filterOn ? "Hide Filters" : "Show Filters"}
-              </Button>
-              {filterOn && (
-                <>
-                  <DropdownButton
-                    id="dropdown-basic-button"
-                    title={`Sort by ${sortField}`}
+              <rect
+                className="move-on-hover__item2"
+                x="6"
+                y="11"
+                width="18"
+                height="8"
+                rx="4"
+                fill="#ff4a6e"
+              />
+              <ellipse
+                className="move-on-hover__item3"
+                cx="15"
+                cy="4.5"
+                rx="4"
+                ry="4.5"
+                fill="#ff4a6e"
+              />
+            </svg>
+          </h2>
+          <p className="text-secondary text-center">This is /toys route</p>
+          <div className="row  ">
+            <div className="col-6 mb-5 ">
+              <div className="col-6">
+                <label>
+                  Sort by:
+                  <select
+                    className="form-control"
+                    value={sortOption}
+                    onChange={handleSortOptionChange}
                   >
-                    <Dropdown.Item onClick={() => setSortField("name")}>
+                    <option className="form-select" value="name">
                       Name
-                    </Dropdown.Item>
-                    <Dropdown.Item onClick={() => setSortField("category")}>
-                      Category
-                    </Dropdown.Item>
-                    <Dropdown.Item onClick={() => setSortField("price")}>
-                      Price
-                    </Dropdown.Item>
-                  </DropdownButton>
-                  <Form.Check
-                    type="switch"
-                    id="custom-switch"
-                    label="Descending Sort"
-                    checked={descSort}
-                    onChange={() => setDescSort(!descSort)}
+                    </option>
+                    <option value="price">Price</option>
+                    <option value="date_created">Date created</option>
+                  </select>
+                </label>
+              </div>
+              <div className="col-6 mt-3 ">
+                <label>
+                  Descending:
+                  <input
+                    checked={sortDescending}
+                    className=" ms-3   h-auto"
+                    type="checkbox"
+                    onChange={handleSortDescendingChange}
                   />
-                </>
-              )}
+                </label>
+              </div>
+            </div>
+            <div className="col-12">
+              <div className="table-responsive">
+                <table className="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>info</th>
+                      <th>Price</th>
+                      <th>Date created</th>
+                    </tr>
+                  </thead>
+                  {ar.length === 0 ? (
+                    <tbody key={Date.now}>
+                      <tr>
+                        <td className="text-secondary">No data available</td>
+                        <td className="text-secondary">No data available</td>
+                        <td className="text-secondary">No data available</td>
+                        <td className="text-secondary">No data available</td>
+                      </tr>
+                    </tbody>
+                  ) : (
+                    <>
+                      {ar.map((item) => {
+                        return (
+                          <tbody key={item.id}>
+                            <tr>
+                              <td>{item.name}</td>
+                              <td>{item.info}</td>
+                              <td>{item.price}</td>
+                              <td>{item.date_created}</td>
+                            </tr>
+                          </tbody>
+                        );
+                      })}
+                    </>
+                  )}
+                </table>
+              </div>
+            </div>
+            <div className="col-12">
+              <div className="pagination">
+                <button
+                  className="btn btn-primary submitbtn me-2"
+                  disabled={currentPage === 1}
+                  onClick={() => handlePageChange(currentPage - 1)}
+                >
+                  Previous
+                </button>
+                <button
+                  disabled={ar.length === 0}
+                  className="btn btn-primary submitbtn"
+                  onClick={() => handlePageChange(currentPage + 1)}
+                >
+                  Next
+                </button>
+              </div>
             </div>
           </div>
-          <Table striped bordered hover responsive>
-            <thead>
-              <tr>
-                <th col>Name</th>
-                <th col>Info</th>
-                <th col>Category</th>
-                <th col>Image</th>
-                <th col>Price</th>
-                <th col>Date Created</th>
-              </tr>
-            </thead>
-            <tbody>
-              {products.map((product) => (
-                <tr key={product.name}>
-                  <td>{product.name}</td>
-                  <td>{product.info}</td>
-                  <td>{product.category}</td>
-                  <td>
-                    <img src={product.img_url} alt={product.name} />
-                  </td>
-                  <td>{product.price}</td>
-                  <td>{product.date_created}</td>
-                </tr>
-              ))}
-            </tbody>
-          </Table>
         </div>
       </div>
     </>

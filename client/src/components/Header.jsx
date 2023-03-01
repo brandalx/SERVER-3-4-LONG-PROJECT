@@ -160,7 +160,7 @@ export const Header = () => {
                             cy="11.5"
                             r="10.5"
                             stroke="#FF4A6E"
-                            stroke-width="2"
+                            strokeWidth="2"
                           />
                         </svg>
                       </div>

@@ -113,7 +113,7 @@ const UserInfo = () => (
                   Email
                 </label>
                 <Field className="form-control" type="email" name="email" />
-                <small id="emailHelp" class="form-text text-muted">
+                <small id="emailHelp" className="form-text text-muted">
                   <ErrorMessage name="email" component="div" />
                 </small>
               </div>
@@ -127,7 +127,7 @@ const UserInfo = () => (
                   type="password"
                   name="password"
                 />
-                <small id="emailHelp" class="form-text text-muted">
+                <small id="emailHelp" className="form-text text-muted">
                   <ErrorMessage name="password" component="div" />
                 </small>
               </div>
@@ -157,9 +157,9 @@ const UserInfo = () => (
             {status && status.success && (
               <div className="row">
                 <div className="col-lg-4 col-md-6 col-sm-8 mx-auto mx-auto">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title"> Name: {status.data.name} </h5>
+                  <div className="card">
+                    <div className="card-body">
+                      <h5 className="card-title"> Name: {status.data.name} </h5>
                       <p className="card-text">Email: {status.data.email}</p>
 
                       <p>Role: {status.data.role}</p>

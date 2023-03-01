@@ -91,7 +91,7 @@ const EditUser = () => (
                 </label>
                 <Field className="form-control" type="text" name="name" />
 
-                <small id="emailHelp" class="form-text text-muted">
+                <small id="emailHelp" className="form-text text-muted">
                   <ErrorMessage name="name" component="div" />
                 </small>
               </div>
@@ -101,10 +101,10 @@ const EditUser = () => (
                   Email
                 </label>
                 <Field className="form-control" type="email" name="email" />
-                <small id="emailHelp" class="form-text text-muted">
+                <small id="emailHelp" className="form-text text-muted">
                   We'll never share your email with anyone else.
                 </small>
-                <small id="emailHelp" class="form-text text-muted">
+                <small id="emailHelp" className="form-text text-muted">
                   <ErrorMessage name="email" component="div" />
                 </small>
               </div>

@@ -84,6 +84,23 @@ input:active {
   box-shadow: -1px 0px 2px 5px rgba(255, 74, 110, 0.2) !important;
 }
 
+.form-control:focus {
+  border: #ff4a6e 1px solid !important;
+  outline: none !important;
+  box-shadow: -1px 0px 2px 5px rgba(255, 74, 110, 0.2) !important;
+}
+.form-control:active {
+  border: #ff4a6e 1px solid !important;
+  outline: none !important;
+  box-shadow: -1px 0px 2px 5px rgba(255, 74, 110, 0.2) !important;
+}
+
+input .chekin {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 .srchbtn {
   border: 1px solid rgba(255, 255, 255, 0.377) !important;
   background: #fc5c7cd8 !important;

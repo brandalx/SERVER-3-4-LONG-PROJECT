@@ -66,13 +66,13 @@ const LogInForm = () => (
             >
               <path
                 fillRule="evenodd"
-                clip-rule="evenodd"
+                clipRule="evenodd"
                 d="M14.5 13H2.5V11H14.5V13Z"
                 fill="#FF4A6E"
               />
               <path
                 fillRule="evenodd"
-                clip-rule="evenodd"
+                clipRule="evenodd"
                 d="M11.7071 7.79297L15.2071 11.293C15.5976 11.6835 15.5976 12.3167 15.2071 12.7072L11.7071 16.2072L10.2929 14.793L13.0858 12.0001L10.2929 9.20718L11.7071 7.79297Z"
                 fill="#FF4A6E"
               />
@@ -91,7 +91,7 @@ const LogInForm = () => (
                   Email
                 </label>
                 <Field className="form-control" type="email" name="email" />
-                <small id="emailHelp" class="form-text text-muted">
+                <small id="emailHelp" className="form-text text-muted">
                   <ErrorMessage name="email" component="div" />
                 </small>
               </div>
