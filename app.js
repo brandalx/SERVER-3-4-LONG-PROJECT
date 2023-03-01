@@ -49,7 +49,24 @@ app.use("/swagger", (req, res) => {
   res.json(swaggerDocs);
 });
 // cache controller middleware
+
+console.log("Adding cache controller middleware");
 app.use(cacheController());
+
+console.log("Cache controller middleware added");
+
+//checks if chaching happens
+app.use((req, res, next) => {
+  res.on("finish", () => {
+    console.log(
+      `[${new Date().toISOString()}] ${req.method} ${req.originalUrl} ${
+        res.statusCode
+      } ${res.getHeader("cache-hit")}`
+    );
+  });
+  next();
+});
+
 app.use(cors());
 
 //To send body from client side

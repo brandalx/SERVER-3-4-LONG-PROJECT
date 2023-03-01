@@ -9,7 +9,8 @@ const cache = require("express-cache-controller");
 // GET request handle
 //Query example: https://toysrestapi.cyclic.app/toys/?page=1&sort=name&desc=yes
 
-router.get("/", cache(300), async (req, res) => {
+router.get("/", cache({ maxAge: 300 }), async (req, res) => {
+  console.log("Retrieving data from cache...");
   let perPage = 5;
   // Variable to list the page
   let page = req.query.page - 1 || 0;
