@@ -12,7 +12,7 @@ const auth = (req, res, next) => {
   }
   try {
     // tries to decode the token and get its payload, which is currently an ID
-    let decodeToken = jwt.verify(token, process.env.tokenSecret)
+    let decodeToken = jwt.verify(token, tokenSecret)
     // req -> parameter of an object that is shared by all functions in the routers chain
     req.tokenData = decodeToken
     // Will call the next function in the routers chain
