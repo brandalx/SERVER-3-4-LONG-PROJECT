@@ -13,8 +13,8 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: 'https://toysrestapi.cyclic.app/',
-        // url: `http://localhost:3001/`,
+        // url: 'https://toysrestapi.cyclic.app/',
+        url: `http://localhost:3001/`,
         description: process.env.PORT ? ' Cyclic server ' : 'Local server'
       }
     ]

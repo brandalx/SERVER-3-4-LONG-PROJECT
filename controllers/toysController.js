@@ -123,7 +123,7 @@ example:
   */
 
   // TODO: add auth after all requests settled
-  async postToy(async, req, res) {
+  async postToy(req, res) {
     //Checks first that returned object from Joi validation is even valid, if not throws an error and not continues to make POST request
     let validBody = validateJoi(req.body)
     if (validBody.error) {
@@ -132,6 +132,8 @@ example:
     //If returned Joi schema is valid creates an new obejct in JSON  and puts it in data base
     try {
       let toy = new ToysModel(req.body)
+      console.log('asking for the token')
+      // console.log('token is ' + req.header('x-api-key'))
       toy.user_id = req.tokenData._id
       await toy.save()
       res.json(toy)
@@ -158,7 +160,7 @@ https://toysrestapi/toys/63f67afa1c859b4d063e03f4
 
   //Id will be added through an params option
 
-  async putToy(req, res, auth) {
+  async putToy(req, res) {
     //Joi checks
     let validBody = validateJoi(req.body)
     if (validBody.error) {
@@ -196,7 +198,7 @@ https://toysrestapi.cyclic.app/toys/63f67b01e7dadcb2291e0828
 */
   // code will try to delete and makes check only users adds and not all the others.
   //code will filter by user id
-  async deleteToy(auth, req, res) {
+  async deleteToy(req, res) {
     try {
       //params defenition
       let id = req.params.delId
