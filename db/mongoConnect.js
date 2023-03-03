@@ -1,9 +1,8 @@
-const mongoose = require("mongoose");
+import mongoose from 'mongoose'
+import { urldb } from '../config/config.js'
 
-main().catch((err) => console.log(err));
-
-async function main() {
-  mongoose.set("strictQuery", false);
-  await mongoose.connect(process.env.URLDB);
-  console.log("mongo connect server atlas");
+export async function main() {
+  mongoose.set('strictQuery', false)
+  await mongoose.connect(urldb)
+  console.log('mongo connect server atlas')
 }

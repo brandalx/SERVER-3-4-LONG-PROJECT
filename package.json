@@ -2,6 +2,7 @@
   "name": "SERVER-3-4-LONG-PROJECT",
   "version": "1.0.0",
   "description": "SERVER-3-4-LONG-PROJECT",
+  "type": "module",
   "scripts": {
     "start": "nodemon app"
   },
@@ -28,7 +29,23 @@
     "mongoose": "^6.9.3",
     "node-cache": "^5.1.2",
     "nodemon": "^2.0.20",
+    "prettier": "^2.8.4",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^4.6.2"
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "commonjs": true
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.4"
   }
 }

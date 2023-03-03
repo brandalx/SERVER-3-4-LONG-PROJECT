@@ -1,7 +1,10 @@
-const mongoose = require("mongoose");
-const Joi = require("joi");
+import jwt from 'jsonwebtoken'
+import Joi from 'joi'
+import mongoose from 'mongoose'
+import { tokenSecret } from '../config/config.js'
+
 //Import for Json Web Token for user authentication and authorization
-const jwt = require("jsonwebtoken");
+
 //Basic user scema model for Mongo Data Base
 let schema = new mongoose.Schema({
   name: String,
@@ -9,44 +12,35 @@ let schema = new mongoose.Schema({
   password: String,
   date_created: {
     type: Date,
-    default: Date.now,
+    default: Date.now
   },
   role: {
     type: String,
-    default: "USER",
+    default: 'USER'
   },
   //This is new paramter to display in response
-  user_id: String,
-});
+  user_id: String
+})
 //Scema import to users route
-exports.UsersModel = mongoose.model("users", schema);
-//Joi validation Schema
-exports.validateJoi = (_reqBody) => {
-  let joiSchema = Joi.object({
-    name: Joi.string().min(2).max(200).required(),
-    //this will handle and make validation for email
-    email: Joi.string().min(1).max(300).email().required(),
-    password: Joi.string().min(1).max(100).required(),
-  });
-  //returns valid schema
-  return joiSchema.validate(_reqBody);
-};
-//Joi validation schema for Log in
-exports.validateLogin = (_reqBody) => {
-  let joiSchema = Joi.object({
-    //this will handle and make validation for email
-    email: Joi.string().min(1).max(300).email().required(),
-    password: Joi.string().min(1).max(100).required(),
-  });
-  return joiSchema.validate(_reqBody);
-};
+export const UsersModel = mongoose.model('users', schema)
 
-exports.createToken = (user_id, role) => {
+//Joi validation schema for Log in
+
+export function validateLogin(_reqBody) {
+  let joiSchema = Joi.object({
+    //this will handle and make validation for email
+    email: Joi.string().min(1).max(300).email().required(),
+    password: Joi.string().min(1).max(100).required()
+  })
+  return joiSchema.validate(_reqBody)
+}
+
+export function createToken(user_id, role) {
   //          ===>           PLEASE MENTION: [THIS] KEY WILL BE CHANGED WHEN WILL BE DEPLOYED TO THE REAL SERVER
   //                                           \/
   //                       payload    | the secret key |  options object (will expire in 60 minutes)
-  let token = jwt.sign({ _id: user_id, role }, process.env.TOKENSECRET, {
-    expiresIn: "60mins",
-  });
-  return token;
-};
+  let token = jwt.sign({ _id: user_id, role }, tokenSecret, {
+    expiresIn: '60mins'
+  })
+  return token
+}
