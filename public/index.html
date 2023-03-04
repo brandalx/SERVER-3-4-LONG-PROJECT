@@ -9,6 +9,7 @@
     <meta property="og:image:height" content="630" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/tools/preloaderwb.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -28,10 +29,47 @@
     <link rel="stylesheet" href="./css/tools/burger.css" />
     <link rel="stylesheet" href="./css/tools/tools.css" />
 
+    <!-- <script src="./js/tools//preloaderwb.js"></script> -->
     <title>Welcome to Toys REST API</title>
   </head>
   <body>
     <div id="loadingLine" class="css-selector" style="width: 0%"></div>
+
+    <div class="preloaderwb" style="min-height: 100vh">
+      <div class="v-align">
+        <h1>
+          Toys REST API
+          <m>
+            <svg
+              class="move-on-hover mb-2"
+              width="80px"
+              height="50"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect class="move-on-hover__item1" y="21" width="30" height="9" rx="4" fill="#C77DFF" />
+              <rect class="move-on-hover__item2" x="6" y="11" width="18" height="8" rx="4" fill="#FDE781" />
+              <ellipse class="move-on-hover__item3" cx="15" cy="4.5" rx="4" ry="4.5" fill="#FC5C7C" />
+            </svg>
+          </m>
+        </h1>
+        <h3>Documentation to use</h3>
+        <div class="loader">
+          <aside class="loader__box loader--left">
+            <span class="loader__circle"></span>
+          </aside>
+          <aside class="loader__box loader--right">
+            <span class="loader__circle"></span>
+          </aside>
+        </div>
+      </div>
+      <!-- follow me template -->
+      <div class="made-with-love mb-4" style="color: #2c3136">
+        <p>Visit <a href="https://github.com/brandalx/SERVER-3-4-LONG-PROJECT">GitHub repo to source code</a></p>
+      </div>
+    </div>
+
     <div class="wrapper">
       <!-- MAYBE USE THIS CLASSES LOOKS BETTER rounded-5 m-lg-4 p-lg-5 -->
       <header class="page-header css-selector styled">
@@ -47,37 +85,12 @@
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <rect
-                    class="move-on-hover__item1"
-                    y="20"
-                    width="30"
-                    height="8"
-                    rx="4"
-                    fill="white"
-                  />
-                  <rect
-                    class="move-on-hover__item2"
-                    x="6"
-                    y="10"
-                    width="18"
-                    height="8"
-                    rx="4"
-                    fill="white"
-                  />
-                  <circle
-                    class="move-on-hover__item3"
-                    cx="15"
-                    cy="4"
-                    r="4"
-                    fill="white"
-                  />
+                  <rect class="move-on-hover__item1" y="20" width="30" height="8" rx="4" fill="white" />
+                  <rect class="move-on-hover__item2" x="6" y="10" width="18" height="8" rx="4" fill="white" />
+                  <circle class="move-on-hover__item3" cx="15" cy="4" r="4" fill="white" />
                 </svg>
 
-                <mark
-                  class="text-white"
-                  style="font-weight: bold; background: none"
-                  >Toys REST API</mark
-                >
+                <mark class="text-white" style="font-weight: bold; background: none">Toys REST API</mark>
               </a>
 
               <button
@@ -89,21 +102,13 @@
                 class="navbar-toggler first-button border-0"
                 type="button"
               >
-                <div class="animated-icon1">
-                  <span></span><span></span><span></span>
-                </div>
+                <div class="animated-icon1"><span></span><span></span><span></span></div>
               </button>
-              <div
-                class="collapse navbar-collapse justify-content-between"
-                id="navbarTogglerDemo02"
-              >
+              <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo02">
                 <div class="col-lg-8">
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                      <a
-                        target="_blank"
-                        class="nav-link fw-bold text-white"
-                        href="https://toysrestapi.netlify.app"
+                      <a target="_blank" class="nav-link fw-bold text-white" href="https://toysrestapi.netlify.app"
                         >Front-end</a
                       >
                     </li>
@@ -152,10 +157,7 @@
         <div class="container-fluid partMain">
           <div class="container">
             <p class="text-white">Documentation to use</p>
-            <h1
-              data-aos="fade-right"
-              class="text-white fw-bolder display-4 text-focus-in roll-in-blurred-left"
-            >
+            <h1 data-aos="fade-right" class="text-white fw-bolder display-4 text-focus-in roll-in-blurred-left">
               Toys REST API
 
               <svg
@@ -166,42 +168,16 @@
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="move-on-hover__item1"
-                  y="21"
-                  width="30"
-                  height="9"
-                  rx="4"
-                  fill="#C77DFF"
-                />
-                <rect
-                  class="move-on-hover__item2"
-                  x="6"
-                  y="11"
-                  width="18"
-                  height="8"
-                  rx="4"
-                  fill="#FDE781"
-                />
-                <ellipse
-                  class="move-on-hover__item3"
-                  cx="15"
-                  cy="4.5"
-                  rx="4"
-                  ry="4.5"
-                  fill="#FC5C7C"
-                />
+                <rect class="move-on-hover__item1" y="21" width="30" height="9" rx="4" fill="#C77DFF" />
+                <rect class="move-on-hover__item2" x="6" y="11" width="18" height="8" rx="4" fill="#FDE781" />
+                <ellipse class="move-on-hover__item3" cx="15" cy="4.5" rx="4" ry="4.5" fill="#FC5C7C" />
               </svg>
             </h1>
             <div class="row align-items-center">
               <div class="col-lg-6" data-aos="fade-right">
                 <div class="row">
                   <div class="col-lg-10">
-                    <input
-                      class="w-100 rounded-2"
-                      placeholder="For example: PUT request"
-                      type="text"
-                    />
+                    <input class="w-100 rounded-2" placeholder="For example: PUT request" type="text" />
                   </div>
                   <div class="col-lg-2 mt-3 mt-lg-0">
                     <button class="btn srchbtn w-100">Search</button>
@@ -209,18 +185,13 @@
                 </div>
               </div>
 
-              <div
-                class="col-lg-6 mt-3 mt-lg-0 d-flex justify-content-end fw-semibold"
-              >
+              <div class="col-lg-6 mt-3 mt-lg-0 d-flex justify-content-end fw-semibold">
                 <div class="col-lg-9 col-12" data-aos="fade-left">
                   <p class="text-white">
-                    Search for any requests you need or just list down. Not sure
-                    where to start from? <br />
+                    Search for any requests you need or just list down. Not sure where to start from? <br />
                     Try
                     <a href="#" style="color: #c77dff"
-                      ><code
-                        class="p-1 rounded-2"
-                        style="background: rgba(255, 255, 255, 0.788)"
+                      ><code class="p-1 rounded-2" style="background: rgba(255, 255, 255, 0.788)"
                         >Basic requests</code
                       ></a
                     >
@@ -252,22 +223,14 @@
                   fill="#FF4A6E"
                 />
                 <path d="M6 3H15V11L6 12.5V3Z" fill="#FF4A6E" />
-                <path
-                  d="M9 11.25L17.5 9.5L10.5 19.25L9 16.75V12.75V11.25Z"
-                  fill="#FF4A6E"
-                />
+                <path d="M9 11.25L17.5 9.5L10.5 19.25L9 16.75V12.75V11.25Z" fill="#FF4A6E" />
               </svg>
             </h2>
 
-            <div
-              class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-6 g-3"
-            >
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-6 g-3">
               <div class="col" data-aos="fade-up" data-aos-duration="700">
                 <a class="text-decoration-none text-dark" href="#introduction">
-                  <div
-                    class="card cardintro rounded-4 border-0 h-100"
-                    style="background: #d1ffd186"
-                  >
+                  <div class="card cardintro rounded-4 border-0 h-100" style="background: #d1ffd186">
                     <div class="card-body">
                       <div>
                         <svg
@@ -295,8 +258,7 @@
                       <h5 class="card-title">Introduction</h5>
 
                       <p class="card-text text-body-secondary">
-                        Everything you need to know about this Toys REST API and
-                        how does it works
+                        Everything you need to know about this Toys REST API and how does it works
                       </p>
                     </div>
                   </div>
@@ -304,10 +266,7 @@
               </div>
               <div class="col" data-aos="fade-up" data-aos-duration="800">
                 <a class="text-decoration-none text-dark" href="#userinterface">
-                  <div
-                    class="card cardintro rounded-4 border-0 h-100"
-                    style="background: #fcffd186"
-                  >
+                  <div class="card cardintro rounded-4 border-0 h-100" style="background: #fcffd186">
                     <div class="card-body">
                       <div>
                         <svg
@@ -324,25 +283,14 @@
                             d="M0.5 4.5C0.5 2.84315 1.84315 1.5 3.5 1.5H20.5C22.1569 1.5 23.5 2.84315 23.5 4.5V15.5C23.5 17.1569 22.1569 18.5 20.5 18.5H3.5C1.84315 18.5 0.5 17.1569 0.5 15.5V4.5ZM3.5 3.5C2.94772 3.5 2.5 3.94772 2.5 4.5V15.5C2.5 16.0523 2.94772 16.5 3.5 16.5H20.5C21.0523 16.5 21.5 16.0523 21.5 15.5V4.5C21.5 3.94772 21.0523 3.5 20.5 3.5H3.5Z"
                             fill="#FF4A6E"
                           />
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M11 21.5V17.5H13V21.5H11Z"
-                            fill="#FF4A6E"
-                          />
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M16 22.5H8V20.5H16V22.5Z"
-                            fill="#FF4A6E"
-                          />
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M11 21.5V17.5H13V21.5H11Z" fill="#FF4A6E" />
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M16 22.5H8V20.5H16V22.5Z" fill="#FF4A6E" />
                         </svg>
                       </div>
                       <h5 class="card-title">User Interface</h5>
                       <p class="card-text text-body-secondary">
-                        Layout, navigation, and functionality of the user
-                        interface, including how to access various features and
-                        functions
+                        Layout, navigation, and functionality of the user interface, including how to access various
+                        features and functions
                       </p>
                     </div>
                   </div>
@@ -350,10 +298,7 @@
               </div>
               <div class="col" data-aos="fade-up" data-aos-duration="900">
                 <a class="text-decoration-none text-dark" href="#userroles">
-                  <div
-                    class="card cardintro rounded-4 border-0 h-100"
-                    style="background: #d1edff86"
-                  >
+                  <div class="card cardintro rounded-4 border-0 h-100" style="background: #d1edff86">
                     <div class="card-body">
                       <div>
                         <svg
@@ -392,8 +337,7 @@
                       </div>
                       <h5 class="card-title">User Roles</h5>
                       <p class="card-text text-body-secondary">
-                        Different roles and access levels for users, and what
-                        actions they are authorized to perform.
+                        Different roles and access levels for users, and what actions they are authorized to perform.
                       </p>
                     </div>
                   </div>
@@ -401,10 +345,7 @@
               </div>
               <div class="col" data-aos="fade-up" data-aos-duration="1000">
                 <a class="text-decoration-none text-dark" href="#functionality">
-                  <div
-                    class="card cardintro rounded-4 border-0 h-100"
-                    style="background: #e9d1ff86"
-                  >
+                  <div class="card cardintro rounded-4 border-0 h-100" style="background: #e9d1ff86">
                     <div class="card-body">
                       <div>
                         <svg
@@ -421,48 +362,17 @@
                             d="M3 4C3 3.44772 3.44772 3 4 3H20C20.5523 3 21 3.44772 21 4V22C21 22.5523 20.5523 23 20 23H4C3.44772 23 3 22.5523 3 22V4ZM5 5V21H19V5H5Z"
                             fill="#FF4A6E"
                           />
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M9 2V6H7V2H9Z"
-                            fill="#FF4A6E"
-                          />
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M13 2V6H11V2H13Z"
-                            fill="#FF4A6E"
-                          />
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M17 2V6H15V2H17Z"
-                            fill="#FF4A6E"
-                          />
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M14 11H7V9H14V11Z"
-                            fill="#FF4A6E"
-                          />
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M17.5 15H7V13H17.5V15Z"
-                            fill="#FF4A6E"
-                          />
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M15 19H7V17H15V19Z"
-                            fill="#FF4A6E"
-                          />
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M9 2V6H7V2H9Z" fill="#FF4A6E" />
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M13 2V6H11V2H13Z" fill="#FF4A6E" />
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M17 2V6H15V2H17Z" fill="#FF4A6E" />
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M14 11H7V9H14V11Z" fill="#FF4A6E" />
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 15H7V13H17.5V15Z" fill="#FF4A6E" />
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M15 19H7V17H15V19Z" fill="#FF4A6E" />
                         </svg>
                       </div>
                       <h5 class="card-title">Functionality</h5>
                       <p class="card-text text-body-secondary">
-                        Features and functions of the application, including how
-                        to use each feature and what it does.
+                        Features and functions of the application, including how to use each feature and what it does.
                       </p>
                     </div>
                   </div>
@@ -470,10 +380,7 @@
               </div>
               <div class="col" data-aos="fade-up" data-aos-duration="1100">
                 <a class="text-decoration-none text-dark" href="#routes">
-                  <div
-                    class="card cardintro rounded-4 border-0 h-100"
-                    style="background: #ffd1f486"
-                  >
+                  <div class="card cardintro rounded-4 border-0 h-100" style="background: #ffd1f486">
                     <div class="card-body">
                       <div>
                         <svg
@@ -484,42 +391,22 @@
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M6 19.5V4.5H8V19.5H6Z"
-                            fill="#FF4A6E"
-                          />
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M6 19.5V4.5H8V19.5H6Z" fill="#FF4A6E" />
                           <path
                             fill-rule="evenodd"
                             clip-rule="evenodd"
                             d="M7.00001 18.0859L4.70712 15.793L3.29291 17.2072L6.29291 20.2072C6.68343 20.5977 7.3166 20.5977 7.70712 20.2072L10.7071 17.2072L9.29291 15.793L7.00001 18.0859Z"
                             fill="#FF4A6E"
                           />
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M14 12.5H10V14.5H14V12.5Z"
-                            fill="#FF4A6E"
-                          />
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M17 8.5H10V10.5H17V8.5Z"
-                            fill="#FF4A6E"
-                          />
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M20 4.5H10V6.5H20V4.5Z"
-                            fill="#FF4A6E"
-                          />
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M14 12.5H10V14.5H14V12.5Z" fill="#FF4A6E" />
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M17 8.5H10V10.5H17V8.5Z" fill="#FF4A6E" />
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M20 4.5H10V6.5H20V4.5Z" fill="#FF4A6E" />
                         </svg>
                       </div>
                       <h5 class="card-title">Routes</h5>
                       <p class="card-text text-body-secondary">
-                        Different routes or endpoints available in the
-                        application's API, what they do, and how to use them.
+                        Different routes or endpoints available in the application's API, what they do, and how to use
+                        them.
                       </p>
                     </div>
                   </div>
@@ -527,10 +414,7 @@
               </div>
               <div class="col" data-aos="fade-up" data-aos-duration="1200">
                 <a class="text-decoration-none text-dark" href="#functions">
-                  <div
-                    class="card cardintro rounded-4 border-0 h-100"
-                    style="background: #ffebd186"
-                  >
+                  <div class="card cardintro rounded-4 border-0 h-100" style="background: #ffebd186">
                     <div class="card-body">
                       <div>
                         <svg
@@ -581,8 +465,7 @@
                       </div>
                       <h5 class="card-title">Functions</h5>
                       <p class="card-text text-body-secondary">
-                        Different functions available in the application, what
-                        they do, and how to use them.
+                        Different functions available in the application, what they do, and how to use them.
                       </p>
                     </div>
                   </div>
@@ -620,8 +503,7 @@
                   </svg>
                 </h2>
                 <p class="text-body-secondary">
-                  Everything you need to know about this Toys REST API and how
-                  does it works
+                  Everything you need to know about this Toys REST API and how does it works
                 </p>
               </div>
               <div class="col-lg-9">
@@ -629,45 +511,23 @@
                 <h4 class="text-start">What this API about?</h4>
 
                 <p>
-                  The Toys REST API is a component of a server-side project
-                  built using several technologies, including
-                  <code style="color: #19cc37; background: #d1ffd186"
-                    >Node.js</code
-                  >,
-                  <code style="color: #19cc37; background: #d1ffd186"
-                    >Express</code
-                  >,
-                  <code style="color: #c77dff; background: #ebd1ff86"
-                    >axios</code
-                  >,
-                  <code style="color: #c77dff; background: #ebd1ff86"
-                    >bcrypt</code
-                  >,
-                  <code style="color: #c77dff; background: #ebd1ff86">cors</code
-                  >,
-                  <code style="color: #c77dff; background: #ebd1ff86"
-                    >dotenv</code
-                  >,
-                  <code style="color: #c77dff; background: #ebd1ff86">joi</code
-                  >,
-                  <code style="color: #c77dff; background: #ebd1ff86"
-                    >jsonwebtoken</code
-                  >, and
-                  <code style="color: #c77dff; background: #ebd1ff86"
-                    >mongoose</code
-                  >. For more information about the project, please refer to the
-                  following link on its
-                  <a
-                    target="_blank"
-                    href="https://github.com/brandalx/SERVER-3-4-LONG-PROJECT"
-                    >GitHub project</a
-                  >
+                  The Toys REST API is a component of a server-side project built using several technologies, including
+                  <code style="color: #19cc37; background: #d1ffd186">Node.js</code>,
+                  <code style="color: #19cc37; background: #d1ffd186">Express</code>,
+                  <code style="color: #c77dff; background: #ebd1ff86">axios</code>,
+                  <code style="color: #c77dff; background: #ebd1ff86">bcrypt</code>,
+                  <code style="color: #c77dff; background: #ebd1ff86">cors</code>,
+                  <code style="color: #c77dff; background: #ebd1ff86">dotenv</code>,
+                  <code style="color: #c77dff; background: #ebd1ff86">joi</code>,
+                  <code style="color: #c77dff; background: #ebd1ff86">jsonwebtoken</code>, and
+                  <code style="color: #c77dff; background: #ebd1ff86">mongoose</code>. For more information about the
+                  project, please refer to the following link on its
+                  <a target="_blank" href="https://github.com/brandalx/SERVER-3-4-LONG-PROJECT">GitHub project</a>
                 </p>
                 <p>
-                  The server is responsible for handling requests to the Mongo
-                  DB database and can perform various operations on the
-                  <code>users</code> and <code>toys</code> routes, including
-                  <b><code>GET</code></b
+                  The server is responsible for handling requests to the Mongo DB database and can perform various
+                  operations on the
+                  <code>users</code> and <code>toys</code> routes, including <b><code>GET</code></b
                   >, <b><code>PUT</code></b
                   >, <b><code>POST</code></b
                   >, and <b><code>DELETE</code></b> requests.
@@ -697,46 +557,25 @@
                       d="M0.5 4.5C0.5 2.84315 1.84315 1.5 3.5 1.5H20.5C22.1569 1.5 23.5 2.84315 23.5 4.5V15.5C23.5 17.1569 22.1569 18.5 20.5 18.5H3.5C1.84315 18.5 0.5 17.1569 0.5 15.5V4.5ZM3.5 3.5C2.94772 3.5 2.5 3.94772 2.5 4.5V15.5C2.5 16.0523 2.94772 16.5 3.5 16.5H20.5C21.0523 16.5 21.5 16.0523 21.5 15.5V4.5C21.5 3.94772 21.0523 3.5 20.5 3.5H3.5Z"
                       fill="#FF4A6E"
                     />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M11 21.5V17.5H13V21.5H11Z"
-                      fill="#FF4A6E"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M16 22.5H8V20.5H16V22.5Z"
-                      fill="#FF4A6E"
-                    />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11 21.5V17.5H13V21.5H11Z" fill="#FF4A6E" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16 22.5H8V20.5H16V22.5Z" fill="#FF4A6E" />
                   </svg>
                 </h3>
                 <p class="mb-0 text-body-secondary">
-                  Layout, navigation, and functionality of the user interface,
-                  including how to access various features and functions
+                  Layout, navigation, and functionality of the user interface, including how to access various features
+                  and functions
                 </p>
               </div>
 
               <div class="col-lg-9">
                 <div class="col-lg-12 part2">
-                  <div
-                    class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-3 text-center"
-                  >
+                  <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-3 text-center">
                     <div class="col" data-aos="fade-up" data-aos-duration="900">
-                      <a
-                        target="_blank"
-                        class="text-decoration-none text-dark"
-                        href="https://toysrestapi.netlify.app"
-                      >
-                        <div
-                          class="card cardintroImp rounded-4 border-0 h-100"
-                          style="background: #ffffff86"
-                        >
+                      <a target="_blank" class="text-decoration-none text-dark" href="https://toysrestapi.netlify.app">
+                        <div class="card cardintroImp rounded-4 border-0 h-100" style="background: #ffffff86">
                           <div class="card-body">
                             <div></div>
-                            <h5 class="card-title">
-                              Front End side of this App
-                            </h5>
+                            <h5 class="card-title">Front End side of this App</h5>
                             <svg
                               class="move-on-hover__item4"
                               width="24"
@@ -760,33 +599,23 @@
                             </svg>
 
                             <p class="card-text text-body-secondary">
-                              You can visit front-end side of this site. The
-                              friendly User Interface builded on react will help
-                              to perform all the actions this API allows to
+                              You can visit front-end side of this site. The friendly User Interface builded on react
+                              will help to perform all the actions this API allows to
                             </p>
                           </div>
                         </div>
                       </a>
                     </div>
-                    <div
-                      class="col"
-                      data-aos="fade-up"
-                      data-aos-duration="1000"
-                    >
+                    <div class="col" data-aos="fade-up" data-aos-duration="1000">
                       <a
                         target="_blank"
                         class="text-decoration-none text-dark"
                         href="https://toysrestapi.cyclic.app/api-docs"
                       >
-                        <div
-                          class="card cardintro rounded-4 border-0 h-100"
-                          style="background: #d1ffd186"
-                        >
+                        <div class="card cardintro rounded-4 border-0 h-100" style="background: #d1ffd186">
                           <div class="card-body">
                             <div></div>
-                            <h5 class="card-title">
-                              Swagger Automated Documentation
-                            </h5>
+                            <h5 class="card-title">Swagger Automated Documentation</h5>
 
                             <svg
                               class="move-on-hover__item4"
@@ -796,13 +625,7 @@
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg"
                             >
-                              <circle
-                                cx="12"
-                                cy="12"
-                                r="11"
-                                stroke="#FF4A6E"
-                                stroke-width="2"
-                              />
+                              <circle cx="12" cy="12" r="11" stroke="#FF4A6E" stroke-width="2" />
                               <path
                                 d="M17.9404 11.3158V11.3158C17.9954 11.3188 18.0517 11.326 18.1117 11.3336C18.1377 11.3369 18.1644 11.3403 18.1919 11.3435L18.3246 11.3589V11.4925V12.7117V12.8175L18.2249 12.853C18.1585 12.8766 18.0941 12.8899 18.0292 12.8987L18.0188 12.9001L18.0188 12.8997C17.7368 12.9179 17.5602 12.9838 17.4465 13.0905C17.3337 13.1964 17.2587 13.3654 17.2317 13.645L17.2317 13.6456C17.213 13.8309 17.2044 14.019 17.1972 14.2115C17.196 14.2422 17.1949 14.273 17.1938 14.3039C17.1879 14.4647 17.182 14.6285 17.1707 14.7914C17.1588 15.2159 17.1199 15.6403 17.0537 16.061L17.0526 16.0677L17.0525 16.0677C16.9704 16.4696 16.8008 16.7858 16.535 17.0068C16.2701 17.227 15.9248 17.3398 15.5146 17.3642M17.9404 11.3158L15.5057 17.2144M17.9404 11.3158L17.9386 11.3157C17.7284 11.3066 17.5961 11.2673 17.5055 11.2003C17.4173 11.1351 17.3474 11.0278 17.2967 10.8354L17.9404 11.3158ZM15.5146 17.3642L15.5057 17.2144M15.5146 17.3642C15.5147 17.3642 15.5148 17.3642 15.5149 17.3642L15.5057 17.2144M15.5146 17.3642C15.3439 17.3747 15.1682 17.3712 14.9927 17.3678C14.9058 17.3661 14.819 17.3644 14.7329 17.3644H14.5829V17.2144V16.1262V15.984L14.7249 15.9764C14.7768 15.9737 14.8287 15.9702 14.8804 15.9668C14.9656 15.9611 15.0501 15.9555 15.1323 15.9531L15.1329 15.9531C15.3573 15.9475 15.4649 15.9079 15.5239 15.8517C15.582 15.7963 15.6256 15.6935 15.6367 15.4726L15.6367 15.4723C15.6544 15.1371 15.6654 14.8033 15.6764 14.4689C15.682 14.298 15.6877 14.1269 15.6942 13.9555L15.6942 13.9541C15.7271 13.2556 15.9075 12.5993 16.5089 12.1137M15.5057 17.2144C15.3407 17.2246 15.1758 17.2213 15.0042 17.218C14.9158 17.2162 14.8257 17.2144 14.7329 17.2144V17.0644V16.1262C14.7894 16.1232 14.8431 16.1196 14.8952 16.1161C14.9778 16.1106 15.0565 16.1054 15.1367 16.103C15.602 16.0914 15.7633 15.9415 15.7865 15.4802C15.8043 15.1436 15.8154 14.8071 15.8264 14.4717C15.832 14.3012 15.8376 14.131 15.8441 13.9612C15.8764 13.2748 16.0532 12.6591 16.6313 12.208C16.5898 12.1775 16.5489 12.1461 16.5089 12.1137M16.5089 12.1137C16.5482 12.0819 16.5894 12.0508 16.6325 12.0205L17.0246 10.0465C17.0101 9.80222 17.0032 9.55708 16.9964 9.31189C16.9888 9.03986 16.9813 8.76778 16.9631 8.49675L17.1128 8.48686C17.1128 8.48684 17.1128 8.48681 17.1127 8.48678C17.0699 7.83768 16.8096 7.3747 16.3664 7.11097C15.9318 6.85234 15.3486 6.80204 14.6891 6.91051L14.5635 6.93118V7.05852V8.11995V8.26995H14.7135C14.9176 8.26995 15.0734 8.26996 15.229 8.27371V8.27371L15.2305 8.27373C15.3518 8.27542 15.4367 8.29959 15.491 8.33871C15.5391 8.37336 15.5805 8.4321 15.5907 8.5485L15.5908 8.54988C15.6039 8.68404 15.6105 8.81975 15.6173 8.96023L15.6174 8.96329C15.6241 9.1016 15.631 9.2445 15.6448 9.38802L15.6448 9.38812C15.6587 9.53177 15.6711 9.67735 15.6837 9.82402C15.719 10.238 15.7551 10.6606 15.8271 11.0722L15.827 11.0722L15.8274 11.0739C15.9093 11.5128 16.179 11.8466 16.5089 12.1137ZM8.52207 9.93144L8.52208 9.93144L8.53331 8.89122C8.53331 8.89121 8.53331 8.8912 8.53331 8.89118C8.54595 8.75109 8.55687 8.642 8.57545 8.55329C8.5939 8.46515 8.61725 8.41162 8.64547 8.37623C8.69482 8.31433 8.80081 8.25883 9.12868 8.27026L9.12868 8.27035H9.13391C9.20398 8.27035 9.28052 8.26288 9.35134 8.25596C9.38684 8.2525 9.42091 8.24917 9.452 8.247L9.59154 8.23725V8.09736V7.00515V6.85515H9.44154C9.35606 6.85515 9.27133 6.85384 9.18759 6.85255C9.02168 6.84999 8.85966 6.84749 8.70341 6.85534L8.70249 6.85539C8.27224 6.87964 7.90984 6.99378 7.6353 7.222C7.35929 7.45144 7.18884 7.78224 7.11706 8.2066C7.05085 8.58885 7.03594 8.98629 7.02154 9.37021C7.01474 9.55143 7.00805 9.72964 6.99614 9.90183L6.99607 9.90182L6.9959 9.90634C6.98479 10.1912 6.95487 10.4715 6.90267 10.7472C6.85004 10.9855 6.77823 11.1116 6.68452 11.1864C6.58856 11.263 6.44376 11.3068 6.19585 11.3197L6.19583 11.3195L6.18731 11.3204C6.11161 11.3288 6.04074 11.3414 5.96742 11.3577L5.85 11.3838V11.5041V12.7231V12.8659L5.99263 12.8729C6.45211 12.8955 6.65779 12.9869 6.77401 13.1415C6.83552 13.2233 6.8816 13.335 6.91652 13.4935C6.9515 13.6522 6.97326 13.8479 6.99242 14.092C7.00519 14.2627 7.00252 14.4346 6.99916 14.6141L6.99883 14.6316C6.9956 14.8032 6.99223 14.982 7.00379 15.1616C7.01947 15.5086 7.06681 15.8509 7.13757 16.1844L7.13752 16.1844L7.13847 16.1883C7.25756 16.6834 7.56252 17.0195 7.9816 17.202C8.3944 17.3818 8.90894 17.4095 9.45541 17.3161L9.58015 17.2948V17.1683V16.0992V15.9492H9.43015C9.36903 15.9492 9.31184 15.9497 9.25715 15.9501C9.15555 15.951 9.0626 15.9517 8.96923 15.9493C8.79374 15.9437 8.71562 15.9184 8.67441 15.8851C8.6392 15.8566 8.60317 15.7987 8.58714 15.6384L8.58709 15.6378C8.56462 15.4208 8.55608 15.2007 8.54985 14.9758C8.54862 14.9315 8.54748 14.887 8.54634 14.8423C8.54172 14.6615 8.53702 14.4775 8.52605 14.2946L8.52601 14.294C8.47608 13.5191 8.39302 12.686 7.66499 12.1105C8.0219 11.8124 8.28858 11.4492 8.3811 10.9797C8.4517 10.6303 8.49474 10.282 8.52207 9.93144ZM9.66743 11.258L9.66743 11.258H9.66442H9.65259C9.18673 11.2369 8.7881 11.5999 8.76462 12.0657L8.76461 12.0658C8.74136 12.5365 9.10445 12.9381 9.57227 12.9612L9.57226 12.9614H9.57967H9.6215C10.0839 12.987 10.4781 12.6314 10.5062 12.1707L10.5064 12.1707V12.1616V12.1246C10.5151 11.6527 10.1367 11.2674 9.66743 11.258ZM11.2296 12.0532L11.2295 12.0532V12.0578L11.2295 12.0606C11.2295 12.0797 11.2295 12.1051 11.2336 12.135C11.2362 12.3748 11.3199 12.5836 11.4758 12.7329C11.6335 12.884 11.8519 12.9616 12.0987 12.9616C12.3438 12.9616 12.5574 12.8806 12.7095 12.723C12.8609 12.5661 12.9371 12.3481 12.9371 12.1002L12.9371 12.0988C12.9348 11.8553 12.8513 11.6411 12.6947 11.4882C12.5387 11.3359 12.3227 11.2564 12.0771 11.258C11.6234 11.2455 11.2435 11.6014 11.2296 12.0532ZM13.6638 12.0996L13.6638 12.0996V12.104C13.6638 12.5776 14.0438 12.9591 14.5168 12.9614C14.7459 12.9962 14.9641 12.9025 15.1234 12.7517C15.2862 12.5975 15.3995 12.3737 15.4134 12.1278L15.4134 12.1269C15.4372 11.6507 15.0127 11.2588 14.5459 11.258C14.072 11.2494 13.6776 11.6258 13.6638 12.0996Z"
                                 fill="#FF4A6E"
@@ -812,10 +635,8 @@
                             </svg>
 
                             <p class="card-text text-body-secondary">
-                              This is special implementation of automated
-                              swagger docs for toys API. It's also have a
-                              cool-looks UI so you also can perform all the
-                              actions to this API
+                              This is special implementation of automated swagger docs for toys API. It's also have a
+                              cool-looks UI so you also can perform all the actions to this API
                             </p>
                           </div>
                         </div>
@@ -827,10 +648,7 @@
                         class="text-decoration-none text-dark"
                         href="https://toysrestapi.cyclic.app/toys"
                       >
-                        <div
-                          class="card cardintro rounded-4 border-0 h-100"
-                          style="background: #d1f4ff86"
-                        >
+                        <div class="card cardintro rounded-4 border-0 h-100" style="background: #d1f4ff86">
                           <div class="card-body">
                             <div></div>
                             <h5 class="card-title">Direct link</h5>
@@ -851,9 +669,8 @@
                             </svg>
 
                             <p class="card-text text-body-secondary">
-                              This is direct link to work with this API. You can
-                              use programs like "Postman" to interact with it
-                              directly
+                              This is direct link to work with this API. You can use programs like "Postman" to interact
+                              with it directly
                             </p>
                           </div>
                         </div>
@@ -865,60 +682,39 @@
                 <h4 class="text-start">Options of UI interaction</h4>
 
                 <p>
-                  The user interface for this application can be accessed
-                  through this direct
+                  The user interface for this application can be accessed through this direct
                   <b
-                    ><a
-                      target="_blank"
-                      href="https://toysrestapi.cyclic.app/toys"
-                    >
-                      URL</a
-                    >
+                    ><a target="_blank" href="https://toysrestapi.cyclic.app/toys"> URL</a>
                     <code> https://toysrestapi.cyclic.app/toys</code></b
                   >
-                  input directly in your web browser or through an API platform
-                  like
-                  <a target="_blank" href="https://www.postman.com/">Postman</a
-                  >, wtih all request to the same
+                  input directly in your web browser or through an API platform like
+                  <a target="_blank" href="https://www.postman.com/">Postman</a>, wtih all request to the same
                   <b
-                    ><a
-                      target="_blank"
-                      href="https://toysrestapi.cyclic.app//toys"
-                    >
-                      URL</a
-                    >
+                    ><a target="_blank" href="https://toysrestapi.cyclic.app//toys"> URL</a>
                     <code> https://toysrestapi.cyclic.app//toys</code></b
                   >. For users route URL is the
                   <b
-                    ><a
-                      target="_blank"
-                      href="https://toysrestapi.cyclic.app//toys"
-                      >follow</a
-                    >
+                    ><a target="_blank" href="https://toysrestapi.cyclic.app//toys">follow</a>
                     <code> https://toysrestapi.cyclic.app//toys</code></b
                   >
                 </p>
                 <p>
-                  For the purposes of this documentation, we will use Postman to
-                  provide clear instructions. Please note that this server has
-                  been tested and works best with hand requests or requests made
-                  through Postman, and may not function well with other
-                  programs.
+                  For the purposes of this documentation, we will use Postman to provide clear instructions. Please note
+                  that this server has been tested and works best with hand requests or requests made through Postman,
+                  and may not function well with other programs.
                 </p>
                 <p>
                   The user interface is structured around two main routes:
-                  <code>toys</code> and <code>users</code>. To use the
-                  application, users <b>must</b> first register by making a
+                  <code>toys</code> and <code>users</code>. To use the application, users <b>must</b> first register by
+                  making a
                   <b><code>POST</code></b>
                   request, which explained in
-                  <a href="#createuser">functions</a> section. Once registered,
-                  users can create new toys in the toys route and delete any
-                  items they have created.
+                  <a href="#createuser">functions</a> section. Once registered, users can create new toys in the toys
+                  route and delete any items they have created.
                 </p>
                 <p>
-                  Without registering, users can still access the toys route,
-                  but will only be able to make <b><code>GET</code></b> requests
-                  to retrieve information about toys and sort/search by name or
+                  Without registering, users can still access the toys route, but will only be able to make
+                  <b><code>GET</code></b> requests to retrieve information about toys and sort/search by name or
                   category.
                 </p>
               </div>
@@ -967,8 +763,7 @@
                   </svg>
                 </h3>
                 <p class="mb-0 text-body-secondary">
-                  Different roles and access levels for users, and what actions
-                  they are authorized to perform.
+                  Different roles and access levels for users, and what actions they are authorized to perform.
                 </p>
               </div>
               <div class="col-lg-9">
@@ -976,22 +771,17 @@
                 <h4 class="text-start">User and Admin roles</h4>
 
                 <p>
-                  The Toys API has two levels of user roles and permissions. By
-                  default, all users are considered regular users and can only
-                  perform limited actions. Regular users can delete only the
-                  items they have created and modify their password, email, or
-                  name. Only an admin can grant additional permissions or
+                  The Toys API has two levels of user roles and permissions. By default, all users are considered
+                  regular users and can only perform limited actions. Regular users can delete only the items they have
+                  created and modify their password, email, or name. Only an admin can grant additional permissions or
                   elevate a user to the second user role.
                 </p>
                 <p>
-                  The second user role is called an admin, and can only be
-                  granted directly in the Mongo database. Admins have full
-                  control over the users and toys routes, allowing them to
-                  create, update, and delete items without any limitations. They
-                  can also view all users and their created items. Due to their
-                  elevated permissions, admin accounts must be carefully managed
-                  and restricted to trusted individuals. At this moment its not
-                  possible to require change status to admin account
+                  The second user role is called an admin, and can only be granted directly in the Mongo database.
+                  Admins have full control over the users and toys routes, allowing them to create, update, and delete
+                  items without any limitations. They can also view all users and their created items. Due to their
+                  elevated permissions, admin accounts must be carefully managed and restricted to trusted individuals.
+                  At this moment its not possible to require change status to admin account
                 </p>
               </div>
             </div>
@@ -1017,151 +807,68 @@
                       d="M3 4C3 3.44772 3.44772 3 4 3H20C20.5523 3 21 3.44772 21 4V22C21 22.5523 20.5523 23 20 23H4C3.44772 23 3 22.5523 3 22V4ZM5 5V21H19V5H5Z"
                       fill="#FF4A6E"
                     />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M9 2V6H7V2H9Z"
-                      fill="#FF4A6E"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M13 2V6H11V2H13Z"
-                      fill="#FF4A6E"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M17 2V6H15V2H17Z"
-                      fill="#FF4A6E"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M14 11H7V9H14V11Z"
-                      fill="#FF4A6E"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M17.5 15H7V13H17.5V15Z"
-                      fill="#FF4A6E"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M15 19H7V17H15V19Z"
-                      fill="#FF4A6E"
-                    />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9 2V6H7V2H9Z" fill="#FF4A6E" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13 2V6H11V2H13Z" fill="#FF4A6E" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17 2V6H15V2H17Z" fill="#FF4A6E" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14 11H7V9H14V11Z" fill="#FF4A6E" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 15H7V13H17.5V15Z" fill="#FF4A6E" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15 19H7V17H15V19Z" fill="#FF4A6E" />
                   </svg>
                 </h3>
                 <p class="mb-0 text-body-secondary">
-                  Features and functions of the application, including how to
-                  use each feature and what it does.
+                  Features and functions of the application, including how to use each feature and what it does.
                 </p>
               </div>
               <div class="col-lg-9">
                 <hr style="color: #ff4a6e" />
-                <h4 class="text-start">
-                  Implemented libraries, techniques and pacckages
-                </h4>
+                <h4 class="text-start">Implemented libraries, techniques and pacckages</h4>
 
                 <p>
-                  The server was created using various npm packages. One of the
-                  main packages used was
-                  <code style="color: #19cc37; background: #d1ffd186"
-                    >Node.js</code
-                  >
-                  runtime, which is essential for developing server-side
-                  features based on its syntax.
+                  The server was created using various npm packages. One of the main packages used was
+                  <code style="color: #19cc37; background: #d1ffd186">Node.js</code>
+                  runtime, which is essential for developing server-side features based on its syntax.
                 </p>
                 <ul class="list-group">
-                  <li
-                    class="list-group-item list-group-item-action"
-                    data-aos="fade-up"
-                  >
-                    <code style="color: #19cc37; background: #d1ffd186"
-                      >Express</code
-                    >
-                    was used to create the server and create routers for
-                    handling all requests. This package is a fast,
-                    unopinionated, and minimalist web framework for Node.js that
-                    provides various features to build robust and scalable web
-                    applications.
+                  <li class="list-group-item list-group-item-action" data-aos="fade-up">
+                    <code style="color: #19cc37; background: #d1ffd186">Express</code>
+                    was used to create the server and create routers for handling all requests. This package is a fast,
+                    unopinionated, and minimalist web framework for Node.js that provides various features to build
+                    robust and scalable web applications.
                   </li>
-                  <li
-                    class="list-group-item list-group-item-action"
-                    data-aos="fade-up"
-                  >
-                    <code style="color: #ccb119; background: #fcffd186"
-                      >Mongoose</code
-                    >
-                    was used to establish a connection between the server and
-                    MongoDB. It provides a schema-based solution to model your
-                    application data and supports validation, query building,
-                    and data casting. Additionally, Mongoose also enables the
-                    creation of specific required functions, such as creating
+                  <li class="list-group-item list-group-item-action" data-aos="fade-up">
+                    <code style="color: #ccb119; background: #fcffd186">Mongoose</code>
+                    was used to establish a connection between the server and MongoDB. It provides a schema-based
+                    solution to model your application data and supports validation, query building, and data casting.
+                    Additionally, Mongoose also enables the creation of specific required functions, such as creating
                     basic schema models.
                   </li>
-                  <li
-                    class="list-group-item list-group-item-action"
-                    data-aos="fade-up"
-                  >
-                    <code style="color: #1984cc; background: #d1edff86"
-                      >Joi</code
-                    >
-                    was used to verify models before sending them to the
-                    database to ensure that they contain the required values and
-                    keys. This package is a powerful schema description language
-                    and data validator for JavaScript.
+                  <li class="list-group-item list-group-item-action" data-aos="fade-up">
+                    <code style="color: #1984cc; background: #d1edff86">Joi</code>
+                    was used to verify models before sending them to the database to ensure that they contain the
+                    required values and keys. This package is a powerful schema description language and data validator
+                    for JavaScript.
                   </li>
-                  <li
-                    class="list-group-item list-group-item-action"
-                    data-aos="fade-up"
-                  >
-                    <code style="color: #7b19cc; background: #e9d1ff86"
-                      >Axios</code
-                    >
-                    was used to handle asynchronous requests to the database and
-                    get responses. This package provides a simple and
-                    easy-to-use API for sending HTTP requests and handling
-                    responses asynchronously.
+                  <li class="list-group-item list-group-item-action" data-aos="fade-up">
+                    <code style="color: #7b19cc; background: #e9d1ff86">Axios</code>
+                    was used to handle asynchronous requests to the database and get responses. This package provides a
+                    simple and easy-to-use API for sending HTTP requests and handling responses asynchronously.
                   </li>
-                  <li
-                    class="list-group-item list-group-item-action"
-                    data-aos="fade-up"
-                  >
-                    <code style="color: #19ccbd; background: #e9d1ff86"
-                      >jsonwebtoken</code
-                    >
-                    was used to create and pass tokens to recognize user actions
-                    and logins. It is a package for JSON Web Tokens (JWT) that
-                    can be used to create and verify tokens.
+                  <li class="list-group-item list-group-item-action" data-aos="fade-up">
+                    <code style="color: #19ccbd; background: #e9d1ff86">jsonwebtoken</code>
+                    was used to create and pass tokens to recognize user actions and logins. It is a package for JSON
+                    Web Tokens (JWT) that can be used to create and verify tokens.
                   </li>
-                  <li
-                    class="list-group-item list-group-item-action"
-                    data-aos="fade-up"
-                  >
-                    <code style="color: #cc5219; background: #fff8d186"
-                      >Cors</code
-                    >
-                    was used to turn off IP verification and disable strict mode
-                    of access to the server. This package is a Node.js package
-                    for providing a Connect/Express middleware that can be used
-                    to enable Cross-Origin Resource Sharing (CORS) for the web
-                    application.
+                  <li class="list-group-item list-group-item-action" data-aos="fade-up">
+                    <code style="color: #cc5219; background: #fff8d186">Cors</code>
+                    was used to turn off IP verification and disable strict mode of access to the server. This package
+                    is a Node.js package for providing a Connect/Express middleware that can be used to enable
+                    Cross-Origin Resource Sharing (CORS) for the web application.
                   </li>
-                  <li
-                    class="list-group-item list-group-item-action"
-                    data-aos="fade-up"
-                  >
-                    <code style="color: #192bcc; background: #d1dcff86"
-                      >Bcrypt</code
-                    >
-                    was used to hash the password provided by the user. It is a
-                    password-hashing function designed to be slow and
-                    computationally expensive to make it difficult to perform
-                    brute-force attacks against user passwords.
+                  <li class="list-group-item list-group-item-action" data-aos="fade-up">
+                    <code style="color: #192bcc; background: #d1dcff86">Bcrypt</code>
+                    was used to hash the password provided by the user. It is a password-hashing function designed to be
+                    slow and computationally expensive to make it difficult to perform brute-force attacks against user
+                    passwords.
                   </li>
                 </ul>
               </div>
@@ -1181,112 +888,71 @@
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M6 19.5V4.5H8V19.5H6Z"
-                        fill="#FF4A6E"
-                      />
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M6 19.5V4.5H8V19.5H6Z" fill="#FF4A6E" />
                       <path
                         fill-rule="evenodd"
                         clip-rule="evenodd"
                         d="M7.00001 18.0859L4.70712 15.793L3.29291 17.2072L6.29291 20.2072C6.68343 20.5977 7.3166 20.5977 7.70712 20.2072L10.7071 17.2072L9.29291 15.793L7.00001 18.0859Z"
                         fill="#FF4A6E"
                       />
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M14 12.5H10V14.5H14V12.5Z"
-                        fill="#FF4A6E"
-                      />
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M17 8.5H10V10.5H17V8.5Z"
-                        fill="#FF4A6E"
-                      />
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M20 4.5H10V6.5H20V4.5Z"
-                        fill="#FF4A6E"
-                      />
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M14 12.5H10V14.5H14V12.5Z" fill="#FF4A6E" />
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M17 8.5H10V10.5H17V8.5Z" fill="#FF4A6E" />
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M20 4.5H10V6.5H20V4.5Z" fill="#FF4A6E" />
                     </svg>
                   </h3>
                   <p class="mb-0 text-body-secondary">
-                    Different routes or endpoints available in the application's
-                    API, what they do, and how to use them.
+                    Different routes or endpoints available in the application's API, what they do, and how to use them.
                   </p>
                 </div>
                 <div class="col-lg-9">
                   <hr style="color: #ff4a6e" />
-                  <h4 class="text-start fw-bold" data-aos="fade-up">
-                    Description
-                  </h4>
+                  <h4 class="text-start fw-bold" data-aos="fade-up">Description</h4>
 
                   <p data-aos="fade-up">
-                    This API consists of two main routes, <code>/toys</code> and
-                    <code>/users</code>, each serving different functionalities.
-                    Additionally, there is a <code>/main</code> endpoint that
-                    will guide you on what to do in case you are lost. Finally,
-                    if user enter a non-existing endpoint, the server will
+                    This API consists of two main routes, <code>/toys</code> and <code>/users</code>, each serving
+                    different functionalities. Additionally, there is a <code>/main</code> endpoint that will guide you
+                    on what to do in case you are lost. Finally, if user enter a non-existing endpoint, the server will
                     return a default <code>404</code>
                     error response router.
                   </p>
                   <h4 data-aos="fade-up">The <code>/toys</code> router</h4>
                   <p data-aos="fade-up">
-                    The <code>/toys</code> router is responsible for handling
-                    requests related to toys. It allows users to perform
-                    <b><code>GET</code></b
+                    The <code>/toys</code> router is responsible for handling requests related to toys. It allows users
+                    to perform <b><code>GET</code></b
                     >, <b><code>PUT</code></b
                     >, <b><code>POST</code></b
-                    >, and <b><code>DELETE</code></b> requests for toys.
-                    Additionally, users can sort and search for toys by name,
-                    category, and other information. The toys router also
-                    handles requests for creating and updating toy information,
-                    such as name, description, and price.
+                    >, and <b><code>DELETE</code></b> requests for toys. Additionally, users can sort and search for
+                    toys by name, category, and other information. The toys router also handles requests for creating
+                    and updating toy information, such as name, description, and price.
                   </p>
                   <h4 data-aos="fade-up">The <code>/users</code> router</h4>
                   <p data-aos="fade-up">
-                    The <code>/users</code> router, on the other hand, handles
-                    requests related to users. It allows users to perform
-                    <b><code>GET</code></b
+                    The <code>/users</code> router, on the other hand, handles requests related to users. It allows
+                    users to perform <b><code>GET</code></b
                     >, <b><code>PUT</code></b
                     >, <b><code>POST</code></b
-                    >, and <b><code>DELETE</code></b> requests for user
-                    data.This router is responsible for managing user
-                    authentication, including user registration, password reset,
-                    and user role management.
+                    >, and <b><code>DELETE</code></b> requests for user data.This router is responsible for managing
+                    user authentication, including user registration, password reset, and user role management.
                   </p>
                   <h4 data-aos="fade-up">The <code>/main</code> router</h4>
                   <p data-aos="fade-up">
-                    The <code>/main</code> router is a default endpoint for the
-                    API. It's just shows information and recommends to visit
-                    pyblic page woth documentation
-                    <a
-                      target="_blank"
-                      href="https://toysrestapi.cyclic.app"
-                    ></a>
+                    The <code>/main</code> router is a default endpoint for the API. It's just shows information and
+                    recommends to visit pyblic page woth documentation
+                    <a target="_blank" href="https://toysrestapi.cyclic.app"></a>
                   </p>
                   <h4 data-aos="fade-up"><code>404</code> router</h4>
                   <p data-aos="fade-up">
-                    The <code>404</code> router is an additional router in the
-                    Toys REST API that handles any requests for non-existing
-                    endpoints. If a user enters a non-existing endpoint, the
-                    server will return a default response with a 404 error
-                    message. The purpose of this router is to provide a clear
-                    response to users and help them understand what went wrong
-                    in their request.
+                    The <code>404</code> router is an additional router in the Toys REST API that handles any requests
+                    for non-existing endpoints. If a user enters a non-existing endpoint, the server will return a
+                    default response with a 404 error message. The purpose of this router is to provide a clear response
+                    to users and help them understand what went wrong in their request.
                   </p>
                   <hr style="color: #ff4a6e" />
 
-                  <h4 data-aos="fade-up" class="text-start fw-bold pt-5">
-                    All routes endpoints
-                  </h4>
+                  <h4 data-aos="fade-up" class="text-start fw-bold pt-5">All routes endpoints</h4>
                   <p data-aos="fade-up" class="text-secondary">
-                    To see functionality with <b><code>POST</code></b>
-                    <b><code>PUT</code></b> <b><code>DELETE</code></b> requests
-                    follow to
+                    To see functionality with <b><code>POST</code></b> <b><code>PUT</code></b>
+                    <b><code>DELETE</code></b> requests follow to
                     <a href="#functions">functions part</a>
                   </p>
                   <div class="py-5">
@@ -1318,9 +984,7 @@
                           </tr>
                           <tr>
                             <td>Search by category</td>
-                            <td>
-                              https://toysrestapi.cyclic.app/toys/category/{catname}
-                            </td>
+                            <td>https://toysrestapi.cyclic.app/toys/category/{catname}</td>
                             <td>
                               <b><code>GET</code></b>
                             </td>
@@ -1328,9 +992,7 @@
                         </tbody>
                       </table>
                     </div>
-                    <h4 data-aos="fade-up" class="pt-5" style="color: #fc5c7c">
-                      /users
-                    </h4>
+                    <h4 data-aos="fade-up" class="pt-5" style="color: #fc5c7c">/users</h4>
                     <p class="text-secondary">
                       To see functionality with <b><code>POST</code></b>
                       <b><code>PUT</code></b>
@@ -1370,9 +1032,7 @@
                           </tr>
                           <tr>
                             <td>Retrieving a user's information</td>
-                            <td>
-                              https://toysrestapi.cyclic.app/users/userInfo
-                            </td>
+                            <td>https://toysrestapi.cyclic.app/users/userInfo</td>
                             <td>
                               <b><code>GET</code></b>
                             </td>
@@ -1381,9 +1041,7 @@
                       </table>
                     </div>
 
-                    <h4 data-aos="fade-up" class="pt-5" style="color: #fc5c7c">
-                      /main
-                    </h4>
+                    <h4 data-aos="fade-up" class="pt-5" style="color: #fc5c7c">/main</h4>
 
                     <div class="table-responsive">
                       <table data-aos="fade-up" class="table table-hover">
@@ -1405,9 +1063,7 @@
                         </tbody>
                       </table>
                     </div>
-                    <h4 data-aos="fade-up" class="pt-5" style="color: #fc5c7c">
-                      /
-                    </h4>
+                    <h4 data-aos="fade-up" class="pt-5" style="color: #fc5c7c">/</h4>
 
                     <div class="table-responsive" data-aos="fade-up">
                       <table class="table table-hover">
@@ -1432,9 +1088,7 @@
                         </tbody>
                       </table>
                     </div>
-                    <h4 data-aos="fade-up" class="pt-5" style="color: #fc5c7c">
-                      Non-existing route (404 error)
-                    </h4>
+                    <h4 data-aos="fade-up" class="pt-5" style="color: #fc5c7c">Non-existing route (404 error)</h4>
 
                     <div class="table-responsive">
                       <table data-aos="fade-up" class="table table-hover">
@@ -1447,14 +1101,8 @@
                         </thead>
                         <tbody>
                           <tr>
-                            <td>
-                              Wrong route or error in request throws 404 error
-                              message
-                            </td>
-                            <td>
-                              https://toysrestapi.cyclic.app/{none-existing
-                              route}
-                            </td>
+                            <td>Wrong route or error in request throws 404 error message</td>
+                            <td>https://toysrestapi.cyclic.app/{none-existing route}</td>
                             <td>
                               <b><code>GET</code></b>
                             </td>
@@ -1521,8 +1169,7 @@
                     </svg>
                   </h3>
                   <p class="mb-0 text-body-secondary">
-                    Different functions available in the application, what they
-                    do, and how to use them.
+                    Different functions available in the application, what they do, and how to use them.
                   </p>
                 </div>
                 <div class="col-lg-9">
@@ -1530,37 +1177,21 @@
                   <h4 class="text-start">General information</h4>
 
                   <p>
-                    This is a complete description of all the functions
-                    available in each router, including how to use them and
-                    examples of implementation. The usage examples are
-                    demonstrated using the
-                    <bold class="fw-bold"
-                      ><a target="_blank" href="https://www.postman.com/"
-                        >Postman</a
-                      ></bold
-                    >
+                    This is a complete description of all the functions available in each router, including how to use
+                    them and examples of implementation. The usage examples are demonstrated using the
+                    <bold class="fw-bold"><a target="_blank" href="https://www.postman.com/">Postman</a></bold>
                     program.
                   </p>
                   <hr style="color: #ff4a6e" />
-                  <h4 data-aos="fade-up" class="text-start fw-bold pt-5">
-                    All routes functions
-                  </h4>
+                  <h4 data-aos="fade-up" class="text-start fw-bold pt-5">All routes functions</h4>
                   <div class="py-5">
-                    <h2
-                      data-aos="fade-up"
-                      class="mt-5 pt-5 text-center"
-                      style="color: #fc5c7c"
-                    >
-                      /toys
-                    </h2>
+                    <h2 data-aos="fade-up" class="mt-5 pt-5 text-center" style="color: #fc5c7c">/toys</h2>
                     <div class="py-3">
                       <h4 class="text-start">
                         <b><code>GET</code></b> requests
                       </h4>
 
-                      <code class="">
-                        https://toysrestapi.cyclic.app/toys
-                      </code>
+                      <code class=""> https://toysrestapi.cyclic.app/toys </code>
                       <p>
                         Here all params you can pass in this
                         <b><code>GET</code></b> endpoint
@@ -1589,39 +1220,24 @@
                               <b><code>GET</code></b>
                             </td>
                             <td>Shows all toys, lists page</td>
-                            <td>
-                              https://toysrestapi.cyclic.app/toys/?page=<code
-                                >{number of page}</code
-                              >
-                            </td>
+                            <td>https://toysrestapi.cyclic.app/toys/?page=<code>{number of page}</code></td>
                           </tr>
                           <tr>
                             <td>
                               <b><code>GET</code></b>
                             </td>
                             <td>Shows all toys, sorts by required key</td>
-                            <td>
-                              https://toysrestapi.cyclic.app/toys/?sort=<code
-                                >{name of key}</code
-                              >
-                            </td>
+                            <td>https://toysrestapi.cyclic.app/toys/?sort=<code>{name of key}</code></td>
                           </tr>
                           <tr>
                             <td>
                               <b><code>GET</code></b>
                             </td>
+                            <td>Shows all toys, ascending or descending order</td>
                             <td>
-                              Shows all toys, ascending or descending order
-                            </td>
-                            <td>
-                              https://toysrestapi.cyclic.app/toys/?desc=<code
-                                >{yes}</code
-                              >
-                              <code
-                                style="color: #19cc37; background: #d1ffd186"
-                              >
-                                if <code>yes</code> descending will be turn on,
-                                else turned
+                              https://toysrestapi.cyclic.app/toys/?desc=<code>{yes}</code>
+                              <code style="color: #19cc37; background: #d1ffd186">
+                                if <code>yes</code> descending will be turn on, else turned
                                 <bold class="fw-bold">off</bold></code
                               >
                             </td>
@@ -1635,13 +1251,8 @@
                     <b><code>GET</code></b> request for search
                   </h4>
 
-                  <code class="">
-                    https://toysrestapi.cyclic.app/toys/search?s=</code
-                  ><span
-                    class="code"
-                    style="color: #19cc37; background: #d1ffd186"
-                    >{search}</span
-                  >
+                  <code class=""> https://toysrestapi.cyclic.app/toys/search?s=</code
+                  ><span class="code" style="color: #19cc37; background: #d1ffd186">{search}</span>
 
                   <p>
                     Here all params you can pass in this
@@ -1663,13 +1274,8 @@
                             <b><code>GET</code></b>
                           </td>
 
-                          <td>
-                            Search passed query in <code>info</code> and
-                            <code>name</code> keys
-                          </td>
-                          <td>
-                            https://toysrestapi.cyclic.app/toys/search/?s=shuttle
-                          </td>
+                          <td>Search passed query in <code>info</code> and <code>name</code> keys</td>
+                          <td>https://toysrestapi.cyclic.app/toys/search/?s=shuttle</td>
                         </tr>
                       </tbody>
                     </table>
@@ -1679,13 +1285,8 @@
                     <b><code>GET</code></b> request for search by category
                   </h4>
 
-                  <code class="">
-                    https://toysrestapi.cyclic.app/toys/category/</code
-                  ><span
-                    class="code"
-                    style="color: #19cc37; background: #d1ffd186"
-                    >{category name}</span
-                  >
+                  <code class=""> https://toysrestapi.cyclic.app/toys/category/</code
+                  ><span class="code" style="color: #19cc37; background: #d1ffd186">{category name}</span>
 
                   <p>
                     Here all params you can pass in this
@@ -1707,12 +1308,8 @@
                             <b><code>GET</code></b>
                           </td>
 
-                          <td>
-                            Search passed param in <code>category</code> key
-                          </td>
-                          <td>
-                            https://toysrestapi.cyclic.app/toys/category/figures
-                          </td>
+                          <td>Search passed param in <code>category</code> key</td>
+                          <td>https://toysrestapi.cyclic.app/toys/category/figures</td>
                         </tr>
                       </tbody>
                     </table>
@@ -1720,8 +1317,7 @@
 
                   <div class="py-3">
                     <h4 class="text-start">
-                      <span class="fw-bold text-danger">*</span
-                      ><b><code>POST</code></b> request
+                      <span class="fw-bold text-danger">*</span><b><code>POST</code></b> request
                     </h4>
 
                     <code class=""> https://toysrestapi.cyclic.app/toys </code>
@@ -1730,13 +1326,9 @@
                       <b><code>POST</code></b> endpoint
                     </p>
                     <p>
-                      <bold class="fw-bold">
-                        <span class="fw-bold text-danger">*</span> Please
-                        mention:</bold
-                      >
+                      <bold class="fw-bold"> <span class="fw-bold text-danger">*</span> Please mention:</bold>
                       for this type request you should create user in
-                      <code>/users</code> route and have valid
-                      <code class="fw-bold"><a href="#login">token</a></code
+                      <code>/users</code> route and have valid <code class="fw-bold"><a href="#login">token</a></code
                       >. Follow to
                       <code>/user</code>
                       section to get all related information
@@ -1750,9 +1342,7 @@
                           <th scope="col">Description</th>
                           <th scope="col">Request <code>URL</code> example</th>
                           <th scope="col">Request <code>body</code> example</th>
-                          <th scope="col">
-                            Request <code>header</code> example
-                          </th>
+                          <th scope="col">Request <code>header</code> example</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -1803,37 +1393,27 @@
 
                   <div class="py-5">
                     <h4 class="text-start">
-                      <span class="fw-bold text-danger">*</span
-                      ><b><code>PUT</code></b> request
+                      <span class="fw-bold text-danger">*</span><b><code>PUT</code></b> request
                     </h4>
 
                     <code class=""> https://toysrestapi.cyclic.app/toys/</code
-                    ><span
-                      class="code"
-                      style="color: #19cc37; background: #d1ffd186"
-                      >{toy id}</span
-                    >
+                    ><span class="code" style="color: #19cc37; background: #d1ffd186">{toy id}</span>
 
                     <p>
                       Here all params you can pass in this
                       <b><code>PUT</code></b> endpoint
                     </p>
                     <p>
-                      <bold class="fw-bold">
-                        <span class="fw-bold text-danger">*</span> Please
-                        mention:</bold
-                      >
+                      <bold class="fw-bold"> <span class="fw-bold text-danger">*</span> Please mention:</bold>
                       for this type request you should create user in
-                      <code>/users</code> route and have valid
-                      <code class="fw-bold">token</code>. Follow to
+                      <code>/users</code> route and have valid <code class="fw-bold">token</code>. Follow to
                       <code>/user</code>
                       section to get all related information
                     </p>
                     <div class="border-start border-2 border-info ps-4">
                       <p>
-                        User can delete <bold class="fw-bold">only</bold> its
-                        created toy item, only user with <code>admin</code> role
-                        can delete any item he wants
+                        User can delete <bold class="fw-bold">only</bold> its created toy item, only user with
+                        <code>admin</code> role can delete any item he wants
                       </p>
                     </div>
                   </div>
@@ -1845,9 +1425,7 @@
                           <th scope="col">Description</th>
                           <th scope="col">Request <code>URL</code> example</th>
                           <th scope="col">Request <code>body</code> example</th>
-                          <th scope="col">
-                            Request <code>header</code> example
-                          </th>
+                          <th scope="col">Request <code>header</code> example</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -1856,14 +1434,9 @@
                             <b><code>PUT</code></b>
                           </td>
 
-                          <td>
-                            <code>Updates</code> user's created toy
-                            <code>by id</code> in the database
-                          </td>
+                          <td><code>Updates</code> user's created toy <code>by id</code> in the database</td>
 
-                          <td>
-                            https://toysrestapi.cyclic.app/toys/63f67afa1c859b4d063e03f4
-                          </td>
+                          <td>https://toysrestapi.cyclic.app/toys/63f67afa1c859b4d063e03f4</td>
                           <td>
                             <p class="code my-3 w-25">JSON</p>
                             <pre class="jsondata">
@@ -1901,37 +1474,27 @@
 
                   <div class="py-5">
                     <h4 class="text-start">
-                      <span class="fw-bold text-danger">*</span
-                      ><b><code>DELETE</code></b> request
+                      <span class="fw-bold text-danger">*</span><b><code>DELETE</code></b> request
                     </h4>
 
                     <code class=""> https://toysrestapi.cyclic.app/toys/</code
-                    ><span
-                      class="code"
-                      style="color: #19cc37; background: #d1ffd186"
-                      >{toy id}</span
-                    >
+                    ><span class="code" style="color: #19cc37; background: #d1ffd186">{toy id}</span>
 
                     <p>
                       Here all params you can pass in this
                       <b><code>DELETE</code></b> endpoint
                     </p>
                     <p>
-                      <bold class="fw-bold">
-                        <span class="fw-bold text-danger">*</span> Please
-                        mention:</bold
-                      >
+                      <bold class="fw-bold"> <span class="fw-bold text-danger">*</span> Please mention:</bold>
                       for this type request you should create user in
-                      <code>/users</code> route and have valid
-                      <code class="fw-bold">token</code>. Follow to
+                      <code>/users</code> route and have valid <code class="fw-bold">token</code>. Follow to
                       <code>/user</code>
                       section to get all related information
                     </p>
                     <div class="border-start border-2 border-info ps-4">
                       <p>
-                        User can delete <bold class="fw-bold">only</bold> its
-                        created toy item, only user with <code>admin</code> role
-                        can delete any item he wants
+                        User can delete <bold class="fw-bold">only</bold> its created toy item, only user with
+                        <code>admin</code> role can delete any item he wants
                       </p>
                     </div>
                   </div>
@@ -1943,9 +1506,7 @@
                           <th scope="col">Description</th>
                           <th scope="col">Request <code>URL</code> example</th>
 
-                          <th scope="col">
-                            Request <code>header</code> example
-                          </th>
+                          <th scope="col">Request <code>header</code> example</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -1954,14 +1515,9 @@
                             <b><code>DELETE</code></b>
                           </td>
 
-                          <td>
-                            <code>Deletes</code> user's created toy
-                            <code>by id</code> from the database
-                          </td>
+                          <td><code>Deletes</code> user's created toy <code>by id</code> from the database</td>
 
-                          <td>
-                            https://toysrestapi.cyclic.app/toys/63f67afa1c859b4d063e03f4
-                          </td>
+                          <td>https://toysrestapi.cyclic.app/toys/63f67afa1c859b4d063e03f4</td>
 
                           <td>
                             <table class="table-responsive">
@@ -1986,22 +1542,14 @@
                     </table>
                   </div>
                   <div class="container">
-                    <h2
-                      data-aos="fade-up"
-                      class="mt-5 pt-5 text-center"
-                      style="color: #fc5c7c"
-                    >
-                      /users
-                    </h2>
+                    <h2 data-aos="fade-up" class="mt-5 pt-5 text-center" style="color: #fc5c7c">/users</h2>
 
                     <div class="py-3">
                       <h4 class="text-start">
                         <b><code>GET</code></b> requests
                       </h4>
 
-                      <code class="">
-                        https://toysrestapi.cyclic.app/users
-                      </code>
+                      <code class=""> https://toysrestapi.cyclic.app/users </code>
                       <p>
                         Here all params you can pass in this
                         <b><code>GET</code></b> endpoint
@@ -2013,12 +1561,8 @@
                           <tr>
                             <th scope="col">Method</th>
                             <th scope="col">Description</th>
-                            <th scope="col">
-                              Request <code>URL</code> example
-                            </th>
-                            <th scope="col">
-                              Request <code>header</code> example
-                            </th>
+                            <th scope="col">Request <code>URL</code> example</th>
+                            <th scope="col">Request <code>header</code> example</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -2037,9 +1581,7 @@
                             </td>
 
                             <td>Gets user info</td>
-                            <td>
-                              https://toysrestapi.cyclic.app/users/userInfo
-                            </td>
+                            <td>https://toysrestapi.cyclic.app/users/userInfo</td>
                             <td><code>token</code></td>
                           </tr>
                         </tbody>
@@ -2096,9 +1638,7 @@
                       <code>token</code>
                     </h4>
 
-                    <code class="">
-                      https://toysrestapi.cyclic.app/users/login</code
-                    >
+                    <code class=""> https://toysrestapi.cyclic.app/users/login</code>
                     <p>
                       Here all params you can pass in this
                       <b><code>POST</code></b> endpoint
@@ -2118,9 +1658,7 @@
                         <tr>
                           <td>POST</td>
 
-                          <td>
-                            Authenticates user and returns him token in response
-                          </td>
+                          <td>Authenticates user and returns him token in response</td>
 
                           <td>https://toysrestapi.cyclic.app/users/login</td>
                           <td>
@@ -2143,11 +1681,7 @@
                     </h4>
 
                     <code class=""> https://toysrestapi.cyclic.app/users/</code
-                    ><span
-                      class="code"
-                      style="color: #19cc37; background: #d1ffd186"
-                      >{user id}</span
-                    >
+                    ><span class="code" style="color: #19cc37; background: #d1ffd186">{user id}</span>
 
                     <p>
                       Here all params you can pass in this
@@ -2156,9 +1690,8 @@
 
                     <div class="border-start border-2 border-info ps-4">
                       <p>
-                        User can edit <bold class="fw-bold">only</bold> its
-                        created profile, only user with <code>admin</code> role
-                        can edit any user he wants
+                        User can edit <bold class="fw-bold">only</bold> its created profile, only user with
+                        <code>admin</code> role can edit any user he wants
                       </p>
                     </div>
                   </div>
@@ -2170,9 +1703,7 @@
                           <th scope="col">Description</th>
                           <th scope="col">Request <code>URL</code> example</th>
                           <th scope="col">Request <code>body</code> example</th>
-                          <th scope="col">
-                            Request <code>header</code> example
-                          </th>
+                          <th scope="col">Request <code>header</code> example</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -2181,14 +1712,9 @@
                             <b><code>PUT</code></b>
                           </td>
 
-                          <td>
-                            <code>Updates</code> user's information by its
-                            <code>id</code> in the database
-                          </td>
+                          <td><code>Updates</code> user's information by its <code>id</code> in the database</td>
 
-                          <td>
-                            https://toysrestapi.cyclic.app/users/63f6ca4c146b478891fb0ad8
-                          </td>
+                          <td>https://toysrestapi.cyclic.app/users/63f6ca4c146b478891fb0ad8</td>
                           <td>
                             <p class="code my-3 w-25">JSON</p>
                             <pre class="jsondata">
@@ -2228,11 +1754,7 @@
                     </h4>
 
                     <code class=""> https://toysrestapi.cyclic.app/users/</code
-                    ><span
-                      class="code"
-                      style="color: #19cc37; background: #d1ffd186"
-                      >{user id}</span
-                    >
+                    ><span class="code" style="color: #19cc37; background: #d1ffd186">{user id}</span>
 
                     <p>
                       Here all params you can pass in this
@@ -2241,9 +1763,8 @@
 
                     <div class="border-start border-2 border-info ps-4">
                       <p>
-                        User can delete <bold class="fw-bold">only</bold> its
-                        created profile, only user with <code>admin</code> role
-                        can delete any item he wants
+                        User can delete <bold class="fw-bold">only</bold> its created profile, only user with
+                        <code>admin</code> role can delete any item he wants
                       </p>
                     </div>
                   </div>
@@ -2255,9 +1776,7 @@
                           <th scope="col">Description</th>
                           <th scope="col">Request <code>URL</code> example</th>
 
-                          <th scope="col">
-                            Request <code>header</code> example
-                          </th>
+                          <th scope="col">Request <code>header</code> example</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -2266,14 +1785,9 @@
                             <b><code>DELETE</code></b>
                           </td>
 
-                          <td>
-                            <code>Deletes</code> user's profile
-                            <code>by id</code> from the database
-                          </td>
+                          <td><code>Deletes</code> user's profile <code>by id</code> from the database</td>
 
-                          <td>
-                            https://toysrestapi.cyclic.app/users/63f6ca4c146b478891fb0ad8
-                          </td>
+                          <td>https://toysrestapi.cyclic.app/users/63f6ca4c146b478891fb0ad8</td>
 
                           <td>
                             <table class="table-responsive">
@@ -2306,43 +1820,27 @@
       <footer class="page-footer container-fluid bg-body-tertiary">
         <div class="container">
           <div class="row justify-content-center">
-            <div
-              class="col-12 d-flex justify-content-center opacity-75 text-center"
-            >
+            <div class="col-12 d-flex justify-content-center opacity-75 text-center">
               <div class="col-4">
-                <a
-                  class="text-decoration-none fw-bold"
-                  target="_blank"
-                  href="https://toysrestapi.netlify.app"
+                <a class="text-decoration-none fw-bold" target="_blank" href="https://toysrestapi.netlify.app"
                   >Front-end side</a
                 >
               </div>
               <div class="col-4">
-                <a
-                  class="text-decoration-none fw-bold"
-                  target="_blank"
-                  href="https://toysrestapi.cyclic.app/api-docs"
+                <a class="text-decoration-none fw-bold" target="_blank" href="https://toysrestapi.cyclic.app/api-docs"
                   >Swagger Automated Docs</a
                 >
               </div>
               <div class="col-4">
-                <a
-                  class="text-decoration-none fw-bold"
-                  target="_blank"
-                  href="https://toysrestapi.cyclic.app/toys"
+                <a class="text-decoration-none fw-bold" target="_blank" href="https://toysrestapi.cyclic.app/toys"
                   >Direct Link</a
                 >
               </div>
             </div>
             <div class="col-12 text-center part1">
               <p class="text-secondary">
-                This is pre-final server side project. See more information at
-                my
-                <a
-                  target="_blank"
-                  href="https://github.com/brandalx/SERVER-3-4-LONG-PROJECT"
-                  >GitHub repo
-                </a>
+                This is pre-final server side project. See more information at my
+                <a target="_blank" href="https://github.com/brandalx/SERVER-3-4-LONG-PROJECT">GitHub repo </a>
               </p>
             </div>
           </div>

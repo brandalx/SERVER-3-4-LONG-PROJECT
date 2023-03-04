@@ -1,10 +1,12 @@
-import { burger } from "./tools/burger.js";
-import { loadingLine } from "./tools/loadingLine.js";
-
+import { burger } from './tools/burger.js'
+import { loadingLine } from './tools/loadingLine.js'
+import { preloader } from './tools/preloaderwb.js'
 const init = () => {
-  burger();
-  AOS.init();
-  loadingLine();
-};
+  preloader()
 
-init();
+  burger()
+
+  loadingLine()
+}
+
+init()
