@@ -13,14 +13,15 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: 'https://toysrestapi.cyclic.app/',
+        url: process.env.PORT,
+        // url: 'https://toysrestapi.cyclic.app/',
         // url: `http://localhost:3001/`,
         description: process.env.PORT ? ' Cyclic server ' : 'Local server'
       }
     ]
   },
   // API schema model for all routes
-  apis: ['./docs/swagger.js']
+  apis: ['./docs/swaggerToys.js', './docs/swaggerUsers.js']
 }
 
 // Generate the Swagger documentation using the defined options

@@ -1,4 +1,5 @@
-//for /toys GET request
+// for /toys GET request
+
 /**
  * @swagger
  * /toys:
@@ -63,7 +64,7 @@
  *         description: Internal server error.
  */
 
-//for /toys/search GET request
+// for /toys/search GET request
 
 /**
  * @swagger
@@ -401,7 +402,7 @@
  *                 err:
  *                   type: object
  */
-
+//for /toys/ DELETE request
 /**
  * @swagger
  * securityDefinitions:
