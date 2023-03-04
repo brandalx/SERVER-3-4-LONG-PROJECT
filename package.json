@@ -4,7 +4,7 @@
   "description": "SERVER-3-4-LONG-PROJECT",
   "type": "module",
   "scripts": {
-    "start": "nodemon app",
+    "start": "node app",
     "startdev": "nodemon app"
   },
   "repository": {
