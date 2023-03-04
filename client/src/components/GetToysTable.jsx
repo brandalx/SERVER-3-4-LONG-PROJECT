@@ -46,7 +46,7 @@ const ProductTable = () => {
 
   return (
     <>
-      <div className='container-fluid py-5'>
+      <div data-aos='fade-up' data-aos-duration='700' className='container-fluid py-5'>
         <div className='container '>
           <h2 className=' text-center'>
             Toys{' '}
@@ -94,7 +94,7 @@ const ProductTable = () => {
                 </label>
               </div>
             </div>
-            <div className='col-12'>
+            <div data-aos='fade-up' data-aos-duration='700' className='col-12'>
               <div className='table-responsive'>
                 <table className='table table-hover'>
                   <thead>
