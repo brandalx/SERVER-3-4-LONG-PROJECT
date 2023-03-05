@@ -1,7 +1,8 @@
 import swaggerUi from 'swagger-ui-express'
 import swaggerJsdoc from 'swagger-jsdoc'
-
+import { SERVER_URL, port, localurldb } from '../config/config.js'
 // Set up Swagger options and generate the Swagger documentation
+
 const swaggerOptions = {
   definition: {
     openapi: '3.0.0',
@@ -13,10 +14,11 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: process.env.PORT,
+        url: SERVER_URL || localurldb,
+        // url: SERVER_URL || localurldb,
         // url: 'https://toysrestapi.cyclic.app/',
         // url: `http://localhost:3001/`,
-        description: process.env.PORT ? ' Cyclic server ' : 'Local server'
+        description: 'The adress is ' + SERVER_URL
       }
     ]
   },

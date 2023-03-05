@@ -3,7 +3,7 @@ import { config } from 'dotenv'
 config()
 
 export const urldb = process.env.URLDB
-
+export const SERVER_URL = process.env.SERVER_URL
 export const tokenSecret = process.env.TOKENSECRET
 export const localurldb = process.env.LOCALURLDB
 // When upload to a real server that the server will provide its port
