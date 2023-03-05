@@ -14,7 +14,14 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: SERVER_URL || localurldb,
+        url: SERVER_URL,
+        // url: SERVER_URL || localurldb,
+        // url: 'https://toysrestapi.cyclic.app/',
+        // url: `http://localhost:3001/`,
+        description: 'The adress is ' + SERVER_URL
+      },
+      {
+        url: localurldb,
         // url: SERVER_URL || localurldb,
         // url: 'https://toysrestapi.cyclic.app/',
         // url: `http://localhost:3001/`,
