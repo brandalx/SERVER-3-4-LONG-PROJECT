@@ -3,6 +3,7 @@ import { Sugar } from 'react-preloaders2'
 import LoadingLine from './components/Loadinline'
 import { Header } from './components/Header'
 import { Main } from './components/Main'
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import { Footer } from './components/Footer'
 import CreateUser from './components/CreateUser'
 import LogInForm from './components/LogInForm'
@@ -23,6 +24,7 @@ export function App() {
 
     return () => clearTimeout(timeout)
   }, [])
+
   useEffect(() => {
     if (!showSugar) {
       document.body.style.overflow = 'auto'
@@ -34,22 +36,36 @@ export function App() {
   }, [showSugar])
 
   return (
-    <div className='App'>
-      <LoadingLine />
-      {showSugar && <Sugar color={'#ff4a6e'} background={' white'} time={2400} />}
+    <Router>
+      <div className='App'>
+        <LoadingLine />
+        {showSugar && <Sugar color={'#ff4a6e'} background={' white'} time={2400} />}
 
-      <div className='wrapper'>
-        <Header />
-        <Main>
-          <CreateUser />
-          <LogInForm />
-          <UserInfo />
-          <EditUser />
-          <ProductTable />
-        </Main>
+        <div className='wrapper'>
+          <Header />
+          <Main>
+            <Switch className='py-5 my-5'>
+              <Route path='/create-user'>
+                <CreateUser className='py-5 my-5' />
+              </Route>
+              <Route path='/login'>
+                <LogInForm className='py-5 my-5' />
+              </Route>
+              <Route path='/user-info'>
+                <UserInfo className='py-5 my-5' />
+              </Route>
+              <Route path='/edit-user'>
+                <EditUser className='py-5 my-5' />
+              </Route>
+              <Route path='/product-table'>
+                <ProductTable className='py-5 my-5' />
+              </Route>
+            </Switch>
+          </Main>
+        </div>
+
+        <Footer />
       </div>
-
-      <Footer />
-    </div>
+    </Router>
   )
 }

@@ -35,7 +35,7 @@ td:hover {
 }
 
 ::-webkit-scrollbar {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   color: #ff4a6e;
 }
 
