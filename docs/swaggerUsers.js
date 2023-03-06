@@ -126,7 +126,6 @@
  *                   example: {}
  */
 
-//
 // /users/login POST request
 
 /**
@@ -150,8 +149,8 @@
  *                 type: string
  *                 format: password
  *             example:
- *               email: bdrndddalxs@gmail.com
- *               password: "342743630"
+ *               email: example@gmail.com
+ *               password: "123456"
 
  *     responses:
  *       200:
@@ -257,22 +256,20 @@
  *         description: Bad Gateway
  */
 
+//Usser update info PUT request
+
 /**
  * @swagger
- * /users/{id}:
+ * securityDefinitions:
+ *   apiKey:
+ *     type: apiKey
+ *     in: header
+ *     name: x-api-key
+ * /users/{editId}:
  *   put:
- *     summary: Update user details by ID
+ *     summary: Authenticating a user by verifying their email and password and returning a JSON web token if the authentication is successful.
  *     tags:
  *       - Users
- *     security:
- *       - apiKeyAuth: []
- *     parameters:
- *       - in: path
- *         name: token
- *         required: true
- *         schema:
- *           type: string
- *         description: The user ID
  *     requestBody:
  *       required: true
  *       content:
@@ -282,25 +279,143 @@
  *             properties:
  *               name:
  *                 type: string
+ *                 format: email
  *               email:
  *                 type: string
+ *                 format: email
  *               password:
  *                 type: string
- *             required:
- *               - name
- *               - email
- *               - password
- *           example:
- *             name: example@gmail.com
- *             email: iliya_tsoy@mail.ru
- *             password: 23232
+ *                 format: password
+ *             example:
+ *               name: John Griffith
+ *               email: example333@gmail.com
+ *               password: "123456789"
+ *     parameters:
+ *       - in: path
+ *         name: editId
+ *         required: true
+ *         description: The ID of the user to update (you can get it when gets a user's info)
+ *         schema:
+ *           type: string
+ *           example: "63f67afa1c859b4d063e03f4"
+ *       - in: header
+ *         name: x-api-key
+ *         required: true
+ *         description: Token obtained from logging in
+ *         schema:
+ *           type: string
+ *     security:
+ *       - apiKey: []
+ *       - application/json
  *     responses:
- *       '200':
- *         description: Updated user details successfully
- *       '400':
- *         description: Invalid input
- *       '401':
- *         description: Unauthorized
- *       '502':
- *         description: Internal server error
+ *       200:
+ *         description: Returns a JSON web token if the authentication is successful.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 token:
+ *                   type: string
+ *                   description: JSON web token.
+ *                   example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDAyOTVlMzc5ZDk2YjAxMWE3ODg0NWMiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTY3Nzg5MjYzOSwiZXhwIjoxNjc3ODk2MjM5fQ.BiqtYLXtjNUZjZFFeV1R10-dptSwD7BBCQX2ZG0jzr8"
+ *       400:
+ *         description: Bad request error if the request body is not valid.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 error:
+ *                   type: object
+ *                   description: Validation error details.
+ *                   example: { "email": "Invalid email format." }
+ *       401:
+ *         description: Unauthorized error if the email is not found or the password is wrong.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 err:
+ *                   type: string
+ *                   description: Error message.
+ *                   example: "Email not found / user dont exist or Password you're entered is wrong"
+ *       502:
+ *         description: Bad gateway error if an unexpected error occurs on the server.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 err:
+ *                   type: string
+ *                   description: Error message.
+ *                   example: "Unexpected error occurred on the server."
+ */
+
+/**
+ * @swagger
+ * securityDefinitions:
+ *   apiKey:
+ *     type: apiKey
+ *     in: header
+ *     name: x-api-key
+ * /users/{delId}:
+ *   delete:
+ *     summary: Delete a user with a specific ID.
+ *     tags:
+ *       - Users
+ *     parameters:
+ *       - in: path
+ *         name: delId
+ *         required: true
+ *         description: The ID of the user to delete.
+ *         schema:
+ *           type: string
+ *           example: "63f67afa1c859b4d063e03f4"
+ *       - in: header
+ *         name: x-api-key
+ *         required: true
+ *         description: Token obtained from logging in.
+ *         schema:
+ *           type: string
+ *     security:
+ *       - apiKey: []
+ *     responses:
+ *       204:
+ *         description: Returns no content if the deletion is successful.
+ *       401:
+ *         description: Unauthorized error if the x-api-key header is missing or invalid.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 error:
+ *                   type: string
+ *                   description: Error message.
+ *                   example: "Unauthorized."
+ *       404:
+ *         description: Not found error if the user with the specified ID does not exist.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 error:
+ *                   type: string
+ *                   description: Error message.
+ *                   example: "User not found."
+ *       502:
+ *         description: Bad gateway error if an unexpected error occurs on the server.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 error:
+ *                   type: string
+ *                   description: Error message.
+ *                   example: "Unexpected error occurred on the server."
  */

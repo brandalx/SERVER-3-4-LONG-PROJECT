@@ -10,7 +10,7 @@ const swaggerOptions = {
       title: 'Toys REST API',
       version: '1.0.0',
       description:
-        'Toys REST API - Swagger automated documantation. Please visit `https://toysrestapi.cyclic.app` for full custom documentation on the server side, or visit `https://toysrestapi.netlify.app` for front-end side of the app. '
+        'Toys REST API - Swagger automated documantation. Please visit `https://toysrestapi.cyclic.app` for full custom documentation on the server side, or visit `https://toysrestapi.netlify.app` for front-end side of the app. Something not working? Try to change servers. Still have a troubles? Reposrt about a bug in my GitHub repo: `https://github.com/brandalx/SERVER-3-4-LONG-PROJECT` '
     },
     servers: [
       {

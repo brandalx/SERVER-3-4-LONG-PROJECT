@@ -97,7 +97,7 @@ const usersController = {
   },
 
   // Update user details by ID
-  async putUser(auth, req, res) {
+  async putUser(req, res) {
     const id = req.params.id
     const tokenDataId = req.tokenData._id
 
