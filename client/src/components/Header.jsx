@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { Navbar } from './Navbar'
-
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 export const Header = () => {
   return (
     <header className='page-header css-selector styled '>
@@ -86,7 +86,7 @@ export const Header = () => {
                 </a>
               </div>
               <div className='col' data-aos='fade-up' data-aos-duration='800'>
-                <a className='text-decoration-none text-dark' href='#quickstart'>
+                <Link to={{ pathname: '/create-user', hash: '#quickstart' }} className='text-decoration-none text-dark'>
                   <div className='card cardintro rounded-4 border-0 h-100' styles='background: #fcffd186'>
                     <div className='card-body d-flex flex-column justify-content-center align-items-center text-center'>
                       <div>
@@ -110,7 +110,7 @@ export const Header = () => {
                       </p>
                     </div>
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
 

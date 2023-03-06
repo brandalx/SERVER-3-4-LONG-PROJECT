@@ -48,7 +48,7 @@ const CreateUser = () => (
     {({ isSubmitting, status }) => (
       <Form data-aos='fade-up' data-aos-duration='600' className='form-group'>
         {' '}
-        <div id='quickstart' className='container py-5'>
+        <div className='container py-5'>
           <h2 className=' text-center'>
             Lets register first!{' '}
             <svg

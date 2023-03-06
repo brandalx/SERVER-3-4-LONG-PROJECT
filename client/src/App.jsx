@@ -13,6 +13,7 @@ import ProductTable from './components/GetToysTable'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 // import Loader from './components/loader'
+import MainTopBlocks from './components/MainTopBlocks'
 
 export function App() {
   const [showSugar, setShowSugar] = useState(true)
@@ -44,9 +45,10 @@ export function App() {
         <div className='wrapper'>
           <Header />
           <Main>
+            <MainTopBlocks />
             <Switch className='py-5 my-5'>
               <Route path='/create-user'>
-                <CreateUser className='py-5 my-5' />
+                <CreateUser id='quickstart' className='py-5 my-5' />
               </Route>
               <Route path='/login'>
                 <LogInForm className='py-5 my-5' />
@@ -59,6 +61,17 @@ export function App() {
               </Route>
               <Route path='/product-table'>
                 <ProductTable className='py-5 my-5' />
+              </Route>
+              <Route path='/x'>
+                <Link to='/x'></Link>
+                <div>x</div>
+              </Route>
+              <Route path=''>
+                <div data-aos='fade-up' data-aos-duration='600' className='container-fluid  py-2'>
+                  <div className='container'>
+                    <p className='text-center text-secondary'>Choose any form to start with</p>
+                  </div>
+                </div>
               </Route>
             </Switch>
           </Main>
