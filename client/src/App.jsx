@@ -4,6 +4,7 @@ import LoadingLine from './components/Loadinline'
 import { Header } from './components/Header'
 import { Main } from './components/Main'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import PostToys from './components/PostToys'
 import { Footer } from './components/Footer'
 import CreateUser from './components/CreateUser'
 import LogInForm from './components/LogInForm'
@@ -62,6 +63,11 @@ export function App() {
               <Route path='/product-table'>
                 <ProductTable className='py-5 my-5' />
               </Route>
+
+              <Route path='/posttoys'>
+                <PostToys className='py-5 my-5' />
+              </Route>
+
               <Route path='/x'>
                 <Link to='/x'></Link>
                 <div>x</div>

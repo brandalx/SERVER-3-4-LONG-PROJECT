@@ -7,16 +7,20 @@ const ProductTable = () => {
   const [currentPage, setCurrentPage] = useState(1)
   const [sortOption, setSortOption] = useState('name')
   const [sortDescending, setSortDescending] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     handleApiRequest()
   }, [currentPage, sortOption, sortDescending])
 
   const handleApiRequest = async () => {
+    setLoading(true)
     let url = `https://toysrestapi.cyclic.app/toys?page=${currentPage}&sort_by=${sortOption}&desc=${
       sortDescending ? 'true' : 'false'
     }`
+
     let resp = await axios.get(url)
+    setLoading(false)
     console.log(resp.data)
     let sortedData = resp.data.sort((a, b) => {
       if (sortOption === 'name') {
@@ -95,6 +99,7 @@ const ProductTable = () => {
               </div>
             </div>
             <div data-aos='fade-up' data-aos-duration='700' className='col-12'>
+              {loading && <p className='text-center text-secondary'>Loading...</p>}
               <div className='table-responsive'>
                 <table className='table table-hover'>
                   <thead>
