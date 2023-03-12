@@ -263,6 +263,52 @@ export default function MainTopBlocks() {
                 </div>
               </Link>
             </div>
+
+            <div className='col' data-aos='fade-up' data-aos-duration='1000'>
+              <Link className='text-decoration-none text-dark' href='#quickstart' to='/deletetoy'>
+                <div className='card cardintro rounded-4 border-0 h-100' styles='background: #fcffd186'>
+                  <div className='card-body d-flex flex-column justify-content-center align-items-center text-center'>
+                    <div>
+                      <svg
+                        className='move-on-hover__item4 '
+                        width='20'
+                        height='19'
+                        viewBox='0 0 20 19'
+                        fill='none'
+                        xmlns='http://www.w3.org/2000/svg'
+                      >
+                        <path
+                          fillRule='evenodd'
+                          clipRule='evenodd'
+                          d='M4.44666 14.5533C4.19997 14.3067 4.19997 13.9067 4.44666 13.66L13.66 4.44666C13.9067 4.19998 14.3067 4.19997 14.5533 4.44666V4.44666C14.8 4.69334 14.8 5.09329 14.5533 5.33997L5.33997 14.5533C5.09329 14.8 4.69334 14.8 4.44666 14.5533V14.5533Z'
+                          fill='#FF4A6E'
+                        />
+                        <path
+                          fillRule='evenodd'
+                          clipRule='evenodd'
+                          d='M14.5533 14.5533C14.8 14.3067 14.8 13.9067 14.5533 13.66L5.33997 4.44666C5.09329 4.19998 4.69334 4.19997 4.44666 4.44666V4.44666C4.19998 4.69334 4.19998 5.09329 4.44666 5.33997L13.66 14.5533C13.9067 14.8 14.3067 14.8 14.5533 14.5533V14.5533Z'
+                          fill='#FF4A6E'
+                        />
+                        <rect
+                          x='1'
+                          y='1'
+                          width='18'
+                          height='17'
+                          rx='3'
+                          stroke='#FF4A6E'
+                          stroke-width='2'
+                          stroke-linejoin='round'
+                        />
+                      </svg>
+                    </div>
+                    <h5 className='card-title'>Delete Toys</h5>
+                    <p className='card-text text-body-secondary'>
+                      Peform toys route /DELETE request and delete existing toys from the the data base
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -12,6 +12,7 @@ import UserInfo from './components/UserInfo'
 import EditUser from './components/EditUser'
 import ProductTable from './components/GetToysTable'
 import EditToys from './components/EditToys'
+import DeleteToy from './components/DeleteToy'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 // import Loader from './components/loader'
@@ -71,6 +72,9 @@ export function App() {
 
               <Route path='/edittoys'>
                 <EditToys className='py-5 my-5' />
+              </Route>
+              <Route path='/deletetoy'>
+                <DeleteToy className='py-5 my-5' />
               </Route>
 
               <Route path='/x'>
