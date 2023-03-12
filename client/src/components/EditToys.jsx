@@ -53,7 +53,7 @@ const validate = (values) => {
   return errors
 }
 
-const onSubmit = async (values, { setSubmitting, setStatus }) => {
+const onSubmit = async (values, { setSubmitting, setStatus, resetForm }) => {
   idtoy = values.idtoy
   delete values.idtoy
 
@@ -64,17 +64,14 @@ const onSubmit = async (values, { setSubmitting, setStatus }) => {
         'x-api-key': localStorage.getItem('x-api-key')
       }
     })
+    resetForm()
     console.log(response.data)
     setStatus({ success: true })
+    resetForm()
   } catch (error) {
+    resetForm()
     console.error(error)
     setStatus({ success: false, message: error.response.data[0].message })
-    values.name = ''
-    values.info = ''
-    values.category = ''
-    values.img_url = ''
-    values.price = ''
-    values.idtoy = ''
   }
 
   setSubmitting(false)
