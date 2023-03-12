@@ -177,9 +177,9 @@ export default function MainTopBlocks() {
                         fill='none'
                         xmlns='http://www.w3.org/2000/svg'
                       >
-                        <path fillRule='evenodd' clip-rule='evenodd' d='M18 8H6V6H18V8Z' fill='#FF4A6E' />
-                        <path fillRule='evenodd' clip-rule='evenodd' d='M18 13H6V11H18V13Z' fill='#FF4A6E' />
-                        <path fillRule='evenodd' clip-rule='evenodd' d='M18 18H6V16H18V18Z' fill='#FF4A6E' />
+                        <path fillRule='evenodd' clipRule='evenodd' d='M18 8H6V6H18V8Z' fill='#FF4A6E' />
+                        <path fillRule='evenodd' clipRule='evenodd' d='M18 13H6V11H18V13Z' fill='#FF4A6E' />
+                        <path fillRule='evenodd' clipRule='evenodd' d='M18 18H6V16H18V18Z' fill='#FF4A6E' />
                       </svg>
                     </div>
                     <h5 className='card-title'>Show Toys Table</h5>
@@ -205,24 +205,59 @@ export default function MainTopBlocks() {
                         xmlns='http://www.w3.org/2000/svg'
                       >
                         <path
-                          fill-rule='evenodd'
-                          clip-rule='evenodd'
+                          fillRule='evenodd'
+                          clipRule='evenodd'
                           d='M6 3C5.44772 3 5 3.44772 5 4V20C5 20.5523 5.44772 21 6 21H18C18.5523 21 19 20.5523 19 20V8.91987C19 8.62794 18.8724 8.3506 18.6508 8.16061L12.9109 3.24074C12.7297 3.08539 12.4989 3 12.2602 3H6ZM3 4C3 2.34315 4.34315 1 6 1H12.2602C12.9763 1 13.6688 1.25618 14.2125 1.72223L19.9524 6.6421C20.6173 7.21205 21 8.0441 21 8.91987V20C21 21.6569 19.6569 23 18 23H6C4.34315 23 3 21.6569 3 20V4Z'
                           fill='#FF4A6E'
                         />
                         <path
-                          fill-rule='evenodd'
-                          clip-rule='evenodd'
+                          fillRule='evenodd'
+                          clipRule='evenodd'
                           d='M12 6V2.5H14V6C14 6.55228 14.4477 7 15 7H19.5V9H15C13.3431 9 12 7.65685 12 6Z'
                           fill='#FF4A6E'
                         />
-                        <path fill-rule='evenodd' clip-rule='evenodd' d='M11 18V10H13V18H11Z' fill='#FF4A6E' />
-                        <path fill-rule='evenodd' clip-rule='evenodd' d='M16 15H8V13H16V15Z' fill='#FF4A6E' />
+                        <path fillRule='evenodd' clipRule='evenodd' d='M11 18V10H13V18H11Z' fill='#FF4A6E' />
+                        <path fillRule='evenodd' clipRule='evenodd' d='M16 15H8V13H16V15Z' fill='#FF4A6E' />
                       </svg>
                     </div>
                     <h5 className='card-title'>Post Toys</h5>
                     <p className='card-text text-body-secondary'>
                       Peform toys route /POST request and add new toys to the the data base
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className='col' data-aos='fade-up' data-aos-duration='1000'>
+              <Link className='text-decoration-none text-dark' href='#quickstart' to='/edittoys'>
+                <div className='card cardintro rounded-4 border-0 h-100' styles='background: #fcffd186'>
+                  <div className='card-body d-flex flex-column justify-content-center align-items-center text-center'>
+                    <div>
+                      <svg
+                        className='move-on-hover__item4'
+                        width='24'
+                        height='24'
+                        viewBox='0 0 24 24'
+                        fill='none'
+                        xmlns='http://www.w3.org/2000/svg'
+                      >
+                        <path
+                          fillRule='evenodd'
+                          clipRule='evenodd'
+                          d='M17.7929 1.79289C18.1834 1.40237 18.8166 1.40237 19.2071 1.79289L22.2071 4.79289C22.5976 5.18342 22.5976 5.81658 22.2071 6.20711L13.2071 15.2071C13.0541 15.3601 12.8556 15.4594 12.6414 15.4899L9.14143 15.9899C8.82984 16.0345 8.51547 15.9297 8.2929 15.7071C8.07034 15.4845 7.96555 15.1702 8.01006 14.8586L8.51006 11.3586C8.54066 11.1444 8.63991 10.9459 8.7929 10.7929L17.7929 1.79289ZM10.4428 11.9714L10.1785 13.8215L12.0286 13.5572L20.0858 5.5L18.5 3.91421L10.4428 11.9714Z'
+                          fill='#FF4A6E'
+                        />
+                        <path
+                          fillRule='evenodd'
+                          clipRule='evenodd'
+                          d='M5 6.5C4.17157 6.5 3.5 7.17157 3.5 8V19C3.5 19.8284 4.17157 20.5 5 20.5H16C16.8284 20.5 17.5 19.8284 17.5 19V11.5H19.5V19C19.5 20.933 17.933 22.5 16 22.5H5C3.067 22.5 1.5 20.933 1.5 19V8C1.5 6.067 3.067 4.5 5 4.5H12.5V6.5H5Z'
+                          fill='#FF4A6E'
+                        />
+                      </svg>
+                    </div>
+                    <h5 className='card-title'>Edit Toys</h5>
+                    <p className='card-text text-body-secondary'>
+                      Peform toys route /EDIT request and edit existing toys in the the data base
                     </p>
                   </div>
                 </div>

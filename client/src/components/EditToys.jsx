@@ -3,6 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik'
 import axios from 'axios'
 
 const initialValues = {
+  idtoy: '',
   name: '',
   info: '',
   category: '',
@@ -16,7 +17,7 @@ const validate = (values) => {
   if (!values.name) {
     errors.name = 'Required'
   } else if (values.name.length < 2 || values.name.length > 150) {
-    errors.name = 'You should provide at least two characters of information about the toy'
+    errors.name = 'You should provide at least two characters of name about the toy'
   }
 
   if (!values.info) {
@@ -28,7 +29,7 @@ const validate = (values) => {
   if (!values.category) {
     errors.category = 'Required'
   } else if (values.category.length < 2 || values.category.length > 150) {
-    errors.category = 'You should provide at least two characters of information about the toy'
+    errors.category = 'You should provide at least two characters of category about the toy'
   }
 
   if (!values.img_url) {
@@ -43,12 +44,22 @@ const validate = (values) => {
     errors.price = 'Price should be at least bigger or equal two and smaller than 150'
   }
 
+  if (!values.idtoy) {
+    errors.idtoy = 'You can find toy id in toys table'
+  } else if (values.idtoy.length < 2 || values.idtoy.length > 150) {
+    errors.idtoy = 'You should provide at least two characters of id for the toy'
+  }
+
   return errors
 }
 
 const onSubmit = async (values, { setSubmitting, setStatus }) => {
+  idtoy = values.idtoy
+  delete values.idtoy
+
+  console.log(values)
   try {
-    const response = await axios.post('https://toysrestapi.cyclic.app/toys', values, {
+    const response = await axios.put(`https://toysrestapi.cyclic.app/toys/${idtoy}`, values, {
       headers: {
         'x-api-key': localStorage.getItem('x-api-key')
       }
@@ -57,20 +68,26 @@ const onSubmit = async (values, { setSubmitting, setStatus }) => {
     setStatus({ success: true })
   } catch (error) {
     console.error(error)
-    setStatus({ success: false, message: error.response.data.err })
+    setStatus({ success: false, message: error.response.data[0].message })
+    values.name = ''
+    values.info = ''
+    values.category = ''
+    values.img_url = ''
+    values.price = ''
+    values.idtoy = ''
   }
 
   setSubmitting(false)
 }
 
-const PostToys = () => (
+const EditToys = () => (
   <Formik initialValues={initialValues} validate={validate} onSubmit={onSubmit}>
     {({ isSubmitting, status }) => (
       <Form data-aos='fade-up' data-aos-duration='600' className='form-group'>
         {' '}
         <div className='container py-5'>
           <h2 className=' text-center'>
-            Post new toy item
+            Edit existing toy item
             <svg
               className='move-on-hover__item4 ms-2 mb-1'
               width='24'
@@ -81,25 +98,37 @@ const PostToys = () => (
             >
               <path
                 fillRule='evenodd'
-                clip-rule='evenodd'
-                d='M6 3C5.44772 3 5 3.44772 5 4V20C5 20.5523 5.44772 21 6 21H18C18.5523 21 19 20.5523 19 20V8.91987C19 8.62794 18.8724 8.3506 18.6508 8.16061L12.9109 3.24074C12.7297 3.08539 12.4989 3 12.2602 3H6ZM3 4C3 2.34315 4.34315 1 6 1H12.2602C12.9763 1 13.6688 1.25618 14.2125 1.72223L19.9524 6.6421C20.6173 7.21205 21 8.0441 21 8.91987V20C21 21.6569 19.6569 23 18 23H6C4.34315 23 3 21.6569 3 20V4Z'
+                clipRule='evenodd'
+                d='M17.7929 1.79289C18.1834 1.40237 18.8166 1.40237 19.2071 1.79289L22.2071 4.79289C22.5976 5.18342 22.5976 5.81658 22.2071 6.20711L13.2071 15.2071C13.0541 15.3601 12.8556 15.4594 12.6414 15.4899L9.14143 15.9899C8.82984 16.0345 8.51547 15.9297 8.2929 15.7071C8.07034 15.4845 7.96555 15.1702 8.01006 14.8586L8.51006 11.3586C8.54066 11.1444 8.63991 10.9459 8.7929 10.7929L17.7929 1.79289ZM10.4428 11.9714L10.1785 13.8215L12.0286 13.5572L20.0858 5.5L18.5 3.91421L10.4428 11.9714Z'
                 fill='#FF4A6E'
               />
               <path
                 fillRule='evenodd'
-                clip-rule='evenodd'
-                d='M12 6V2.5H14V6C14 6.55228 14.4477 7 15 7H19.5V9H15C13.3431 9 12 7.65685 12 6Z'
+                clipRule='evenodd'
+                d='M5 6.5C4.17157 6.5 3.5 7.17157 3.5 8V19C3.5 19.8284 4.17157 20.5 5 20.5H16C16.8284 20.5 17.5 19.8284 17.5 19V11.5H19.5V19C19.5 20.933 17.933 22.5 16 22.5H5C3.067 22.5 1.5 20.933 1.5 19V8C1.5 6.067 3.067 4.5 5 4.5H12.5V6.5H5Z'
                 fill='#FF4A6E'
               />
-              <path fillRule='evenodd' clip-rule='evenodd' d='M11 18V10H13V18H11Z' fill='#FF4A6E' />
-              <path fillRule='evenodd' clip-rule='evenodd' d='M16 15H8V13H16V15Z' fill='#FF4A6E' />
             </svg>
           </h2>
-          <p className='text-center opacity-50 text-secondary'>
-            Please note that you need to log in first in order to perform this action
-          </p>
+
           <div className='row'>
             <div className='col-lg-4 col-md-6 col-sm-8 mx-auto'>
+              <div>
+                <ul className='py-3 text-center opacity-50 text-secondary'>
+                  <li> Please note that you need to log in first in order to perform this action </li>
+                  <li>Additionally, you can only item you created (by toy id)</li>
+                </ul>
+              </div>
+              <div className='mb-3'>
+                <label className='form-label' htmlFor='idtoy'>
+                  <b> Toy id</b>
+                </label>
+                <Field className='form-control' type='text' name='idtoy' />
+
+                <small id='emailHelp' className='form-text text-muted'>
+                  <ErrorMessage name='idtoy' component='div' />
+                </small>
+              </div>
               <div className='mb-3'>
                 <label className='form-label' htmlFor='name'>
                   Name of toy
@@ -160,7 +189,7 @@ const PostToys = () => (
               </button>
 
               {status && status.success && (
-                <div className='text-success'>New toy added successfully! You can see it in the Toys Table</div>
+                <div className='text-success'>Toy edited successfully! You can see it in the Toys Table</div>
               )}
               {status && !status.success && (
                 <div className='text-danger'>Failed to add new toy, reason: {status.message}</div>
@@ -174,4 +203,4 @@ const PostToys = () => (
   </Formik>
 )
 
-export default PostToys
+export default EditToys

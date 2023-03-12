@@ -108,11 +108,13 @@ const ProductTable = () => {
                       <th>info</th>
                       <th>Price</th>
                       <th>Date created</th>
+                      <th>Item id</th>
                     </tr>
                   </thead>
                   {ar.length === 0 ? (
                     <tbody key={Date.now}>
                       <tr>
+                        <td className='text-secondary'>No data available</td>
                         <td className='text-secondary'>No data available</td>
                         <td className='text-secondary'>No data available</td>
                         <td className='text-secondary'>No data available</td>
@@ -129,6 +131,7 @@ const ProductTable = () => {
                               <td>{item.info}</td>
                               <td>{item.price}</td>
                               <td>{item.date_created}</td>
+                              <td>{item._id}</td>
                             </tr>
                           </tbody>
                         )
